@@ -6,14 +6,14 @@ Automatically make court bundles in seconds.
 
 # Usage
 
-Tested on Ubuntu. To self-host:
+Tested only on Ubuntu. To self-host:
 
 ```
 python3 -m venv venv
 . venv/bin/activate
 pip install -r requirements.txt
-apt install pdflatex -y
-apt install pdftk -y
+apt install -y pdflatex pdftk-java
+python3 app.py
 ```
 
 Then visit 0.0.0.0:7001 in your browser.
