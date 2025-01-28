@@ -2,7 +2,7 @@
 
 Automatically make court bundles in seconds.
 
-[buntool.sherliker.net](https://buntool.sherliker.net)
+[buntool.co.uk](https://buntool.co.uk)
 
 # Usage
 
