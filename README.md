@@ -19,12 +19,10 @@ python3 app.py
 Then visit 0.0.0.0:7001 in your browser.
 
 # Licences
-
-MIT.
-
-BunTool uses third-party software including: 
+BunTool uses third-party software including these, which each have their own licenses:
 - pyPDF: https://github.com/py-pdf/pypdf/blob/main/LICENSE (MIT)
 - pike PDF:https://github.com/pikepdf/pikepdf/blob/main/LICENSE.txt (Mozilla v.2.0)
 - pdfLaTeX: https://ctan.org/pkg/pdftex (actually not used, but stubs of code remain)
 - pdfplumber: https://github.com/jsvine/pdfplumber/blob/stable/LICENSE.txt
 - python-docx: https://github.com/python-openxml/python-docx/blob/master/LICENSE
+- ReportLab: https://github.com/eduardocereto/reportlab/blob/master/LICENSE.txt
