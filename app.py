@@ -4,30 +4,45 @@ import os
 #import sys
 import bundle as buntool
 import shutil
-import tempfile
 import logging
 from datetime import datetime
 import uuid
 from waitress import serve
-from distutils.util import strtobool
 import csv
+import boto3
 
 app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = 20 * 1024 * 1024  # 20 MB limit
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # file size limit in MB
 app.logger.setLevel(logging.DEBUG)
-logs_dir = os.path.join("logs")
+
+s3 = boto3.client('s3')
+bucket_name = os.environ.get('S3_BUCKET', 'your-default-bucket')
+
+def upload_to_s3(file_path, s3_key):
+    s3.upload_file(file_path, bucket_name, s3_key)
+    return f"s3://{bucket_name}/{s3_key}"
+
+def is_running_in_lambda():
+    return 'AWS_LAMBDA_FUNCTION_NAME' in os.environ #seems to work?
+
+if is_running_in_lambda():
+    logs_dir = '/tmp/logs'
+else:
+    logs_dir = os.path.join('logs')
 if not os.path.exists(logs_dir):
         os.makedirs(logs_dir)
+
     # Configure logging
 # # Configure upload folder and bundles output folder
 # UPLOAD_FOLDER = 'uploads'
 # if not os.path.exists(UPLOAD_FOLDER):
 #     os.makedirs(UPLOAD_FOLDER)
 
-BUNDLES_FOLDER = 'static/bundles'
-if not os.path.exists(BUNDLES_FOLDER):
-    os.makedirs(BUNDLES_FOLDER)
+BUNDLES_DIR = '/tmp/bundles'
+if not os.path.exists(BUNDLES_DIR):
+    os.makedirs(BUNDLES_DIR)
  
+
 def save_uploaded_file(file, directory, filename=None):
     # Takes in a file object, the tmpfiles directory path, and an optional filename.
     # passes the filename (supplied, or original) through secure_filename.
@@ -42,34 +57,41 @@ def save_uploaded_file(file, directory, filename=None):
         return filepath
     return None
 
+def strtobool(value: str) -> bool:
+  value = value.lower()
+  if value in ("y", "yes", "on", "1", "true", "t", "True", "enabled"):
+    return True
+  return False
+
+
 def get_output_filename(bundle_title, case_name, timestamp, fallback="Bundle"):
     # Takes in the bundle title, case name, and a timestamp.
-    # Creates a filename for the output file by joining the bundle title, case name, and timestamp.
-    # makes sure not too long. If is too long, tries just bundle name and timestamp
-    # if that's too long, try claim no and timestamp
-    # if that's too long, try footer prefix and timestamp
-    # Returns the output filename.
+    # purpose is to guard against extra-long filenames.
+    # Returns the output filename picked among many fallback options.
     output_file = f"{bundle_title}_{case_name}_{timestamp}.pdf"
-    if len(output_file) > 180:
-        output_file = f"{bundle_title}_{timestamp}.pdf"
-    if len(output_file) > 180:
-        output_file = f"{case_name}_{timestamp}.pdf"
-    if len(output_file) > 180:
+    if len(output_file) > 100:
+        #take first 20 chars of bundle title and add case name: 
+        output_file = f"{bundle_title[:20]}_{case_name}_{timestamp}.pdf"
+    if len(output_file) > 100:
+        #take first 20 chars of bundle title, first 20 chars of case name, and add timestamp:
+        output_file = f"{bundle_title[:30]}_{case_name[:30]}_{timestamp}.pdf"
+    if len(output_file) > 100:
+        #this should never happen:
         output_file = f"{fallback}_{timestamp}.pdf"
-    if len(output_file) > 180:
+    if len(output_file) > 100:
+        #this should doubly never happen:
         output_file = f"{timestamp}.pdf"
     return output_file
-
 
 def synchronise_csv_index(uploaded_csv_path, filename_mappings):
     #takes the path of the uploaded csv file and a dictionary of filename mappings (due to sanitising filenames of uploads).
     # creates a new csv file with the same structure as the original, but with the filenames replaced with secure versions.
     # returns the path of the new csv file.
-    sanitised_fienames_csv_path = uploaded_csv_path.replace('index_', 'securefilenames_index_')
-    app.logger.info(f"secure_csv_path: {sanitised_fienames_csv_path}")
+    sanitised_filenames_csv_path = uploaded_csv_path.replace('index_', 'securefilenames_index_')
+    app.logger.info(f"secure_csv_path: {sanitised_filenames_csv_path}")
     try:
         with open(uploaded_csv_path, 'r', newline='', encoding='utf-8') as infile:
-            with open(sanitised_fienames_csv_path, 'w', newline='', encoding='utf-8') as outfile:
+            with open(sanitised_filenames_csv_path, 'w', newline='', encoding='utf-8') as outfile:
                 reader = csv.reader(infile)
                 writer = csv.writer(outfile)
                 #print content of input csv: 
@@ -111,8 +133,8 @@ def synchronise_csv_index(uploaded_csv_path, filename_mappings):
         app.logger.error(f"..Error in save_csv_index: {str(e)}")
         raise
 
-    app.logger.info(f"..saved csv index as {sanitised_fienames_csv_path}")
-    return sanitised_fienames_csv_path
+    app.logger.info(f"..saved csv index as {sanitised_filenames_csv_path}")
+    return sanitised_filenames_csv_path
 
 @app.route('/')
 def index():
@@ -136,10 +158,15 @@ def create_bundle():
         return jsonify({"status": "error", "message": "No files found. Please add files and try again."})
 
     try:
-        # Create temporary working directory in ./tempfiles/{session_id}:
-        if not os.path.exists('tempfiles'):
-            os.makedirs('tempfiles')
-        temp_dir = os.path.join('tempfiles', session_id)
+        # Create temporary working directory in /tmp/tempfiles/{session_id}:
+        if is_running_in_lambda():
+            temp_dir = os.path.join('/tmp', 'tempfiles', session_id)
+            if not os.path.exists('/tmp/tempfiles'):
+                os.makedirs('/tmp/tempfiles')
+        else:
+            temp_dir = os.path.join('tempfiles', session_id)
+            if not os.path.exists('tempfiles'):
+                os.makedirs('tempfiles')
         os.makedirs(temp_dir)
         app.logger.debug(f"Temporary directory created: {temp_dir}")
 
@@ -240,7 +267,27 @@ def create_bundle():
 
         # Create bundle - main function call  
         try:
-            app.logger.info(f"Calling buntool.create_bundle")
+            app.logger.info(f"Calling buntool.create_bundle with params:")
+            app.logger.info(f"....input_files: {input_files}")
+            app.logger.info(f"....output_file: {output_file}")
+            app.logger.info(f"....secure_coversheet_filename: {secure_coversheet_filename}")
+            app.logger.info(f"....sanitised_filenames_index_csv: {sanitised_filenames_index_csv}")
+            app.logger.info(f"....bundle_config elements:")
+            app.logger.info(f"........timestamp: {timestamp}")
+            app.logger.info(f"........case_details: {case_details}")
+            app.logger.info(f"........confidential_bool: {confidential_bool}")
+            app.logger.info(f"........zip_bool: {zip_bool}")
+            app.logger.info(f"........session_id: {session_id}")
+            app.logger.info(f"........user_agent: {user_agent}")
+            app.logger.info(f"........page_num_align: {page_num_align}")
+            app.logger.info(f"........index_font: {index_font}")
+            app.logger.info(f"........footer_font: {footer_font}")
+            app.logger.info(f"........page_num_style: {page_num_style}")
+            app.logger.info(f"........footer_prefix: {footer_prefix}")
+            app.logger.info(f"........date_setting: {date_setting}")
+            app.logger.info(f"........roman_for_preface: {roman_for_preface}")
+            app.logger.info(f"........temp_dir: {temp_dir}")
+            app.logger.info(f"........logs_dir: {logs_dir}")
             
             # Create BundleConfig instance
             bundle_config = buntool.BundleConfig(
@@ -257,7 +304,9 @@ def create_bundle():
                 page_num_style=page_num_style,
                 footer_prefix=footer_prefix,
                 date_setting=date_setting,
-                roman_for_preface=roman_for_preface
+                roman_for_preface=roman_for_preface,
+                temp_dir = temp_dir,
+                logs_dir = logs_dir
             )
             
             received_output_file, zip_file_path = buntool.create_bundle(
@@ -270,7 +319,7 @@ def create_bundle():
 
             # Copy both files to bundles folder
             if os.path.exists(received_output_file):
-                final_output_path = os.path.join(BUNDLES_FOLDER, os.path.basename(received_output_file))
+                final_output_path = os.path.join(BUNDLES_DIR, os.path.basename(received_output_file))
                 shutil.copy2(received_output_file, final_output_path)
                 app.logger.debug(f"Copied final PDF to: {final_output_path}")
             else:
@@ -278,7 +327,7 @@ def create_bundle():
                 return jsonify({"status": "error", "message": f"Error preparing PDF file for download. Session code: {session_id}"}), 500
 
             if os.path.exists(zip_file_path):
-                final_zip_path = os.path.join(BUNDLES_FOLDER, os.path.basename(zip_file_path))
+                final_zip_path = os.path.join(BUNDLES_DIR, os.path.basename(zip_file_path))
                 shutil.copy2(zip_file_path, final_zip_path)
                 app.logger.debug(f"Copied final ZIP to: {final_zip_path}")
             else:
@@ -302,17 +351,37 @@ def create_bundle():
 
     finally:
         # Remove the session FileHandler to prevent duplicate logs
-        app.logger.removeHandler(session_file_handler)
+        if session_file_handler and session_file_handler in app.logger.handlers:
+            app.logger.removeHandler(session_file_handler)
+
+        try:
+            # Upload logs to s3:
+            # As mentioned in the frontend, logs are always uploaded to s3, and the 
+            # only private info they contain are is user agent and index 
+            # data (basically, filenames and titles):
+            logsurl = upload_to_s3(logs_path, f'logs/{os.path.basename(logs_path)}') 
+            # By contrast, the zip file has all the input files and the output bundle 
+            # itself. It almost certainly contains private data. 
+            # In the /dev/ instance it's uploaded to s3 for testing purposes 
+            # and regularly cleaned out.It is disabled in stable version by commenting 
+            # out the following lin, but is left uncommented here for tranparency:
+            upload_to_s3(final_zip_path, f'bundles/{os.path.basename(final_zip_path)}')
+            app.logger.debug(f"Upload to s3 successful: {logsurl}") 
+        except Exception as e:
+            app.logger.error(f"Error uploading logs or zip to s3: {str(e)}")
+            pass
+        
+
 
 @app.route('/download/bundle', methods=['GET'])
 def download_bundle():
     bundle_path = request.args.get('path')
     if not bundle_path:
-        return jsonify({"status": "error", "message": f"Download Error: Bundle download path could not be found. Session code: {session_id}"}), 400
+        return jsonify({"status": "error", "message": f"Download Error: Bundle download path could not be found."}), 400
 
     absolute_path = os.path.abspath(bundle_path)
     if not os.path.exists(absolute_path):
-        return jsonify({"error": f"Download Error: bundle does not exist in expected location. Session code: {session_id}"}), 404
+        return jsonify({"status":"error", "message": f"Download Error: bundle does not exist in expected location."}), 404
 
     return send_file(absolute_path, as_attachment=True)
 
@@ -320,11 +389,11 @@ def download_bundle():
 def download_zip():
     zip_path = request.args.get('path')
     if not zip_path:
-        return jsonify({"error": f"Download Error: Zip download path could not be found. Session code: {session_id} "}), 400
+        return jsonify({"status": "error", "message": f"Download Error: Zip download path could not be found."}), 400
 
     absolute_path = os.path.abspath(zip_path)
     if not os.path.exists(absolute_path):
-        return jsonify({"error": f"Download Error: zip does not exist in expected location. Session code: {session_id}"}), 404
+        return jsonify({"status": "error", "message": f"Download Error: zip does not exist in expected location."}), 404
 
     return send_file(absolute_path, as_attachment=True)
 
