@@ -6,7 +6,7 @@ Automatically make court bundles in seconds.
 
 # Usage
 
-Tested only on Ubuntu. To self-host:
+Tested only on Ubuntu, and suitable for AWS Lambda deployment via Zappa. To self-host:
 
 ```
 python3 -m venv venv
