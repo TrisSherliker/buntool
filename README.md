@@ -1,12 +1,21 @@
-# buntool
+# BunTool
 
-Automatically make court bundles in seconds.
+![alt text](static/buntool.webp)
 
-[buntool.co.uk](https://buntool.co.uk)
+Automatically make court bundles in seconds.  Check out the main instance: [buntool.co.uk](https://buntool.co.uk)
 
-# Usage
+Takes input PDF files; generates index data; outputs a merged PDF with index, hyperlinks, bookmarks and page numbers according to your chosen settings.
 
-Tested only on Ubuntu, and suitable for AWS Lambda deployment via Zappa. To self-host:
+Output Bundles comply with the requirements of the English Courts, and are also useful for a range of other applications. 
+
+
+# Usage and installation
+
+This is configured for self-hosting, which is what these isntructions are for.
+
+It can also be deployed to an AWS Lambda with zappa, if desired.
+
+## Installation
 
 ```
 python3 -m venv venv
@@ -16,13 +25,14 @@ apt install -y pdflatex pdftk-java
 python3 app.py
 ```
 
-Then visit 0.0.0.0:7001 in your browser.
+## Copy fonts to fonts directory
 
-# Licences
-BunTool uses third-party software including these, which each have their own licenses:
-- pyPDF: https://github.com/py-pdf/pypdf/blob/main/LICENSE (MIT)
-- pike PDF:https://github.com/pikepdf/pikepdf/blob/main/LICENSE.txt (Mozilla v.2.0)
-- pdfLaTeX: https://ctan.org/pkg/pdftex (actually not used, but stubs of code remain)
-- pdfplumber: https://github.com/jsvine/pdfplumber/blob/stable/LICENSE.txt
-- python-docx: https://github.com/python-openxml/python-docx/blob/master/LICENSE
-- ReportLab: https://github.com/eduardocereto/reportlab/blob/master/LICENSE.txt
+Buntool uses the font Charter, a popular style of font for legal documents. The four `.ttf` files need to be added to ReportLab's fonts folder:
+
+```
+cp ./static/Charter*.ttf ./venv/lib/python3.12/site-packages/reportlab/fonts/
+```
+
+## Ready to bake
+
+Now you can visit `0.0.0.0:7001` in your browser.
