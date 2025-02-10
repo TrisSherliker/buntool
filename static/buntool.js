@@ -231,7 +231,8 @@ function escapeCsvField(field) {
 }
 bundleForm.addEventListener('submit', function (e) {
     e.preventDefault();
-
+    clearProcessErrorMessages();
+    clearZipExplainer();
     document.getElementById('downloadButtonContainer').style.display = 'none';
     document.getElementById('loadingIndicator').style.display = 'block';
     const submitButton = this.querySelector('button[type="submit"]');
@@ -299,6 +300,7 @@ bundleForm.addEventListener('submit', function (e) {
                 downloadZipButton.onclick = () => {
                     window.location.href = `/download/zip?path=${encodeURIComponent(data.zip_path)}`;
                 };
+                showZipExplainer('You can download just the PDF bundle, or you can download a Zip file. The Zip packages everything together for filing (and later editing), plus a separate draft index in Word (docx) format.')
             } else {
                 throw new Error(data.message || 'Unknown error occurred');
             }
@@ -372,6 +374,23 @@ function showProcessError(message) {
     // setTimeout(() => errorDiv.remove(), 5000);
 }
 
+function showZipExplainer(message, type = 'success') {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `success-message`;
+    messageDiv.innerHTML = `<i class="mdi mdi-check-circle"></i>${message}`;
+    document.getElementById('zipExplainerContainer').appendChild(messageDiv);
+    //setTimeout(() => messageDiv.remove(), 5000);
+}
+
+function clearProcessErrorMessages() {
+    const processErrorContainer = document.getElementById('processErrorContainer');
+    processErrorContainer.innerHTML = '';
+}
+
+function clearZipExplainer() {
+    const zipExplainerContainer = document.getElementById('zipExplainerContainer');
+    zipExplainerContainer.innerHTML = '';
+}
 function parseDateFromFilename(filename, title) {
     console.log("Parsing date and cleaning title. Input:", { filename, title });
     let titleWithoutDate = title;
@@ -410,7 +429,7 @@ function parseDateFromFilename(filename, title) {
     }
 
     // Fall back to chrono-node for natural language processing
-    const chrono_parsedDate = chrono.parseDate(filename);
+    const chrono_parsedDate = chrono.strict.parseDate(filename);
     if (chrono_parsedDate) {
         matchedDate = chrono_parsedDate.toISOString().split('T')[0];
         // Note: With chrono, we don't attempt to clean the title as we don't know exactly what text matched

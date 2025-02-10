@@ -1,17 +1,17 @@
 :root {
-    --primary: #68b3cd;
-    --orange: #ef8c51;
-    --dothething: #d57782;
+    --primary: #420560;
+    --orange: #bc641d;
+    --dothething: #420560;
     --success: #29ad11;
     --surface: #ffffff;
-    --background: #f8fafc;
-    --text: #1f2937;
-    --text-light: #6b7280;
+    --background: #e3e1e1;
+    --text: #0e0e0e;
+    --text-light: #000000;
     --border: #3f3830;
     --accent: #8b5cf6;
     --danger: #ef4444;
     --warning: #f59e0b;
-    --earpink: #d57782;
+    --earpink: #ff5c9b;
     --max-content-width: 1200px;
 }
 
@@ -21,7 +21,7 @@ body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--background), #eef2ff);
+    background:  #dddddd;
     color: var(--text);
     line-height: 1.5;
 }
@@ -36,8 +36,8 @@ body {
 
 .app-header {
     text-align: center;
-    margin-bottom: 1rem;
-    background: linear-gradient(90deg,  #9ee3fa, #fecaac);
+    margin-bottom: 0.2rem;
+    /* background: linear-gradient(90deg,  #9ee3fa, #fecaac); */
 
 }
 
@@ -46,12 +46,15 @@ body {
     font-weight: 800;
     color: var(--orange);
     margin: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .app-subtitle {
     color: var(--text-light);
     font-size: 2rem;
     margin-top: 0rem;
+    margin-bottom: -1rem;
 }
 
 .card {
@@ -107,6 +110,7 @@ label {
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: var (--text);
+    font-weight: 700;
 }
 
 input[type="text"],
@@ -129,7 +133,7 @@ input[type="date"]:focus {
 .upload-zone {
     border: 2px dashed var(--border);
     border-radius: 0.5rem;
-    border-color: #d57782;
+    border-color: #ff5c9b;
     padding: 1rem;
     text-align: center;
     cursor: pointer;
@@ -183,7 +187,7 @@ th {
 
 
 .flash {
-    background: linear-gradient(to right, #d57782, transparent);
+    background: linear-gradient(to right, #ff5c9b, transparent);
     border-left: 3px solid var(--accent);
 }
 
@@ -222,7 +226,7 @@ button {
 }
 
 .create-button {
-    background: var(--orange);
+    background: var(--earpink);
     color: white;
     border: none;
     font-size: 1.5rem;
@@ -325,7 +329,6 @@ button {
 
 .intro-section h1 {
     color: #4a4a4a;
-    []
 }
 
 .intro-section p {
@@ -337,6 +340,13 @@ button {
     font-family: "Computer Modern";
     src: url('/static/cmunrm.otf');
 }
+
+@font-face {
+    font-family: "Charter Regular";
+    src: url('/static/Charter-Regular.otf');
+}
+
+
 
 .sortable {
     cursor: pointer;
@@ -357,14 +367,14 @@ button {
 
 .sortable.asc i:before {
     content: "\F04BA";
-    color: #d57782;
+    color: #ff5c9b;
     font-size: large;
     /* mdi-sort-ascending */
 }
 
 .sortable.desc i:before {
     content: "\F04BA";
-    color: #d57782;
+    color: #ff5c9b;
     font-size: large;
     /* mdi-sort-descending */
 }
@@ -389,6 +399,54 @@ button {
     .app-title {
         font-size: 5rem;
     }
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form-group td {
+        display: block;
+        width: 100%;
+        padding:0;
+    }
+
+    .form-group td label,
+    .form-group td input,
+    .form-group td select,
+    .form-group td .form-control {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .form-group td:first-child {
+        background-color: #f0f0f0;
+    }
+
+    .form-group td:nth-child(2) {
+        background-color: transparent;
+    }
+
+    .form-group td input[type="radio"] {
+        width: auto;
+        margin-right: 0.5rem;
+    }
+
+    .form-group td input[type="file"] {
+        width: auto;
+        margin-right: 0.5rem;
+    }
+    .form-check {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -400,7 +458,9 @@ button {
     }
     .app-subtitle {
         font-size: 1.5rem;
+        
     }
+
 }
 
 @media (max-width: 576px) {
