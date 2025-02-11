@@ -1,6 +1,7 @@
 # BunTool
-
-![alt text](static/buntool.webp)
+<p align="center">
+  <img src="static/buntool.webp" width="300" style="center">
+</p>  
 
 Automatically make court bundles in seconds.  Check out the main instance: [buntool.co.uk](https://buntool.co.uk)
 
