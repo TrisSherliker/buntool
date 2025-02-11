@@ -1538,7 +1538,7 @@ def add_hyperlinks(
                         # x0=llx, top=ury, x1=urx, bottom=lly
                         # pikepdf wants them ordered as llx lly urx ury therefore use order: x0, bottom, x1, top ---
                         'coords': (word['x0'], word['bottom'], word['x1'], word['top']),
-                        'destination_page': int(entry[3]) + length_of_coversheet + 1
+                        'destination_page': int(entry[3]) + length_of_frontmatter
                         # 0-based page entry for main arabic section
                     }
                     list_of_annotation_coords.append(annotation)
@@ -1556,7 +1556,7 @@ def add_hyperlinks(
                             'title': entry[1],
                             'toc_page': page_idx,
                             'coords': (word['x0'], word['bottom'], word['x1'], word['top']),
-                            'destination_page': int(entry[3]) + length_of_coversheet + 1
+                            'destination_page': int(entry[3]) + length_of_frontmatter
                         }
                         list_of_annotation_coords.append(annotation)
                         break
@@ -1858,7 +1858,7 @@ def create_bundle(input_files, output_file, coversheet, index_file, bundle_confi
         except Exception as e:
             bundle_logger.error(f"[CB]..Error during create_toc_docx: {e}")
 
-        # Handle frontmatter
+        # Handle frontmatter: merge coversheet, else just use toc
         frontmatter = os.path.join(temp_dir, "TEMP00-coversheet-plus-toc.pdf")
         if coversheet:
             if os.path.exists(coversheet_path):
