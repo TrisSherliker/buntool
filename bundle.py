@@ -13,15 +13,14 @@
 ##############################################
 ##  ROADMAP
 ##############################################
-# - [ ] General error handling in functions of app.py (file saving, dir creation, csv reading/writing)
-# - [ ] Validation of all strings passed through frontend
-# - [ ] validation of csv data passed from frontend, check headers and columns.
-# - [ ] Code cleanup:
-#       - [x] use the globally available bundle_config rather than passing around args
-#       - [ ] assert tests rather than if-testing
-#       - [x] Add function explanation strings
-# - [ ] Add a write-metadata function: https://pypdf.readthedocs.io/en/stable/user/metadata.html
-# - [ ] ability to reload state (via zip import).
+# Technical improvements
+#   - [ ] General error handling in functions of app.py (file saving, dir creation, csv reading/writing)
+#   - [ ] Validation of all strings passed through frontend
+#   - [ ] validation of csv data passed from frontend, check headers and columns.
+# Features
+#   - [ ] Convenience for sections: Add section header, spawn upload area for that section, helps to organise files
+#   - [ ] Add a write-metadata function: https://pypdf.readthedocs.io/en/stable/user/metadata.html
+#   - [ ] ability to reload state (via zip import).
 #       This would require --
 #       - [ ] save option state (as json?)
 #       - [ ] save csv
