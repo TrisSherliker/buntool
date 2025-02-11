@@ -5,26 +5,22 @@
 
 # GENERAL
 # - [x] make sure temp files delete
+# - [x] add cron job to server to cleanup every few mins
 # - [x] draft docx indexing
 # - [x] responsive index overflows at some breakpoints
-# - [ ] duplicate logs - session file handler not being removed properly. No time to fix this right now.
 # - [ ] Possible niggle: handling of filenames with multiple `.` characters in names, or none of them. Is the code depending too much on there being an extension to the file at all?
 
 ##############################################
-##  Planned Technical improvements
+##  ROADMAP
 ##############################################
 # - [ ] General error handling in functions of app.py (file saving, dir creation, csv reading/writing)
-#  - [ ] Validation of all strings passed through frontend
+# - [ ] Validation of all strings passed through frontend
 # - [ ] validation of csv data passed from frontend, check headers and columns.
 # - [ ] Code cleanup:
-#       - [ ] use the globally available bundle_config rather than passing around args
+#       - [x] use the globally available bundle_config rather than passing around args
 #       - [ ] assert tests rather than if-testing
 #       - [x] Add function explanation strings
 # - [ ] Add a write-metadata function: https://pypdf.readthedocs.io/en/stable/user/metadata.html
-
-##############################################
-## Planned feature expansions
-##############################################
 # - [ ] ability to reload state (via zip import).
 #       This would require --
 #       - [ ] save option state (as json?)
@@ -32,7 +28,6 @@
 #       - [ ] save input files
 #       - [ ] allow upload of zip which is then parsed out into options/csv/inputfiles
 #       - [ ] the data structure point above will help with this, because then it just becomes a matter of setting variables from the lines of the file.
-#   - [ ] Drop down box with pre-filled bundle names, or type your own in?
 
 # PDF manipulation
 from pypdf import PdfReader, PdfWriter
