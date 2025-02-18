@@ -37,3 +37,7 @@ cp ./static/Charter*.ttf ./venv/lib/python3.12/site-packages/reportlab/fonts/
 ## Ready to bake
 
 Now you can visit `0.0.0.0:7001` in your browser.
+
+# License
+
+Licensed under the Mozilla Public License, version 2.0.
