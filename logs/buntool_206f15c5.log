@@ -1,0 +1,798 @@
+2025-02-11 18:13:05,857-DEBUG-[APP]: Ingesting form information...
+2025-02-11 18:13:05,857-INFO-[APP]: ..index file found in form submission
+2025-02-11 18:13:05,857-INFO-[APP]: ..index data: <FileStorage: 'index.csv' ('text/csv')>
+2025-02-11 18:13:05,857-DEBUG-[APP]: generated output filename: Bundle__20250211_181305.pdf
+2025-02-11 18:13:05,857-DEBUG-[APP]: Gathering uploaded files...
+2025-02-11 18:13:05,857-DEBUG-[APP]: ....[<FileStorage: 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021.pdf' ('application/pdf')>, <FileStorage: 'Great Place To Work - Wise - July 2024.pdf' ('application/pdf')>, <FileStorage: 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021.pdf' ('application/pdf')>, <FileStorage: 'Business Live - Wise move for Solihull technology firm - 24 September 2021.pdf' ('application/pdf')>, <FileStorage: 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022.pdf' ('application/pdf')>, <FileStorage: 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021.pdf' ('application/pdf')>, <FileStorage: 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024.pdf' ('application/pdf')>, <FileStorage: 'Inflexion - Inflexion announces investment into WithWise - December 2021.pdf' ('application/pdf')>, <FileStorage: "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023.pdf" ('application/pdf')>, <FileStorage: 'Logistics Business - Technology specialist scoops award - 25 October 2022.pdf' ('application/pdf')>, <FileStorage: 'Logistics UK - Logistics Awards 2023 Winners.pdf' ('application/pdf')>, <FileStorage: "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024.pdf" ('application/pdf')>, <FileStorage: 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021.pdf' ('application/pdf')>, <FileStorage: 'MarTech Awards _ Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024.pdf' ('application/pdf')>, <FileStorage: 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021.pdf' ('application/pdf')>, <FileStorage: 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022.pdf' ('application/pdf')>, <FileStorage: "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022.pdf" ('application/pdf')>, <FileStorage: "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021.pdf" ('application/pdf')>, <FileStorage: 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022.pdf' ('application/pdf')>, <FileStorage: "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021.pdf" ('application/pdf')>, <FileStorage: 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022.pdf' ('application/pdf')>, <FileStorage: "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf" ('application/pdf')>, <FileStorage: 'The Daily Mirror - City with the worst bosses - 24 January 2022.pdf' ('application/pdf')>, <FileStorage: "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf" ('application/pdf')>, <FileStorage: 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022.pdf' ('application/pdf')>, <FileStorage: "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf" ('application/pdf')>, <FileStorage: 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022.pdf' ('application/pdf')>, <FileStorage: "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022.pdf" ('application/pdf')>, <FileStorage: "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022.pdf" ('application/pdf')>, <FileStorage: 'The Sun - Norwich bosses worst in country - 24 January 2022.pdf' ('application/pdf')>, <FileStorage: 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023.pdf' ('application/pdf')>, <FileStorage: 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024.pdf' ('application/pdf')>, <FileStorage: 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022.pdf' ('application/pdf')>]
+2025-02-11 18:13:05,857-DEBUG-[APP]: ..Processing BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021.pdf
+2025-02-11 18:13:05,858-DEBUG-[APP]: Saved file: tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf
+2025-02-11 18:13:05,858-INFO-[APP]: ..File saved to: tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf
+2025-02-11 18:13:05,858-DEBUG-[APP]: ..Processing Great Place To Work - Wise - July 2024.pdf
+2025-02-11 18:13:05,859-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf
+2025-02-11 18:13:05,859-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf
+2025-02-11 18:13:05,859-DEBUG-[APP]: ..Processing Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021.pdf
+2025-02-11 18:13:05,859-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf
+2025-02-11 18:13:05,859-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf
+2025-02-11 18:13:05,859-DEBUG-[APP]: ..Processing Business Live - Wise move for Solihull technology firm - 24 September 2021.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf
+2025-02-11 18:13:05,860-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: ..Processing Business Mondays - Solihull tech business scoops national business award - 28 October 2022.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf
+2025-02-11 18:13:05,860-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: ..Processing Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf
+2025-02-11 18:13:05,860-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: ..Processing GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: Saved file: tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf
+2025-02-11 18:13:05,860-INFO-[APP]: ..File saved to: tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf
+2025-02-11 18:13:05,860-DEBUG-[APP]: ..Processing Inflexion - Inflexion announces investment into WithWise - December 2021.pdf
+2025-02-11 18:13:05,861-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf
+2025-02-11 18:13:05,861-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf
+2025-02-11 18:13:05,861-DEBUG-[APP]: ..Processing LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: Saved file: tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf
+2025-02-11 18:13:05,863-INFO-[APP]: ..File saved to: tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: ..Processing Logistics Business - Technology specialist scoops award - 25 October 2022.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf
+2025-02-11 18:13:05,863-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: ..Processing Logistics UK - Logistics Awards 2023 Winners.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf
+2025-02-11 18:13:05,863-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: ..Processing Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf
+2025-02-11 18:13:05,863-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf
+2025-02-11 18:13:05,863-DEBUG-[APP]: ..Processing Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021.pdf
+2025-02-11 18:13:05,864-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf
+2025-02-11 18:13:05,864-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf
+2025-02-11 18:13:05,864-DEBUG-[APP]: ..Processing MarTech Awards _ Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024.pdf
+2025-02-11 18:13:05,864-DEBUG-[APP]: Saved file: tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf
+2025-02-11 18:13:05,864-INFO-[APP]: ..File saved to: tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf
+2025-02-11 18:13:05,864-DEBUG-[APP]: ..Processing Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021.pdf
+2025-02-11 18:13:05,864-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf
+2025-02-11 18:13:05,864-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf
+2025-02-11 18:13:05,864-DEBUG-[APP]: ..Processing Solihull Observer - Solihull tech business scoops national award - 6 November 2022.pdf
+2025-02-11 18:13:05,866-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf
+2025-02-11 18:13:05,866-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf
+2025-02-11 18:13:05,866-DEBUG-[APP]: ..Processing Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022.pdf
+2025-02-11 18:13:05,866-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf
+2025-02-11 18:13:05,866-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf
+2025-02-11 18:13:05,866-DEBUG-[APP]: ..Processing The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf
+2025-02-11 18:13:05,867-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: ..Processing The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf
+2025-02-11 18:13:05,867-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: ..Processing The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf
+2025-02-11 18:13:05,867-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: ..Processing The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf
+2025-02-11 18:13:05,867-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf
+2025-02-11 18:13:05,867-DEBUG-[APP]: ..Processing The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf
+2025-02-11 18:13:05,869-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:05,869-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:05,869-DEBUG-[APP]: ..Processing The Daily Mirror - City with the worst bosses - 24 January 2022.pdf
+2025-02-11 18:13:05,869-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf
+2025-02-11 18:13:05,869-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf
+2025-02-11 18:13:05,869-DEBUG-[APP]: ..Processing The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf
+2025-02-11 18:13:05,869-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:05,870-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:05,870-DEBUG-[APP]: ..Processing The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022.pdf
+2025-02-11 18:13:05,870-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf
+2025-02-11 18:13:05,870-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf
+2025-02-11 18:13:05,870-DEBUG-[APP]: ..Processing The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf
+2025-02-11 18:13:05,871-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:05,871-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:05,871-DEBUG-[APP]: ..Processing The Independent - Is this Britains most picturesque delivery route - 13 August 2022.pdf
+2025-02-11 18:13:05,871-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf
+2025-02-11 18:13:05,871-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf
+2025-02-11 18:13:05,871-DEBUG-[APP]: ..Processing The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022.pdf
+2025-02-11 18:13:05,871-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf
+2025-02-11 18:13:05,871-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf
+2025-02-11 18:13:05,871-DEBUG-[APP]: ..Processing The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022.pdf
+2025-02-11 18:13:05,873-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf
+2025-02-11 18:13:05,873-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf
+2025-02-11 18:13:05,873-DEBUG-[APP]: ..Processing The Sun - Norwich bosses worst in country - 24 January 2022.pdf
+2025-02-11 18:13:05,873-DEBUG-[APP]: Saved file: tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf
+2025-02-11 18:13:05,873-INFO-[APP]: ..File saved to: tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf
+2025-02-11 18:13:05,873-DEBUG-[APP]: ..Processing UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023.pdf
+2025-02-11 18:13:05,874-DEBUG-[APP]: Saved file: tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf
+2025-02-11 18:13:05,874-INFO-[APP]: ..File saved to: tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf
+2025-02-11 18:13:05,874-DEBUG-[APP]: ..Processing vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024.pdf
+2025-02-11 18:13:05,874-DEBUG-[APP]: Saved file: tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf
+2025-02-11 18:13:05,874-INFO-[APP]: ..File saved to: tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf
+2025-02-11 18:13:05,874-DEBUG-[APP]: ..Processing Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022.pdf
+2025-02-11 18:13:05,874-DEBUG-[APP]: Saved file: tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf
+2025-02-11 18:13:05,874-INFO-[APP]: ..File saved to: tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf
+2025-02-11 18:13:05,874-DEBUG-[APP]: No coversheet found in form submission
+2025-02-11 18:13:05,874-DEBUG-[APP]: CSV index found in form submission: <FileStorage: 'index.csv' ('text/csv')>
+2025-02-11 18:13:05,874-DEBUG-[APP]: Saved file: tempfiles/206f15c5/index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,874-INFO-[APP]: secure_csv_path: tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,874-DEBUG-[APP]: Reading input CSV:
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['\ufefffilename', 'title', 'date', 'section']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['filename', 'title', 'date', 'section']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021.pdf', 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf', 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Great Place To Work - Wise - July 2024.pdf', 'Great Place To Work - Wise - July 2024', '2024-07-01', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Great_Place_To_Work_-_Wise_-_July_2024.pdf', 'Great Place To Work - Wise - July 2024', '2024-07-01', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021.pdf', 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf', 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Business Live - Wise move for Solihull technology firm - 24 September 2021.pdf', 'Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf', 'Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Business Mondays - Solihull tech business scoops national business award - 28 October 2022.pdf', 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf', 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021.pdf', 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf', 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024.pdf', 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf', 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Inflexion - Inflexion announces investment into WithWise - December 2021.pdf', 'Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf', 'Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ["LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023.pdf", "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf', "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Logistics Business - Technology specialist scoops award - 25 October 2022.pdf', 'Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf', 'Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Logistics UK - Logistics Awards 2023 Winners.pdf', 'Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Logistics_UK_-_Logistics_Awards_2023_Winners.pdf', 'Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ["Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024.pdf", "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf', "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021.pdf', 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf', 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['MarTech Awards _ Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024.pdf', 'MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf', 'MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021.pdf', 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf', 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['Solihull Observer - Solihull tech business scoops national award - 6 November 2022.pdf', 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf', 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ["Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022.pdf", "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf', "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ["The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021.pdf", "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf', "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: Processing row: ['The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022.pdf', 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', '0']
+2025-02-11 18:13:05,875-DEBUG-[APP]: ..Wrote processed file row: ['The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf', 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ["The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021.pdf", "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: ..Wrote processed file row: ['The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf', "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ['The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022.pdf', 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: ..Wrote processed file row: ['The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf', 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ["The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf", "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: ..Wrote processed file row: ['The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ['The Daily Mirror - City with the worst bosses - 24 January 2022.pdf', 'The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: ..Wrote processed file row: ['The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf', 'The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ["The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf", "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: ..Wrote processed file row: ['The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ['The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022.pdf', 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: ..Wrote processed file row: ['The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf', 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', '0']
+2025-02-11 18:13:05,876-DEBUG-[APP]: Processing row: ["The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022.pdf", "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: ..Wrote processed file row: ['The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: Processing row: ['The Independent - Is this Britains most picturesque delivery route - 13 August 2022.pdf', 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: ..Wrote processed file row: ['The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf', 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: Processing row: ["The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022.pdf", "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: ..Wrote processed file row: ['The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf', "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: Processing row: ["The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022.pdf", "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,877-DEBUG-[APP]: ..Wrote processed file row: ['The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf', "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: Processing row: ['The Sun - Norwich bosses worst in country - 24 January 2022.pdf', 'The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: ..Wrote processed file row: ['The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf', 'The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: Processing row: ['UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023.pdf', 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: ..Wrote processed file row: ['UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf', 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: Processing row: ['vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024.pdf', 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: ..Wrote processed file row: ['vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf', 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: Processing row: ['Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022.pdf', 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', '0']
+2025-02-11 18:13:05,878-DEBUG-[APP]: ..Wrote processed file row: ['Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf', 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', '0']
+2025-02-11 18:13:05,878-INFO-[APP]: ..saved csv index as tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,878-DEBUG-[APP]: CSV saved to: tempfiles/206f15c5/index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,879-INFO-[APP]: Calling buntool.create_bundle with params:
+2025-02-11 18:13:05,879-INFO-[APP]: ....input_files: ['tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf', 'tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf', 'tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf', 'tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf', 'tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf', 'tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf', 'tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf', 'tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf', 'tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf', 'tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf', 'tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf', 'tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf', 'tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf', 'tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf', 'tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf', 'tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf', 'tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf', 'tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf', 'tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf']
+2025-02-11 18:13:05,881-INFO-[APP]: ....output_file: Bundle__20250211_181305.pdf
+2025-02-11 18:13:05,881-INFO-[APP]: ....secure_coversheet_filename: None
+2025-02-11 18:13:05,881-INFO-[APP]: ....sanitised_filenames_index_csv: tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,881-INFO-[APP]: ....bundle_config elements:
+2025-02-11 18:13:05,881-INFO-[APP]: ........timestamp: 20250211_181305
+2025-02-11 18:13:05,881-INFO-[APP]: ........case_details: ['Bundle', '', '']
+2025-02-11 18:13:05,881-INFO-[APP]: ........confidential_bool: None
+2025-02-11 18:13:05,881-INFO-[APP]: ........zip_bool: True
+2025-02-11 18:13:05,881-INFO-[APP]: ........session_id: 206f15c5
+2025-02-11 18:13:05,881-INFO-[APP]: ........user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.1
+2025-02-11 18:13:05,881-INFO-[APP]: ........page_num_align: right
+2025-02-11 18:13:05,881-INFO-[APP]: ........index_font: sans
+2025-02-11 18:13:05,881-INFO-[APP]: ........footer_font: sans
+2025-02-11 18:13:05,881-INFO-[APP]: ........page_num_style: page_x
+2025-02-11 18:13:05,881-INFO-[APP]: ........footer_prefix: 
+2025-02-11 18:13:05,881-INFO-[APP]: ........date_setting: show_date
+2025-02-11 18:13:05,881-INFO-[APP]: ........roman_for_preface: False
+2025-02-11 18:13:05,881-INFO-[APP]: ........temp_dir: tempfiles/206f15c5
+2025-02-11 18:13:05,881-INFO-[APP]: ........logs_dir: logs
+2025-02-11 18:13:05,881-INFO-[BUN]: [CB]THIS IS BUNTOOL VERSION 2025-01-24
+2025-02-11 18:13:05,881-INFO-[BUN]: [CB]Temp directory created at tempfiles/206f15c5.
+2025-02-11 18:13:05,881-INFO-[BUN]: *****New session: 206f15c5 called create_bundle*****
+2025-02-11 18:13:05,881-INFO-[BUN]: 206f15c5 has the USER AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.1
+2025-02-11 18:13:05,881-INFO-[BUN]: Bundle creation called with 33 input files and output file Bundle__20250211_181305.pdf
+2025-02-11 18:13:05,881-DEBUG-[BUN]: [CB]create_bundle received the following arguments:
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [CB]....input_files: ['tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf', 'tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf', 'tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf', 'tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf', 'tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf', 'tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf', 'tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf', 'tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf', 'tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf', 'tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf', 'tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf', 'tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf', 'tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf', 'tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf', 'tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf', 'tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf', 'tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf', 'tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf', 'tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf']
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [CB]....output_file: Bundle__20250211_181305.pdf
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [CB]....coversheet: None
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [CB]....index_file: tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [CB]....bundle_config: {'timestamp': '20250211_181305', 'case_details': ['Bundle', '', ''], 'csv_string': None, 'confidential_bool': False, 'zip_bool': True, 'session_id': '206f15c5', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.1', 'page_num_align': 'right', 'index_font': 'sans', 'footer_font': 'sans', 'page_num_style': 'page_x', 'footer_prefix': '', 'date_setting': 'show_date', 'roman_for_preface': False, 'expected_length_of_frontmatter': 0, 'main_page_count': 0, 'total_number_of_pages': 0, 'temp_dir': 'tempfiles/206f15c5', 'logs_dir': 'logs'}
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [CB]Calling load_index_data [LI] with index_file: tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]Loading index data from tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]..Loaded index data with 33 entries:
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf| -> Value: ('BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Great_Place_To_Work_-_Wise_-_July_2024.pdf| -> Value: ('Great Place To Work - Wise - July 2024', '2024-07-01', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf| -> Value: ('Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf| -> Value: ('Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf| -> Value: ('Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf| -> Value: ('Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf| -> Value: ('GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf| -> Value: ('Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf| -> Value: ("LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf| -> Value: ('Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Logistics_UK_-_Logistics_Awards_2023_Winners.pdf| -> Value: ('Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf| -> Value: ("Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', '0')
+2025-02-11 18:13:05,882-DEBUG-[BUN]: [LID]....Key: |Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf| -> Value: ('Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf| -> Value: ('MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf| -> Value: ('Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf| -> Value: ('Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf| -> Value: ("Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf| -> Value: ("The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf| -> Value: ('The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf| -> Value: ("The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf| -> Value: ('The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf| -> Value: ("The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf| -> Value: ('The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf| -> Value: ("The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf| -> Value: ('The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf| -> Value: ("The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf| -> Value: ('The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf| -> Value: ("The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf| -> Value: ("The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', '0')
+2025-02-11 18:13:05,883-DEBUG-[BUN]: [LID]....Key: |The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf| -> Value: ('The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', '0')
+2025-02-11 18:13:05,885-DEBUG-[BUN]: [LID]....Key: |UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf| -> Value: ('UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', '0')
+2025-02-11 18:13:05,885-DEBUG-[BUN]: [LID]....Key: |vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf| -> Value: ('vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', '0')
+2025-02-11 18:13:05,886-DEBUG-[BUN]: [LID]....Key: |Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf| -> Value: ('Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', '0')
+2025-02-11 18:13:05,886-DEBUG-[BUN]: [CB]Calling merge_pdfs_create_toc_entries [MP] with arguments:
+2025-02-11 18:13:05,886-DEBUG-[BUN]: [CB]....input_files: ['tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf', 'tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf', 'tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf', 'tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf', 'tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf', 'tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf', 'tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf', 'tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf', 'tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf', 'tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf', 'tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf', 'tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf', 'tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf', 'tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf', 'tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf', 'tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf', 'tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf', 'tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf', 'tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf']
+2025-02-11 18:13:05,888-DEBUG-[BUN]: [CB]....merged_file: tempfiles/206f15c5/TEMP01_mainpages.pdf
+2025-02-11 18:13:05,888-DEBUG-[BUN]: [CB]....index_data: {'BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf': ('BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', '0'), 'Great_Place_To_Work_-_Wise_-_July_2024.pdf': ('Great Place To Work - Wise - July 2024', '2024-07-01', '0'), 'Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf': ('Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', '0'), 'Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf': ('Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', '0'), 'Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf': ('Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', '0'), 'Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf': ('Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', '0'), 'GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf': ('GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', '0'), 'Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf': ('Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', '0'), 'LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf': ("LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', '0'), 'Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf': ('Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', '0'), 'Logistics_UK_-_Logistics_Awards_2023_Winners.pdf': ('Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', '0'), 'Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf': ("Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', '0'), 'Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf': ('Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', '0'), 'MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf': ('MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', '0'), 'Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf': ('Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', '0'), 'Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf': ('Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', '0'), 'Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf': ("Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', '0'), 'The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf': ("The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', '0'), 'The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf': ('The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', '0'), 'The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf': ("The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', '0'), 'The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf': ('The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', '0'), 'The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf': ("The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0'), 'The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf': ('The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', '0'), 'The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf': ("The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0'), 'The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf': ('The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', '0'), 'The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf': ("The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', '0'), 'The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf': ('The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', '0'), 'The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf': ("The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', '0'), 'The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf': ("The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', '0'), 'The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf': ('The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', '0'), 'UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf': ('UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', '0'), 'vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf': ('vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', '0'), 'Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf': ('Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', '0')}
+2025-02-11 18:13:05,889-DEBUG-[BUN]: [MPCTE]..File BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf found at tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf
+2025-02-11 18:13:05,891-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,891-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,891-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 001., BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021, 0
+2025-02-11 18:13:05,891-DEBUG-[BUN]: [MPCTE]..File Great_Place_To_Work_-_Wise_-_July_2024.pdf found at tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf
+2025-02-11 18:13:05,894-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,894-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,894-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 002., Great Place To Work - Wise - July 2024, 4
+2025-02-11 18:13:05,894-DEBUG-[BUN]: [MPCTE]..File Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf found at tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf
+2025-02-11 18:13:05,897-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,897-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,898-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 003., Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021, 15
+2025-02-11 18:13:05,898-DEBUG-[BUN]: [MPCTE]..File Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf found at tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf
+2025-02-11 18:13:05,927-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,927-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,927-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 004., Business Live - Wise move for Solihull technology firm - 24 September 2021, 17
+2025-02-11 18:13:05,927-DEBUG-[BUN]: [MPCTE]..File Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf found at tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf
+2025-02-11 18:13:05,931-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,931-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,931-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 005., Business Mondays - Solihull tech business scoops national business award - 28 October 2022, 19
+2025-02-11 18:13:05,931-DEBUG-[BUN]: [MPCTE]..File Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf found at tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf
+2025-02-11 18:13:05,939-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,939-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,939-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 006., Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021, 20
+2025-02-11 18:13:05,939-DEBUG-[BUN]: [MPCTE]..File GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf found at tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf
+2025-02-11 18:13:05,943-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,943-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,943-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 007., GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024, 22
+2025-02-11 18:13:05,943-DEBUG-[BUN]: [MPCTE]..File Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf found at tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf
+2025-02-11 18:13:05,948-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,948-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,948-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 008., Inflexion - Inflexion announces investment into WithWise - December 2021, 24
+2025-02-11 18:13:05,948-DEBUG-[BUN]: [MPCTE]..File LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf found at tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf
+2025-02-11 18:13:05,962-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,962-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,962-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 009., LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023, 26
+2025-02-11 18:13:05,962-DEBUG-[BUN]: [MPCTE]..File Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf found at tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf
+2025-02-11 18:13:05,963-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,963-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,963-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 010., Logistics Business - Technology specialist scoops award - 25 October 2022, 29
+2025-02-11 18:13:05,963-DEBUG-[BUN]: [MPCTE]..File Logistics_UK_-_Logistics_Awards_2023_Winners.pdf found at tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf
+2025-02-11 18:13:05,964-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,964-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,964-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 011., Logistics UK - Logistics Awards 2023 Winners, 31
+2025-02-11 18:13:05,964-DEBUG-[BUN]: [MPCTE]..File Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf found at tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf
+2025-02-11 18:13:05,965-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,965-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,965-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 012., Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024, 32
+2025-02-11 18:13:05,965-DEBUG-[BUN]: [MPCTE]..File Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf found at tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf
+2025-02-11 18:13:05,966-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,966-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,966-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 013., Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021, 34
+2025-02-11 18:13:05,966-DEBUG-[BUN]: [MPCTE]..File MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf found at tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf
+2025-02-11 18:13:05,967-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,967-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,967-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 014., MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024, 35
+2025-02-11 18:13:05,967-DEBUG-[BUN]: [MPCTE]..File Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf found at tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf
+2025-02-11 18:13:05,968-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,968-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,968-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 015., Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021, 36
+2025-02-11 18:13:05,968-DEBUG-[BUN]: [MPCTE]..File Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf found at tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf
+2025-02-11 18:13:05,995-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:05,995-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:05,995-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 016., Solihull Observer - Solihull tech business scoops national award - 6 November 2022, 39
+2025-02-11 18:13:05,995-DEBUG-[BUN]: [MPCTE]..File Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf found at tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf
+2025-02-11 18:13:06,003-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,003-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,003-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 017., Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022, 41
+2025-02-11 18:13:06,003-DEBUG-[BUN]: [MPCTE]..File The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf found at tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf
+2025-02-11 18:13:06,022-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,022-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,022-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 018., The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021, 45
+2025-02-11 18:13:06,022-DEBUG-[BUN]: [MPCTE]..File The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf found at tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf
+2025-02-11 18:13:06,034-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,034-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,034-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 019., The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022, 48
+2025-02-11 18:13:06,034-DEBUG-[BUN]: [MPCTE]..File The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf found at tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf
+2025-02-11 18:13:06,044-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,044-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,044-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 020., The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021, 50
+2025-02-11 18:13:06,044-DEBUG-[BUN]: [MPCTE]..File The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf found at tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf
+2025-02-11 18:13:06,056-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,056-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,056-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 021., The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022, 51
+2025-02-11 18:13:06,056-DEBUG-[BUN]: [MPCTE]..File The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf found at tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:06,059-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,059-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,059-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 022., The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022, 52
+2025-02-11 18:13:06,059-DEBUG-[BUN]: [MPCTE]..File The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf found at tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf
+2025-02-11 18:13:06,060-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,060-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,060-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 023., The Daily Mirror - City with the worst bosses - 24 January 2022, 58
+2025-02-11 18:13:06,060-DEBUG-[BUN]: [MPCTE]..File The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf found at tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 024., The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022, 59
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]..File The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf found at tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 025., The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022, 66
+2025-02-11 18:13:06,062-DEBUG-[BUN]: [MPCTE]..File The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf found at tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:06,065-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,065-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,065-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 026., The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022, 67
+2025-02-11 18:13:06,065-DEBUG-[BUN]: [MPCTE]..File The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf found at tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf
+2025-02-11 18:13:06,076-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,076-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,076-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 027., The Independent - Is this Britains most picturesque delivery route - 13 August 2022, 76
+2025-02-11 18:13:06,076-DEBUG-[BUN]: [MPCTE]..File The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf found at tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf
+2025-02-11 18:13:06,077-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,077-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,077-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 028., The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022, 80
+2025-02-11 18:13:06,077-DEBUG-[BUN]: [MPCTE]..File The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf found at tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf
+2025-02-11 18:13:06,087-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,087-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,087-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 029., The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022, 81
+2025-02-11 18:13:06,087-DEBUG-[BUN]: [MPCTE]..File The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf found at tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf
+2025-02-11 18:13:06,088-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,088-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,088-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 030., The Sun - Norwich bosses worst in country - 24 January 2022, 86
+2025-02-11 18:13:06,089-DEBUG-[BUN]: [MPCTE]..File UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf found at tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf
+2025-02-11 18:13:06,094-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,094-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,094-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 031., UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023, 87
+2025-02-11 18:13:06,094-DEBUG-[BUN]: [MPCTE]..File vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf found at tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf
+2025-02-11 18:13:06,096-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,096-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,096-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 032., vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024, 90
+2025-02-11 18:13:06,096-DEBUG-[BUN]: [MPCTE]..File Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf found at tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf
+2025-02-11 18:13:06,097-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-02-11 18:13:06,097-DEBUG-[BUN]: [MPCTE]..found index data
+2025-02-11 18:13:06,097-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 033., Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022, 95
+2025-02-11 18:13:06,187-INFO-[BUN]: [CB]Merged PDF created at tempfiles/206f15c5/TEMP01_mainpages.pdf
+2025-02-11 18:13:06,187-INFO-[BUN]: =============================================================================
+2025-02-11 18:13:06,187-INFO-[BUN]: BUNTOOL -- BEGIN RECORD OF USER SETTINGS
+2025-02-11 18:13:06,187-INFO-[BUN]: Time of use: 20250211_181305
+2025-02-11 18:13:06,187-INFO-[BUN]: STEP ONE:
+2025-02-11 18:13:06,187-INFO-[BUN]: ..Bundle Title: 
+2025-02-11 18:13:06,187-INFO-[BUN]: ..Case Name: Bundle
+2025-02-11 18:13:06,187-INFO-[BUN]: ..Claim Number: 
+2025-02-11 18:13:06,187-INFO-[BUN]: STEP TWO:
+2025-02-11 18:13:06,187-INFO-[BUN]: ..File 1: Filename "tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf"
+2025-02-11 18:13:06,187-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,188-INFO-[BUN]: .... had 4 page(s).
+2025-02-11 18:13:06,188-INFO-[BUN]: ..File 2: Filename "tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf"
+2025-02-11 18:13:06,188-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,189-INFO-[BUN]: .... had 11 page(s).
+2025-02-11 18:13:06,189-INFO-[BUN]: ..File 3: Filename "tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf"
+2025-02-11 18:13:06,189-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,190-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,190-INFO-[BUN]: ..File 4: Filename "tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf"
+2025-02-11 18:13:06,190-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,193-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,194-INFO-[BUN]: ..File 5: Filename "tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf"
+2025-02-11 18:13:06,194-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,194-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,194-INFO-[BUN]: ..File 6: Filename "tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf"
+2025-02-11 18:13:06,194-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,195-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,195-INFO-[BUN]: ..File 7: Filename "tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf"
+2025-02-11 18:13:06,195-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,196-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,196-INFO-[BUN]: ..File 8: Filename "tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf"
+2025-02-11 18:13:06,196-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,198-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,198-INFO-[BUN]: ..File 9: Filename "tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf"
+2025-02-11 18:13:06,198-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,200-INFO-[BUN]: .... had 3 page(s).
+2025-02-11 18:13:06,200-INFO-[BUN]: ..File 10: Filename "tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf"
+2025-02-11 18:13:06,200-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,201-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,201-INFO-[BUN]: ..File 11: Filename "tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf"
+2025-02-11 18:13:06,201-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,201-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,201-INFO-[BUN]: ..File 12: Filename "tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf"
+2025-02-11 18:13:06,201-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,202-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,202-INFO-[BUN]: ..File 13: Filename "tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf"
+2025-02-11 18:13:06,202-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,202-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,202-INFO-[BUN]: ..File 14: Filename "tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf"
+2025-02-11 18:13:06,202-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,202-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,203-INFO-[BUN]: ..File 15: Filename "tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf"
+2025-02-11 18:13:06,203-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,203-INFO-[BUN]: .... had 3 page(s).
+2025-02-11 18:13:06,203-INFO-[BUN]: ..File 16: Filename "tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf"
+2025-02-11 18:13:06,203-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,207-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,207-INFO-[BUN]: ..File 17: Filename "tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf"
+2025-02-11 18:13:06,207-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,208-INFO-[BUN]: .... had 4 page(s).
+2025-02-11 18:13:06,208-INFO-[BUN]: ..File 18: Filename "tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf"
+2025-02-11 18:13:06,208-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,211-INFO-[BUN]: .... had 3 page(s).
+2025-02-11 18:13:06,211-INFO-[BUN]: ..File 19: Filename "tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf"
+2025-02-11 18:13:06,211-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,213-INFO-[BUN]: .... had 2 page(s).
+2025-02-11 18:13:06,213-INFO-[BUN]: ..File 20: Filename "tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf"
+2025-02-11 18:13:06,213-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,214-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,214-INFO-[BUN]: ..File 21: Filename "tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf"
+2025-02-11 18:13:06,214-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,216-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,216-INFO-[BUN]: ..File 22: Filename "tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf"
+2025-02-11 18:13:06,216-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,217-INFO-[BUN]: .... had 6 page(s).
+2025-02-11 18:13:06,217-INFO-[BUN]: ..File 23: Filename "tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf"
+2025-02-11 18:13:06,217-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,217-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,217-INFO-[BUN]: ..File 24: Filename "tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf"
+2025-02-11 18:13:06,217-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,218-INFO-[BUN]: .... had 7 page(s).
+2025-02-11 18:13:06,218-INFO-[BUN]: ..File 25: Filename "tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf"
+2025-02-11 18:13:06,218-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,218-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,218-INFO-[BUN]: ..File 26: Filename "tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf"
+2025-02-11 18:13:06,218-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,220-INFO-[BUN]: .... had 9 page(s).
+2025-02-11 18:13:06,220-INFO-[BUN]: ..File 27: Filename "tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf"
+2025-02-11 18:13:06,220-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,222-INFO-[BUN]: .... had 4 page(s).
+2025-02-11 18:13:06,222-INFO-[BUN]: ..File 28: Filename "tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf"
+2025-02-11 18:13:06,222-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,222-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,222-INFO-[BUN]: ..File 29: Filename "tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf"
+2025-02-11 18:13:06,222-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,225-INFO-[BUN]: .... had 5 page(s).
+2025-02-11 18:13:06,225-INFO-[BUN]: ..File 30: Filename "tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf"
+2025-02-11 18:13:06,225-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,225-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,225-INFO-[BUN]: ..File 31: Filename "tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf"
+2025-02-11 18:13:06,225-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,226-INFO-[BUN]: .... had 3 page(s).
+2025-02-11 18:13:06,226-INFO-[BUN]: ..File 32: Filename "tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf"
+2025-02-11 18:13:06,226-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,227-INFO-[BUN]: .... had 5 page(s).
+2025-02-11 18:13:06,227-INFO-[BUN]: ..File 33: Filename "tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf"
+2025-02-11 18:13:06,227-INFO-[BUN]: .... had index data: False
+2025-02-11 18:13:06,227-INFO-[BUN]: .... had 1 page(s).
+2025-02-11 18:13:06,227-INFO-[BUN]: STEP THREE:
+2025-02-11 18:13:06,227-INFO-[BUN]: ..Index Options:
+2025-02-11 18:13:06,227-INFO-[BUN]: ....Index font: sans
+2025-02-11 18:13:06,227-INFO-[BUN]: ....No coversheet provided.
+2025-02-11 18:13:06,228-INFO-[BUN]: ....Date column: show_date
+2025-02-11 18:13:06,228-INFO-[BUN]: ....Confidentiality: False
+2025-02-11 18:13:06,228-INFO-[BUN]: ..Page Numbering Options:
+2025-02-11 18:13:06,228-INFO-[BUN]: ....Footer font: sans
+2025-02-11 18:13:06,228-INFO-[BUN]: ....Preface numbering: False
+2025-02-11 18:13:06,228-INFO-[BUN]: ....Page number alignment: right
+2025-02-11 18:13:06,228-INFO-[BUN]: ....Page numbering style: page_x
+2025-02-11 18:13:06,228-INFO-[BUN]: ....No footer prefix
+2025-02-11 18:13:06,228-INFO-[BUN]: END RECORD OF USER SETTINGS
+2025-02-11 18:13:06,228-INFO-[BUN]: =================================================================================
+2025-02-11 18:13:06,250-DEBUG-[BUN]: [CB]Creating dummy TOC PDF to find length of frontmatter
+2025-02-11 18:13:06,285-INFO-[BUN]: [CB]dummy TOC PDF created at tempfiles/206f15c5/TEMP02_dummy_toc.pdf
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]Expected length of frontmatter: 3
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]Calling pdf_paginator_reportlab [PPRL] with arguments:
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]....merged_file: tempfiles/206f15c5/TEMP01_mainpages.pdf
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]....merged_paginated_no_toc: tempfiles/206f15c5/TEMP03_paginated_mainpages.pdf
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]....page_num_alignment: right
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]....page_num_font: sans
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]....page_numbering_style: page_x
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [CB]....footer_prefix: 
+2025-02-11 18:13:06,285-DEBUG-[BUN]: [PPRL]Paginate PDF function beginning (ReporLab version)
+2025-02-11 18:13:06,308-DEBUG-[BUN]: [PPRL]..Main PDF opened with 96 pages
+2025-02-11 18:13:06,308-DEBUG-[BUN]: [GFP]Generating 96 blank pages in tempfiles/206f15c5/pageNumbers.pdf
+2025-02-11 18:13:06,832-DEBUG-[BUN]: [PPRL]Page numbers overlaid on main PDF
+2025-02-11 18:13:06,833-INFO-[BUN]: [CB]..Merged PDF paginated at tempfiles/206f15c5/TEMP03_paginated_mainpages.pdf
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]Calling create_toc_pdf_reportlab [CT] - final version -  with arguments:
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....toc_entries: [['Tab', 'Title', 'Date', 'Page'], ('001.', 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', 0), ('002.', 'Great Place To Work - Wise - July 2024', '2024-07-01', 4), ('003.', 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', 15), ('004.', 'Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', 17), ('005.', 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', 19), ('006.', 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', 20), ('007.', 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', 22), ('008.', 'Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', 24), ('009.', "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', 26), ('010.', 'Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', 29), ('011.', 'Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', 31), ('012.', "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', 32), ('013.', 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', 34), ('014.', 'MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', 35), ('015.', 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', 36), ('016.', 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', 39), ('017.', "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', 41), ('018.', "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', 45), ('019.', 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', 48), ('020.', "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', 50), ('021.', 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', 51), ('022.', "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 52), ('023.', 'The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', 58), ('024.', "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 59), ('025.', 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', 66), ('026.', "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 67), ('027.', 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', 76), ('028.', "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', 80), ('029.', "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', 81), ('030.', 'The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', 86), ('031.', 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', 87), ('032.', 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', 90), ('033.', 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', 95)]
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....casedetails: ['Bundle', '', '']
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....toc_file_path: tempfiles/206f15c5/index.pdf
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....confidential: False
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....date_setting: show_date
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....index_font: sans
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....dummy: False
+2025-02-11 18:13:06,833-DEBUG-[BUN]: [CB]....length_of_frontmatter: 3
+2025-02-11 18:13:06,851-INFO-[BUN]: [CB]..TOC PDF created at index.pdf
+2025-02-11 18:13:06,877-INFO-[BUN]: [CB]No coversheet specified. TOC is the only frontmatter.
+2025-02-11 18:13:06,877-DEBUG-[BUN]: [CB]Frontmatter length is 3 pages.
+2025-02-11 18:13:06,877-INFO-[BUN]: [CB]..Frontmatter length matches expected 3 pages.
+2025-02-11 18:13:07,179-INFO-[BUN]: [CB]..Frontmatter merged with main docs at tempfiles/206f15c5/TEMP04_all_pages.pdf
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [[CB]Beginning hyperlinking process
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]..Calling add_hyperlinks [AH] with arguments:
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......merged_file_with_frontmatter: tempfiles/206f15c5/TEMP04_all_pages.pdf
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......hyperlinked_file: tempfiles/206f15c5/TEMP05-hyperlinked.pdf
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......length_of_coversheet: 0
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......length_of_frontmatter: 3
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......toc_entries: [['Tab', 'Title', 'Date', 'Page'], ('001.', 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', 0), ('002.', 'Great Place To Work - Wise - July 2024', '2024-07-01', 4), ('003.', 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', 15), ('004.', 'Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', 17), ('005.', 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', 19), ('006.', 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', 20), ('007.', 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', 22), ('008.', 'Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', 24), ('009.', "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', 26), ('010.', 'Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', 29), ('011.', 'Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', 31), ('012.', "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', 32), ('013.', 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', 34), ('014.', 'MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', 35), ('015.', 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', 36), ('016.', 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', 39), ('017.', "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', 41), ('018.', "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', 45), ('019.', 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', 48), ('020.', "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', 50), ('021.', 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', 51), ('022.', "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 52), ('023.', 'The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', 58), ('024.', "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 59), ('025.', 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', 66), ('026.', "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 67), ('027.', 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', 76), ('028.', "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', 80), ('029.', "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', 81), ('030.', 'The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', 86), ('031.', 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', 87), ('032.', 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', 90), ('033.', 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', 95)]
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......date_setting: show_date
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [CB]......roman_for_preface: False
+2025-02-11 18:13:07,179-DEBUG-[BUN]: [HYP]Starting hyperlink addition
+2025-02-11 18:13:07,209-DEBUG-[BUN]: [HYP]..Processing page 0 for TOC text extraction
+2025-02-11 18:13:07,234-DEBUG-[BUN]: [HYP]..Processing page 1 for TOC text extraction
+2025-02-11 18:13:07,263-DEBUG-[BUN]: [HYP]..Processing page 2 for TOC text extraction
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ['Tab', 'Title', 'Date', 'Page']
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('001.', 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', 0)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '001\.BusinessLive\-TechfirmWise.*?2021\-12\-064' on TOC pages
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('002.', 'Great Place To Work - Wise - July 2024', '2024-07-01', 4)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '002\.GreatPlaceToWork\-Wise\-.*?2024\-07\-018' on TOC pages
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('003.', 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', 15)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '003\.BirminghamBusinessPost\-So.*?2021\-09\-2219' on TOC pages
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('004.', 'Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', 17)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '004\.BusinessLive\-Wisemovefor.*?2021\-09\-2421' on TOC pages
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('005.', 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', 19)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '005\.BusinessMondays\-Solihullt.*?2022\-10\-2823' on TOC pages
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('006.', 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', 20)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '006\.GreaterBirminghamChamberso.*?2021\-11\-1824' on TOC pages
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('007.', 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', 22)
+2025-02-11 18:13:07,271-DEBUG-[BUN]: [HYP]....Using search-key regex: '007\.GreenFleet\-Shortlistreveal.*?2024\-08\-2326' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('008.', 'Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', 24)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '008\.Inflexion\-Inflexionannounc.*?2021\-12\-0128' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('009.', "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', 26)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '009\.LinkedIn\-AndyStreet'sPost.*?2023\-05\-1630' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('010.', 'Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', 29)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '010\.LogisticsBusiness\-Technolo.*?2022\-10\-2533' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('011.', 'Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', 31)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '011\.LogisticsUK\-LogisticsAwar.*?2025\-02\-1135' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('012.', "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', 32)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '012\.LogisticsUK\-Shortlistreve.*?2024\-08\-2236' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('013.', 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', 34)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '013\.LogisticsVoices\-Logistics.*?2021\-09\-2438' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('014.', 'MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', 35)
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....Using search-key regex: '014\.MarTechAwardsInnovationi.*?2025\-02\-1139' on TOC pages
+2025-02-11 18:13:07,272-DEBUG-[BUN]: [HYP]....found on page 0
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('015.', 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', 36)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '015\.SolihullObserver\-Solihull.*?2021\-11\-2940' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('016.', 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', 39)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '016\.SolihullObserver\-Solihull.*?2022\-11\-0643' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('017.', "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', 41)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '017\.TechnologyDispatch\-WiseNa.*?2022\-10\-0645' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('018.', "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', 45)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '018\.TheBusinessDesk\-Fast\-grow.*?2021\-12\-0649' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('019.', 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', 48)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '019\.TheBusinessMagazine\-Forme.*?2022\-01\-2052' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('020.', "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', 50)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '020\.TheBusinessMagazine\-It's.*?2021\-09\-2054' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('021.', 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', 51)
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....Using search-key regex: '021\.TheBusinessMagazine\-Solih.*?2022\-11\-0755' on TOC pages
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,273-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('022.', "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 52)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '022\.TheDailyExpress\-Mesmerisi.*?2022\-08\-1056' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('023.', 'The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', 58)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '023\.TheDailyMirror\-Citywith.*?2022\-01\-2462' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('024.', "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 59)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '024\.TheDailyMirror\-Mesmerisin.*?2022\-08\-1063' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('025.', 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', 66)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '025\.TheDailyStar\-Aha!Worstb.*?2022\-01\-2470' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('026.', "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 67)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '026\.TheDailyStar\-Mesmerising.*?2022\-08\-1071' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('027.', 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', 76)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '027\.TheIndependent\-IsthisBri.*?2022\-08\-1380' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('028.', "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', 80)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '028\.TheExpress\-Aha!Alanisn't.*?2022\-01\-2484' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('029.', "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', 81)
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....Using search-key regex: '029\.TheSun\-'Britain'sbestdel.*?2022\-08\-1085' on TOC pages
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,274-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('030.', 'The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', 86)
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....Using search-key regex: '030\.TheSun\-Norwichbosseswors.*?2022\-01\-2490' on TOC pages
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....found on page 1
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('031.', 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', 87)
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....Using search-key regex: '031\.UKTransportAwards\-MostIn.*?2025\-02\-1191' on TOC pages
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....found on page 2
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('032.', 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', 90)
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....Using search-key regex: '032\.vanfleetworld\-Vanfleetssh.*?2024\-08\-2094' on TOC pages
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....found on page 2
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]..Processing TOC entry: ('033.', 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', 95)
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....Using search-key regex: '033\.WarehouseNews\-Logisticste.*?2022\-11\-0199' on TOC pages
+2025-02-11 18:13:07,275-DEBUG-[BUN]: [HYP]....found on page 2
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 3
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 7
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 18
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 20
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 22
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 23
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 25
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 27
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 29
+2025-02-11 18:13:07,657-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 32
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 34
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 35
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 37
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 0 to destination pg index 38
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 39
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 42
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 44
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 48
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 51
+2025-02-11 18:13:07,658-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 53
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 54
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 55
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 61
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 62
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 69
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 70
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 79
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 83
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 84
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 1 to destination pg index 89
+2025-02-11 18:13:07,662-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 2 to destination pg index 90
+2025-02-11 18:13:07,663-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 2 to destination pg index 93
+2025-02-11 18:13:07,663-DEBUG-[BUN]: [AAWT]Added annotations on TOC page 2 to destination pg index 98
+2025-02-11 18:13:07,772-INFO-[BUN]: [CB]..Hyperlinked PDF created at tempfiles/206f15c5/TEMP05-hyperlinked.pdf
+2025-02-11 18:13:07,772-DEBUG-[BUN]: [CB]Calling add_bookmarks_to_pdf [AB] with arguments:
+2025-02-11 18:13:07,772-DEBUG-[BUN]: [CB]....hyperlinked_file: tempfiles/206f15c5/TEMP05-hyperlinked.pdf
+2025-02-11 18:13:07,772-DEBUG-[BUN]: [CB]....main_bookmarked_file: tempfiles/206f15c5/TEMP06_main_bookmarks.pdf
+2025-02-11 18:13:07,772-DEBUG-[BUN]: [CB]....toc_entries: [['Tab', 'Title', 'Date', 'Page'], ('001.', 'BusinessLive - Tech firm Wise secures private equity deal - 6 December 2021', '2021-12-06', 0), ('002.', 'Great Place To Work - Wise - July 2024', '2024-07-01', 4), ('003.', 'Birmingham Business Post - Solihull technology firm celebrates outstanding employer award win - 22 September 2021', '2021-09-22', 15), ('004.', 'Business Live - Wise move for Solihull technology firm - 24 September 2021', '2021-09-24', 17), ('005.', 'Business Mondays - Solihull tech business scoops national business award - 28 October 2022', '2022-10-28', 19), ('006.', 'Greater Birmingham Chambers of Commerce - Solihull technology firm named digital startup of the year - 18 November 2021', '2021-11-18', 20), ('007.', 'GreenFleet - Shortlist revealed for Logistics Awards 2024 - 23 August 2024', '2024-08-23', 22), ('008.', 'Inflexion - Inflexion announces investment into WithWise - December 2021', '2021-12-01', 24), ('009.', "LinkedIn - Andy Street's Post (A real hidden gem in Solihull) - 16 May 2023", '2023-05-16', 26), ('010.', 'Logistics Business - Technology specialist scoops award - 25 October 2022', '2022-10-25', 29), ('011.', 'Logistics UK - Logistics Awards 2023 Winners', '2025-02-11', 31), ('012.', "Logistics UK - Shortlist revealed for Logistics UK's Logistics Awards 2024 - 22 August 2024", '2024-08-22', 32), ('013.', 'Logistics Voices - Logistics technology specialist recognised as outstanding employer - 24 September 2021', '2021-09-24', 34), ('014.', 'MarTech Awards   Innovation in Business - Best Onboarding Software Solutions Company 2024 (UK) - 2024', '2025-02-11', 35), ('015.', 'Solihull Observer - Solihull company wins West Midlands technology award - 29 November 2021', '2021-11-29', 36), ('016.', 'Solihull Observer - Solihull tech business scoops national award - 6 November 2022', '2022-11-06', 39), ('017.', "Technology Dispatch - Wise Named Among UK's Best Tech Employers - 6 October 2022", '2022-10-06', 41), ('018.', "The Business Desk - Fast-growth technology business Wise secures 'eight-figure' investment from Inflexion - 6 December 2021", '2021-12-06', 45), ('019.', 'The Business Magazine - Former Tesco Mobile boss Lance Batchelor appointed tech firm chairman - 20 January 2022', '2022-01-20', 48), ('020.', "The Business Magazine - It's great working at Solihull based tech recruitment company Wise - 20 September 2021", '2021-09-20', 50), ('021.', 'The Business Magazine - Solihull tech firm Wise scoops national business award - 7 November 2022', '2022-11-07', 51), ('022.', "The Daily Express - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 52), ('023.', 'The Daily Mirror - City with the worst bosses - 24 January 2022', '2022-01-24', 58), ('024.', "The Daily Mirror - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 59), ('025.', 'The Daily Star - Aha! Worst bosses are in Norwich; PARTRIDGE CITY TOPS TABLE - 24 January 2022', '2022-01-24', 66), ('026.', "The Daily Star - Mesmerising video shows Britain's most scenic delivery route through leafy mountains - 10 August 2022", '2022-08-10', 67), ('027.', 'The Independent - Is this Britains most picturesque delivery route - 13 August 2022', '2022-08-13', 76), ('028.', "The Express - Aha! Alan isn't the only bad boss in city - 24 January 2022", '2022-01-24', 80), ('029.', "The Sun - 'Britain's best delivery route' shown in mesmerising video as van drives over Lake District's highest pass - 10 August 2022", '2022-08-10', 81), ('030.', 'The Sun - Norwich bosses worst in country - 24 January 2022', '2022-01-24', 86), ('031.', 'UK Transport Awards - Most Innovative Driver Recruitment Management System 2023 - 2023', '2025-02-11', 87), ('032.', 'vanfleetworld - Van fleets shortlisted for 2024 Logistics UK awards - 20 August 2024', '2024-08-20', 90), ('033.', 'Warehouse News - Logistics technology firm ranked as one of UKs Best Tech Employers - 1 November 2022', '2022-11-01', 95)]
+2025-02-11 18:13:07,772-DEBUG-[BUN]: [CB]....length_of_frontmatter: 3
+2025-02-11 18:13:08,007-INFO-[BUN]: [CB]..Bookmarked PDF created at tempfiles/206f15c5/TEMP06_main_bookmarks.pdf
+2025-02-11 18:13:08,012-DEBUG-[BUN]: [CB]Calling bookmark_the_index [BI] with arguments:
+2025-02-11 18:13:08,012-DEBUG-[BUN]: [CB]....main_bookmarked_file: tempfiles/206f15c5/TEMP06_main_bookmarks.pdf
+2025-02-11 18:13:08,012-DEBUG-[BUN]: [CB]....index_bookmarked_file: tempfiles/206f15c5/TEMP07_all_bookmarks.pdf
+2025-02-11 18:13:08,012-DEBUG-[BUN]: [CB]....coversheet_path: None
+2025-02-11 18:13:08,037-DEBUG-[BUN]: [BTI]no coversheet specified, outline item added for index
+2025-02-11 18:13:08,240-INFO-[BUN]: [CB]..Index bookmarked PDF created at tempfiles/206f15c5/TEMP07_all_bookmarks.pdf
+2025-02-11 18:13:08,253-INFO-[BUN]: [CB]Completed bundle creation. output written to: tempfiles/206f15c5/Bundle__20250211_181305.pdf
+2025-02-11 18:13:08,253-DEBUG-[BUN]: [CB]Calling create_zip_file:
+2025-02-11 18:13:08,253-DEBUG-[BUN]: [CZF]Creating zip file at tempfiles/206f15c5/Bundle__20250211_181305_files.zip
+2025-02-11 18:13:08,296-INFO-[BUN]: [CB]..Zip file created at Bundle__20250211_181305_files.zip
+2025-02-11 18:13:08,296-DEBUG-[BUN]: [CB]Cleaning up temporary files: ['tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv', 'tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf', 'tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf', 'tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf', 'tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf', 'tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf', 'tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf', 'tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf', 'tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf', 'tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf', 'tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf', 'tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf', 'tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf', 'tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf', 'tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf', 'tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf', 'tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf', 'tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf', 'tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf', 'tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf', 'tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf', 'tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf', 'tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf', 'tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf', 'tempfiles/206f15c5/TEMP01_mainpages.pdf', 'tempfiles/206f15c5/TEMP02_dummy_toc.pdf', 'tempfiles/206f15c5/TEMP02_dummy_toc.out', 'tempfiles/206f15c5/TEMP02_dummy_toc.aux', 'tempfiles/206f15c5/dummytoc.tex', 'tempfiles/206f15c5/TEMP03_paginated_mainpages.pdf', 'tempfiles/206f15c5/pageNumbers.aux', 'tempfiles/206f15c5/pageNumbers.pdf', 'tempfiles/206f15c5/pageNumbers.tex', 'tempfiles/206f15c5/index.pdf', 'tempfiles/206f15c5/index.out', 'tempfiles/206f15c5/index.log', 'tempfiles/206f15c5/index.aux', 'tempfiles/206f15c5/toc.tex', 'tempfiles/206f15c5/TEMP04_all_pages.pdf', 'tempfiles/206f15c5/TEMP05-hyperlinked.pdf', 'tempfiles/206f15c5/TEMP06_main_bookmarks.pdf', 'tempfiles/206f15c5/TEMP07_all_bookmarks.pdf']
+2025-02-11 18:13:08,296-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/securefilenames_index_206f15c5_20250211_181305.csv
+2025-02-11 18:13:08,296-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,296-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/BusinessLive_-_Tech_firm_Wise_secures_private_equity_deal_-_6_December_2021.pdf
+2025-02-11 18:13:08,296-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,296-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Great_Place_To_Work_-_Wise_-_July_2024.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Birmingham_Business_Post_-_Solihull_technology_firm_celebrates_outstanding_employer_award_win_-_22_September_2021.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Business_Live_-_Wise_move_for_Solihull_technology_firm_-_24_September_2021.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Business_Mondays_-_Solihull_tech_business_scoops_national_business_award_-_28_October_2022.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Greater_Birmingham_Chambers_of_Commerce_-_Solihull_technology_firm_named_digital_startup_of_the_year_-_18_November_2021.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/GreenFleet_-_Shortlist_revealed_for_Logistics_Awards_2024_-_23_August_2024.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Inflexion_-_Inflexion_announces_investment_into_WithWise_-_December_2021.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/LinkedIn_-_Andy_Streets_Post_A_real_hidden_gem_in_Solihull_-_16_May_2023.pdf
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,297-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Logistics_Business_-_Technology_specialist_scoops_award_-_25_October_2022.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Logistics_UK_-_Logistics_Awards_2023_Winners.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Logistics_UK_-_Shortlist_revealed_for_Logistics_UKs_Logistics_Awards_2024_-_22_August_2024.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Logistics_Voices_-_Logistics_technology_specialist_recognised_as_outstanding_employer_-_24_September_2021.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/MarTech_Awards___Innovation_in_Business_-_Best_Onboarding_Software_Solutions_Company_2024_UK_-_2024.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Solihull_Observer_-_Solihull_company_wins_West_Midlands_technology_award_-_29_November_2021.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Solihull_Observer_-_Solihull_tech_business_scoops_national_award_-_6_November_2022.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Technology_Dispatch_-_Wise_Named_Among_UKs_Best_Tech_Employers_-_6_October_2022.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Business_Desk_-_Fast-growth_technology_business_Wise_secures_eight-figure_investment_from_Inflexion_-_6_December_2021.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Business_Magazine_-_Former_Tesco_Mobile_boss_Lance_Batchelor_appointed_tech_firm_chairman_-_20_January_2022.pdf
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,298-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Business_Magazine_-_Its_great_working_at_Solihull_based_tech_recruitment_company_Wise_-_20_September_2021.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Business_Magazine_-_Solihull_tech_firm_Wise_scoops_national_business_award_-_7_November_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Daily_Express_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Daily_Mirror_-_City_with_the_worst_bosses_-_24_January_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Daily_Mirror_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Daily_Star_-_Aha_Worst_bosses_are_in_Norwich_PARTRIDGE_CITY_TOPS_TABLE_-_24_January_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Daily_Star_-_Mesmerising_video_shows_Britains_most_scenic_delivery_route_through_leafy_mountains_-_10_August_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Independent_-_Is_this_Britains_most_picturesque_delivery_route_-_13_August_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Express_-_Aha_Alan_isnt_the_only_bad_boss_in_city_-_24_January_2022.pdf
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,299-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Sun_-_Britains_best_delivery_route_shown_in_mesmerising_video_as_van_drives_over_Lake_Districts_highest_pass_-_10_August_2022.pdf
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/The_Sun_-_Norwich_bosses_worst_in_country_-_24_January_2022.pdf
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/UK_Transport_Awards_-_Most_Innovative_Driver_Recruitment_Management_System_2023_-_2023.pdf
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/vanfleetworld_-_Van_fleets_shortlisted_for_2024_Logistics_UK_awards_-_20_August_2024.pdf
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/Warehouse_News_-_Logistics_technology_firm_ranked_as_one_of_UKs_Best_Tech_Employers_-_1_November_2022.pdf
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,300-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP01_mainpages.pdf
+2025-02-11 18:13:08,303-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,303-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP02_dummy_toc.pdf
+2025-02-11 18:13:08,303-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,303-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/TEMP02_dummy_toc.out does not exist, nothing to clean up.
+2025-02-11 18:13:08,303-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/TEMP02_dummy_toc.aux does not exist, nothing to clean up.
+2025-02-11 18:13:08,303-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/dummytoc.tex does not exist, nothing to clean up.
+2025-02-11 18:13:08,303-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP03_paginated_mainpages.pdf
+2025-02-11 18:13:08,305-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,305-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/pageNumbers.aux does not exist, nothing to clean up.
+2025-02-11 18:13:08,305-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/pageNumbers.pdf
+2025-02-11 18:13:08,305-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,305-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/pageNumbers.tex does not exist, nothing to clean up.
+2025-02-11 18:13:08,305-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/index.pdf
+2025-02-11 18:13:08,305-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,305-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/index.out does not exist, nothing to clean up.
+2025-02-11 18:13:08,305-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/index.log does not exist, nothing to clean up.
+2025-02-11 18:13:08,305-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/index.aux does not exist, nothing to clean up.
+2025-02-11 18:13:08,305-INFO-[BUN]: [CB]....Info: Temporary file tempfiles/206f15c5/toc.tex does not exist, nothing to clean up.
+2025-02-11 18:13:08,305-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP04_all_pages.pdf
+2025-02-11 18:13:08,308-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,308-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP05-hyperlinked.pdf
+2025-02-11 18:13:08,310-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,310-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP06_main_bookmarks.pdf
+2025-02-11 18:13:08,312-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,312-DEBUG-[BUN]: [CB]..Deleting: tempfiles/206f15c5/TEMP07_all_bookmarks.pdf
+2025-02-11 18:13:08,315-DEBUG-[BUN]: [CB]....deleted.
+2025-02-11 18:13:08,315-INFO-[BUN]: [CB]..All temporary files deleted successfully.
+2025-02-11 18:13:08,315-INFO-[BUN]: [CB]..All temporary files deleted successfully.
+2025-02-11 18:13:08,343-DEBUG-[APP]: Copied final PDF to: /tmp/bundles/Bundle__20250211_181305.pdf
+2025-02-11 18:13:08,356-DEBUG-[APP]: Copied final ZIP to: /tmp/bundles/Bundle__20250211_181305_files.zip

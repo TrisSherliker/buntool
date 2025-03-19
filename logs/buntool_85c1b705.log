@@ -1,0 +1,318 @@
+2025-03-19 17:59:36,265-DEBUG-[APP]: Ingesting form information...
+2025-03-19 17:59:36,265-INFO-[APP]: ..index file found in form submission
+2025-03-19 17:59:36,265-INFO-[APP]: ..index data: <FileStorage: 'index.csv' ('text/csv')>
+2025-03-19 17:59:36,265-DEBUG-[APP]: generated output filename: test_test_20250319_175936.pdf
+2025-03-19 17:59:36,265-DEBUG-[APP]: Gathering uploaded files...
+2025-03-19 17:59:36,266-DEBUG-[APP]: ....[<FileStorage: 'Malvina Reynolds - Magic Penny.pdf' ('application/pdf')>, <FileStorage: 'Jeff Buckley - Hallelujah.pdf' ('application/pdf')>, <FileStorage: '99 Red Balloons.pdf' ('application/pdf')>, <FileStorage: '99 red balloons larger.pdf' ('application/pdf')>, <FileStorage: 'The Longest Johns - Wellerman.pdf' ('application/pdf')>, <FileStorage: 'Nathan Evans - Wellerman.pdf' ('application/pdf')>, <FileStorage: 'AlicebanD - True Blood.pdf' ('application/pdf')>, <FileStorage: 'Gary Jules - Mad World.pdf' ('application/pdf')>, <FileStorage: 'Misc Traditional - Wellerman.pdf' ('application/pdf')>, <FileStorage: 'Parker Millsap - Old Time Religion.pdf' ('application/pdf')>, <FileStorage: 'Buddy Holly - Everyday.pdf' ('application/pdf')>, <FileStorage: 'Smash Mouth - All Star.pdf' ('application/pdf')>, <FileStorage: 'Creedence Clearwater Revival - Bad Moon Rising.pdf' ('application/pdf')>, <FileStorage: 'Kenny Rogers - The Gambler.pdf' ('application/pdf')>, <FileStorage: 'Annie Lennox - Into The West.pdf' ('application/pdf')>, <FileStorage: 'Johnny Cash - Folsom Prison Blues.pdf' ('application/pdf')>, <FileStorage: 'Misc Cartoons - Lava - Lava.pdf' ('application/pdf')>, <FileStorage: 'craig wright is not satoshi.pdf' ('application/pdf')>]
+2025-03-19 17:59:36,266-DEBUG-[APP]: ..Processing Malvina Reynolds - Magic Penny.pdf
+2025-03-19 17:59:36,266-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf
+2025-03-19 17:59:36,266-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf
+2025-03-19 17:59:36,266-DEBUG-[APP]: ..Processing Jeff Buckley - Hallelujah.pdf
+2025-03-19 17:59:36,267-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf
+2025-03-19 17:59:36,267-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf
+2025-03-19 17:59:36,267-DEBUG-[APP]: ..Processing 99 Red Balloons.pdf
+2025-03-19 17:59:36,267-DEBUG-[APP]: Saved file: tempfiles/85c1b705/99_Red_Balloons.pdf
+2025-03-19 17:59:36,267-INFO-[APP]: ..File saved to: tempfiles/85c1b705/99_Red_Balloons.pdf
+2025-03-19 17:59:36,267-DEBUG-[APP]: ..Processing 99 red balloons larger.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: Saved file: tempfiles/85c1b705/99_red_balloons_larger.pdf
+2025-03-19 17:59:36,268-INFO-[APP]: ..File saved to: tempfiles/85c1b705/99_red_balloons_larger.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: ..Processing The Longest Johns - Wellerman.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: Saved file: tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf
+2025-03-19 17:59:36,268-INFO-[APP]: ..File saved to: tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: ..Processing Nathan Evans - Wellerman.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf
+2025-03-19 17:59:36,268-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: ..Processing AlicebanD - True Blood.pdf
+2025-03-19 17:59:36,268-DEBUG-[APP]: Saved file: tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf
+2025-03-19 17:59:36,268-INFO-[APP]: ..File saved to: tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: ..Processing Gary Jules - Mad World.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf
+2025-03-19 17:59:36,269-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: ..Processing Misc Traditional - Wellerman.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf
+2025-03-19 17:59:36,269-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: ..Processing Parker Millsap - Old Time Religion.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf
+2025-03-19 17:59:36,269-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf
+2025-03-19 17:59:36,269-DEBUG-[APP]: ..Processing Buddy Holly - Everyday.pdf
+2025-03-19 17:59:36,270-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf
+2025-03-19 17:59:36,270-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf
+2025-03-19 17:59:36,270-DEBUG-[APP]: ..Processing Smash Mouth - All Star.pdf
+2025-03-19 17:59:36,270-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf
+2025-03-19 17:59:36,270-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf
+2025-03-19 17:59:36,270-DEBUG-[APP]: ..Processing Creedence Clearwater Revival - Bad Moon Rising.pdf
+2025-03-19 17:59:36,271-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf
+2025-03-19 17:59:36,271-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf
+2025-03-19 17:59:36,271-DEBUG-[APP]: ..Processing Kenny Rogers - The Gambler.pdf
+2025-03-19 17:59:36,271-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf
+2025-03-19 17:59:36,271-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf
+2025-03-19 17:59:36,271-DEBUG-[APP]: ..Processing Annie Lennox - Into The West.pdf
+2025-03-19 17:59:36,271-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf
+2025-03-19 17:59:36,271-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf
+2025-03-19 17:59:36,271-DEBUG-[APP]: ..Processing Johnny Cash - Folsom Prison Blues.pdf
+2025-03-19 17:59:36,272-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf
+2025-03-19 17:59:36,272-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf
+2025-03-19 17:59:36,272-DEBUG-[APP]: ..Processing Misc Cartoons - Lava - Lava.pdf
+2025-03-19 17:59:36,272-DEBUG-[APP]: Saved file: tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf
+2025-03-19 17:59:36,272-INFO-[APP]: ..File saved to: tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf
+2025-03-19 17:59:36,272-DEBUG-[APP]: ..Processing craig wright is not satoshi.pdf
+2025-03-19 17:59:36,272-DEBUG-[APP]: Saved file: tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf
+2025-03-19 17:59:36,272-INFO-[APP]: ..File saved to: tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf
+2025-03-19 17:59:36,272-DEBUG-[APP]: No coversheet found in form submission
+2025-03-19 17:59:36,272-DEBUG-[APP]: CSV index found in form submission: <FileStorage: 'index.csv' ('text/csv')>
+2025-03-19 17:59:36,272-DEBUG-[APP]: Saved file: tempfiles/85c1b705/index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,273-INFO-[APP]: secure_csv_path: tempfiles/85c1b705/securefilenames_index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,273-DEBUG-[APP]: Reading input CSV:
+2025-03-19 17:59:36,273-DEBUG-[APP]: Processing row: ['\ufefffilename', 'title', 'date', 'section']
+2025-03-19 17:59:36,273-DEBUG-[APP]: ..Wrote processed file row: ['filename', 'title', 'date', 'section']
+2025-03-19 17:59:36,273-DEBUG-[APP]: Processing row: ['Malvina Reynolds - Magic Penny.pdf', 'Malvina Reynolds - Magic Penny', '2025-02-08', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: ..Wrote processed file row: ['Malvina_Reynolds_-_Magic_Penny.pdf', 'Malvina Reynolds - Magic Penny', '2025-02-08', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: Processing row: ['Jeff Buckley - Hallelujah.pdf', 'Jeff Buckley - Hallelujah', '2025-02-10', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: ..Wrote processed file row: ['Jeff_Buckley_-_Hallelujah.pdf', 'Jeff Buckley - Hallelujah', '2025-02-10', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: Processing row: ['99 Red Balloons.pdf', '99 Red Balloons', '2025-02-11', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: ..Wrote processed file row: ['99_Red_Balloons.pdf', '99 Red Balloons', '2025-02-11', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: Processing row: ['99 red balloons larger.pdf', '99 red balloons larger', '2025-02-11', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: ..Wrote processed file row: ['99_red_balloons_larger.pdf', '99 red balloons larger', '2025-02-11', '0']
+2025-03-19 17:59:36,273-DEBUG-[APP]: Processing row: ['The Longest Johns - Wellerman.pdf', 'The Longest Johns - Wellerman', '2025-02-15', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: ..Wrote processed file row: ['The_Longest_Johns_-_Wellerman.pdf', 'The Longest Johns - Wellerman', '2025-02-15', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: Processing row: ['Nathan Evans - Wellerman.pdf', 'Nathan Evans - Wellerman', '2025-02-15', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: ..Wrote processed file row: ['Nathan_Evans_-_Wellerman.pdf', 'Nathan Evans - Wellerman', '2025-02-15', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: Processing row: ['AlicebanD - True Blood.pdf', 'AlicebanD - True Blood', '2025-02-15', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: ..Wrote processed file row: ['AlicebanD_-_True_Blood.pdf', 'AlicebanD - True Blood', '2025-02-15', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: Processing row: ['Gary Jules - Mad World.pdf', 'Gary Jules - Mad World', '2025-02-17', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: ..Wrote processed file row: ['Gary_Jules_-_Mad_World.pdf', 'Gary Jules - Mad World', '2025-02-17', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: Processing row: ['Misc Traditional - Wellerman.pdf', 'Misc Traditional - Wellerman', '2025-02-17', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: ..Wrote processed file row: ['Misc_Traditional_-_Wellerman.pdf', 'Misc Traditional - Wellerman', '2025-02-17', '0']
+2025-03-19 17:59:36,274-DEBUG-[APP]: Processing row: ['Parker Millsap - Old Time Religion.pdf', 'Parker Millsap - Old Time Religion', '2025-02-17', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: ..Wrote processed file row: ['Parker_Millsap_-_Old_Time_Religion.pdf', 'Parker Millsap - Old Time Religion', '2025-02-17', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: Processing row: ['Buddy Holly - Everyday.pdf', 'Buddy Holly - Everyday', '2025-02-17', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: ..Wrote processed file row: ['Buddy_Holly_-_Everyday.pdf', 'Buddy Holly - Everyday', '2025-02-17', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: Processing row: ['Smash Mouth - All Star.pdf', 'Smash Mouth - All Star', '2025-02-20', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: ..Wrote processed file row: ['Smash_Mouth_-_All_Star.pdf', 'Smash Mouth - All Star', '2025-02-20', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: Processing row: ['Creedence Clearwater Revival - Bad Moon Rising.pdf', 'Creedence Clearwater Revival - Bad Moon Rising', '2025-03-01', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: ..Wrote processed file row: ['Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf', 'Creedence Clearwater Revival - Bad Moon Rising', '2025-03-01', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: Processing row: ['Kenny Rogers - The Gambler.pdf', 'Kenny Rogers - The Gambler', '2025-03-01', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: ..Wrote processed file row: ['Kenny_Rogers_-_The_Gambler.pdf', 'Kenny Rogers - The Gambler', '2025-03-01', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: Processing row: ['Annie Lennox - Into The West.pdf', 'Annie Lennox - Into The West', '2025-03-01', '0']
+2025-03-19 17:59:36,275-DEBUG-[APP]: ..Wrote processed file row: ['Annie_Lennox_-_Into_The_West.pdf', 'Annie Lennox - Into The West', '2025-03-01', '0']
+2025-03-19 17:59:36,276-DEBUG-[APP]: Processing row: ['Johnny Cash - Folsom Prison Blues.pdf', 'Johnny Cash - Folsom Prison Blues', '2025-03-01', '0']
+2025-03-19 17:59:36,276-DEBUG-[APP]: ..Wrote processed file row: ['Johnny_Cash_-_Folsom_Prison_Blues.pdf', 'Johnny Cash - Folsom Prison Blues', '2025-03-01', '0']
+2025-03-19 17:59:36,276-DEBUG-[APP]: Processing row: ['Misc Cartoons - Lava - Lava.pdf', 'Misc Cartoons - Lava - Lava', '2025-03-08', '0']
+2025-03-19 17:59:36,276-DEBUG-[APP]: ..Wrote processed file row: ['Misc_Cartoons_-_Lava_-_Lava.pdf', 'Misc Cartoons - Lava - Lava', '2025-03-08', '0']
+2025-03-19 17:59:36,276-DEBUG-[APP]: Processing row: ['craig wright is not satoshi.pdf', 'craig wright is not satoshi', '2025-03-15', '0']
+2025-03-19 17:59:36,276-DEBUG-[APP]: ..Wrote processed file row: ['craig_wright_is_not_satoshi.pdf', 'craig wright is not satoshi', '2025-03-15', '0']
+2025-03-19 17:59:36,276-INFO-[APP]: ..saved csv index as tempfiles/85c1b705/securefilenames_index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,276-DEBUG-[APP]: CSV saved to: tempfiles/85c1b705/index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,276-INFO-[APP]: Calling buntool.create_bundle with params:
+2025-03-19 17:59:36,276-INFO-[APP]: ....input_files: ['tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf', 'tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf', 'tempfiles/85c1b705/99_Red_Balloons.pdf', 'tempfiles/85c1b705/99_red_balloons_larger.pdf', 'tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf', 'tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf', 'tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf', 'tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf', 'tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf', 'tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf', 'tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf', 'tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf', 'tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf', 'tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf', 'tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf', 'tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf', 'tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf', 'tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf']
+2025-03-19 17:59:36,276-INFO-[APP]: ....output_file: test_test_20250319_175936.pdf
+2025-03-19 17:59:36,276-INFO-[APP]: ....secure_coversheet_filename: None
+2025-03-19 17:59:36,276-INFO-[APP]: ....sanitised_filenames_index_csv: tempfiles/85c1b705/securefilenames_index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,276-INFO-[APP]: ....bundle_config elements:
+2025-03-19 17:59:36,277-INFO-[APP]: ........timestamp: 20250319_175936
+2025-03-19 17:59:36,277-INFO-[APP]: ........case_details: ['test', 'test', 'test']
+2025-03-19 17:59:36,277-INFO-[APP]: ........confidential_bool: None
+2025-03-19 17:59:36,277-INFO-[APP]: ........zip_bool: True
+2025-03-19 17:59:36,277-INFO-[APP]: ........session_id: 85c1b705
+2025-03-19 17:59:36,277-INFO-[APP]: ........user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.1
+2025-03-19 17:59:36,277-INFO-[APP]: ........page_num_align: right
+2025-03-19 17:59:36,277-INFO-[APP]: ........index_font: sans
+2025-03-19 17:59:36,277-INFO-[APP]: ........footer_font: sans
+2025-03-19 17:59:36,277-INFO-[APP]: ........page_num_style: page_x
+2025-03-19 17:59:36,277-INFO-[APP]: ........footer_prefix: 
+2025-03-19 17:59:36,277-INFO-[APP]: ........date_setting: uk_abbreviated_date
+2025-03-19 17:59:36,277-INFO-[APP]: ........roman_for_preface: False
+2025-03-19 17:59:36,277-INFO-[APP]: ........temp_dir: tempfiles/85c1b705
+2025-03-19 17:59:36,277-INFO-[APP]: ........logs_dir: logs
+2025-03-19 17:59:36,277-INFO-[APP]: ........bookmark_setting: None
+2025-03-19 17:59:36,278-INFO-[BUN]: [CB]THIS IS BUNTOOL VERSION 2025-01-24
+2025-03-19 17:59:36,278-INFO-[BUN]: [CB]Temp directory created at tempfiles/85c1b705.
+2025-03-19 17:59:36,278-INFO-[BUN]: *****New session: 85c1b705 called create_bundle*****
+2025-03-19 17:59:36,278-INFO-[BUN]: 85c1b705 has the USER AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.1
+2025-03-19 17:59:36,278-INFO-[BUN]: Bundle creation called with 18 input files and output file test_test_20250319_175936.pdf
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]create_bundle received the following arguments:
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]....input_files: ['tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf', 'tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf', 'tempfiles/85c1b705/99_Red_Balloons.pdf', 'tempfiles/85c1b705/99_red_balloons_larger.pdf', 'tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf', 'tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf', 'tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf', 'tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf', 'tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf', 'tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf', 'tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf', 'tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf', 'tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf', 'tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf', 'tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf', 'tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf', 'tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf', 'tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf']
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]....output_file: test_test_20250319_175936.pdf
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]....coversheet: None
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]....index_file: tempfiles/85c1b705/securefilenames_index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]....bundle_config: {'timestamp': '20250319_175936', 'case_details': ['test', 'test', 'test'], 'csv_string': None, 'confidential_bool': False, 'zip_bool': True, 'session_id': '85c1b705', 'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.1', 'page_num_align': 'right', 'index_font': 'sans', 'footer_font': 'sans', 'page_num_style': 'page_x', 'footer_prefix': '', 'date_setting': 'uk_abbreviated_date', 'roman_for_preface': False, 'expected_length_of_frontmatter': 0, 'main_page_count': 0, 'total_number_of_pages': 0, 'temp_dir': 'tempfiles/85c1b705', 'logs_dir': 'logs', 'bookmark_setting': 'uk_abbreviated'}
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [CB]Calling load_index_data [LI] with index_file: tempfiles/85c1b705/securefilenames_index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,278-DEBUG-[BUN]: [LID]Loading index data from tempfiles/85c1b705/securefilenames_index_85c1b705_20250319_175936.csv
+2025-03-19 17:59:36,281-DEBUG-[BUN]: [LID]..Loaded index data with 18 entries:
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Malvina_Reynolds_-_Magic_Penny.pdf| -> Value: ('Malvina Reynolds - Magic Penny', '2025-02-08', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Jeff_Buckley_-_Hallelujah.pdf| -> Value: ('Jeff Buckley - Hallelujah', '2025-02-10', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |99_Red_Balloons.pdf| -> Value: ('99 Red Balloons', '2025-02-11', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |99_red_balloons_larger.pdf| -> Value: ('99 red balloons larger', '2025-02-11', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |The_Longest_Johns_-_Wellerman.pdf| -> Value: ('The Longest Johns - Wellerman', '2025-02-15', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Nathan_Evans_-_Wellerman.pdf| -> Value: ('Nathan Evans - Wellerman', '2025-02-15', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |AlicebanD_-_True_Blood.pdf| -> Value: ('AlicebanD - True Blood', '2025-02-15', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Gary_Jules_-_Mad_World.pdf| -> Value: ('Gary Jules - Mad World', '2025-02-17', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Misc_Traditional_-_Wellerman.pdf| -> Value: ('Misc Traditional - Wellerman', '2025-02-17', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Parker_Millsap_-_Old_Time_Religion.pdf| -> Value: ('Parker Millsap - Old Time Religion', '2025-02-17', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Buddy_Holly_-_Everyday.pdf| -> Value: ('Buddy Holly - Everyday', '2025-02-17', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Smash_Mouth_-_All_Star.pdf| -> Value: ('Smash Mouth - All Star', '2025-02-20', '0')
+2025-03-19 17:59:36,282-DEBUG-[BUN]: [LID]....Key: |Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf| -> Value: ('Creedence Clearwater Revival - Bad Moon Rising', '2025-03-01', '0')
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [LID]....Key: |Kenny_Rogers_-_The_Gambler.pdf| -> Value: ('Kenny Rogers - The Gambler', '2025-03-01', '0')
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [LID]....Key: |Annie_Lennox_-_Into_The_West.pdf| -> Value: ('Annie Lennox - Into The West', '2025-03-01', '0')
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [LID]....Key: |Johnny_Cash_-_Folsom_Prison_Blues.pdf| -> Value: ('Johnny Cash - Folsom Prison Blues', '2025-03-01', '0')
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [LID]....Key: |Misc_Cartoons_-_Lava_-_Lava.pdf| -> Value: ('Misc Cartoons - Lava - Lava', '2025-03-08', '0')
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [LID]....Key: |craig_wright_is_not_satoshi.pdf| -> Value: ('craig wright is not satoshi', '2025-03-15', '0')
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [CB]Calling merge_pdfs_create_toc_entries [MP] with arguments:
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [CB]....input_files: ['tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf', 'tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf', 'tempfiles/85c1b705/99_Red_Balloons.pdf', 'tempfiles/85c1b705/99_red_balloons_larger.pdf', 'tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf', 'tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf', 'tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf', 'tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf', 'tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf', 'tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf', 'tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf', 'tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf', 'tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf', 'tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf', 'tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf', 'tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf', 'tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf', 'tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf']
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [CB]....merged_file: tempfiles/85c1b705/TEMP01_mainpages.pdf
+2025-03-19 17:59:36,283-DEBUG-[BUN]: [CB]....index_data: {'Malvina_Reynolds_-_Magic_Penny.pdf': ('Malvina Reynolds - Magic Penny', '2025-02-08', '0'), 'Jeff_Buckley_-_Hallelujah.pdf': ('Jeff Buckley - Hallelujah', '2025-02-10', '0'), '99_Red_Balloons.pdf': ('99 Red Balloons', '2025-02-11', '0'), '99_red_balloons_larger.pdf': ('99 red balloons larger', '2025-02-11', '0'), 'The_Longest_Johns_-_Wellerman.pdf': ('The Longest Johns - Wellerman', '2025-02-15', '0'), 'Nathan_Evans_-_Wellerman.pdf': ('Nathan Evans - Wellerman', '2025-02-15', '0'), 'AlicebanD_-_True_Blood.pdf': ('AlicebanD - True Blood', '2025-02-15', '0'), 'Gary_Jules_-_Mad_World.pdf': ('Gary Jules - Mad World', '2025-02-17', '0'), 'Misc_Traditional_-_Wellerman.pdf': ('Misc Traditional - Wellerman', '2025-02-17', '0'), 'Parker_Millsap_-_Old_Time_Religion.pdf': ('Parker Millsap - Old Time Religion', '2025-02-17', '0'), 'Buddy_Holly_-_Everyday.pdf': ('Buddy Holly - Everyday', '2025-02-17', '0'), 'Smash_Mouth_-_All_Star.pdf': ('Smash Mouth - All Star', '2025-02-20', '0'), 'Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf': ('Creedence Clearwater Revival - Bad Moon Rising', '2025-03-01', '0'), 'Kenny_Rogers_-_The_Gambler.pdf': ('Kenny Rogers - The Gambler', '2025-03-01', '0'), 'Annie_Lennox_-_Into_The_West.pdf': ('Annie Lennox - Into The West', '2025-03-01', '0'), 'Johnny_Cash_-_Folsom_Prison_Blues.pdf': ('Johnny Cash - Folsom Prison Blues', '2025-03-01', '0'), 'Misc_Cartoons_-_Lava_-_Lava.pdf': ('Misc Cartoons - Lava - Lava', '2025-03-08', '0'), 'craig_wright_is_not_satoshi.pdf': ('craig wright is not satoshi', '2025-03-15', '0')}
+2025-03-19 17:59:36,285-DEBUG-[BUN]: [MPCTE]..File Malvina_Reynolds_-_Magic_Penny.pdf found at tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf
+2025-03-19 17:59:36,296-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,296-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,296-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 001., Malvina Reynolds - Magic Penny, 0
+2025-03-19 17:59:36,296-DEBUG-[BUN]: [MPCTE]..File Jeff_Buckley_-_Hallelujah.pdf found at tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf
+2025-03-19 17:59:36,304-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,304-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,304-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 002., Jeff Buckley - Hallelujah, 2
+2025-03-19 17:59:36,304-DEBUG-[BUN]: [MPCTE]..File 99_Red_Balloons.pdf found at tempfiles/85c1b705/99_Red_Balloons.pdf
+2025-03-19 17:59:36,311-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,311-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,311-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 003., 99 Red Balloons, 5
+2025-03-19 17:59:36,311-DEBUG-[BUN]: [MPCTE]..File 99_red_balloons_larger.pdf found at tempfiles/85c1b705/99_red_balloons_larger.pdf
+2025-03-19 17:59:36,318-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,319-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,319-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 004., 99 red balloons larger, 7
+2025-03-19 17:59:36,319-DEBUG-[BUN]: [MPCTE]..File The_Longest_Johns_-_Wellerman.pdf found at tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf
+2025-03-19 17:59:36,326-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,327-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,327-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 005., The Longest Johns - Wellerman, 10
+2025-03-19 17:59:36,327-DEBUG-[BUN]: [MPCTE]..File Nathan_Evans_-_Wellerman.pdf found at tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf
+2025-03-19 17:59:36,334-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,335-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,335-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 006., Nathan Evans - Wellerman, 14
+2025-03-19 17:59:36,335-DEBUG-[BUN]: [MPCTE]..File AlicebanD_-_True_Blood.pdf found at tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf
+2025-03-19 17:59:36,342-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,342-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,342-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 007., AlicebanD - True Blood, 19
+2025-03-19 17:59:36,342-DEBUG-[BUN]: [MPCTE]..File Gary_Jules_-_Mad_World.pdf found at tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf
+2025-03-19 17:59:36,349-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,349-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,349-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 008., Gary Jules - Mad World, 22
+2025-03-19 17:59:36,349-DEBUG-[BUN]: [MPCTE]..File Misc_Traditional_-_Wellerman.pdf found at tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf
+2025-03-19 17:59:36,356-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,356-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,356-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 009., Misc Traditional - Wellerman, 24
+2025-03-19 17:59:36,356-DEBUG-[BUN]: [MPCTE]..File Parker_Millsap_-_Old_Time_Religion.pdf found at tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf
+2025-03-19 17:59:36,363-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,363-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,363-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 010., Parker Millsap - Old Time Religion, 28
+2025-03-19 17:59:36,363-DEBUG-[BUN]: [MPCTE]..File Buddy_Holly_-_Everyday.pdf found at tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf
+2025-03-19 17:59:36,370-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,371-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,371-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 011., Buddy Holly - Everyday, 31
+2025-03-19 17:59:36,371-DEBUG-[BUN]: [MPCTE]..File Smash_Mouth_-_All_Star.pdf found at tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf
+2025-03-19 17:59:36,375-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,376-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,376-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 012., Smash Mouth - All Star, 34
+2025-03-19 17:59:36,376-DEBUG-[BUN]: [MPCTE]..File Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf found at tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf
+2025-03-19 17:59:36,382-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,383-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,383-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 013., Creedence Clearwater Revival - Bad Moon Rising, 36
+2025-03-19 17:59:36,383-DEBUG-[BUN]: [MPCTE]..File Kenny_Rogers_-_The_Gambler.pdf found at tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf
+2025-03-19 17:59:36,390-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,390-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,390-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 014., Kenny Rogers - The Gambler, 38
+2025-03-19 17:59:36,390-DEBUG-[BUN]: [MPCTE]..File Annie_Lennox_-_Into_The_West.pdf found at tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf
+2025-03-19 17:59:36,397-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,397-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,397-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 015., Annie Lennox - Into The West, 41
+2025-03-19 17:59:36,397-DEBUG-[BUN]: [MPCTE]..File Johnny_Cash_-_Folsom_Prison_Blues.pdf found at tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf
+2025-03-19 17:59:36,403-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,403-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,403-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 016., Johnny Cash - Folsom Prison Blues, 43
+2025-03-19 17:59:36,404-DEBUG-[BUN]: [MPCTE]..File Misc_Cartoons_-_Lava_-_Lava.pdf found at tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf
+2025-03-19 17:59:36,410-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,410-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,410-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 017., Misc Cartoons - Lava - Lava, 46
+2025-03-19 17:59:36,410-DEBUG-[BUN]: [MPCTE]..File craig_wright_is_not_satoshi.pdf found at tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf
+2025-03-19 17:59:36,411-DEBUG-[BUN]: [MPCTE]....added to merged PDF
+2025-03-19 17:59:36,411-DEBUG-[BUN]: [MPCTE]..found index data
+2025-03-19 17:59:36,411-DEBUG-[BUN]: [MPCTE]..Adding toc entry: 018., craig wright is not satoshi, 49
+2025-03-19 17:59:36,453-INFO-[BUN]: [CB]Merged PDF created at tempfiles/85c1b705/TEMP01_mainpages.pdf
+2025-03-19 17:59:36,454-INFO-[BUN]: =============================================================================
+2025-03-19 17:59:36,454-INFO-[BUN]: BUNTOOL -- BEGIN RECORD OF USER SETTINGS
+2025-03-19 17:59:36,455-INFO-[BUN]: Time of use: 20250319_175936
+2025-03-19 17:59:36,455-INFO-[BUN]: STEP ONE:
+2025-03-19 17:59:36,455-INFO-[BUN]: ..Bundle Title: test
+2025-03-19 17:59:36,455-INFO-[BUN]: ..Case Name: test
+2025-03-19 17:59:36,455-INFO-[BUN]: ..Claim Number: test
+2025-03-19 17:59:36,455-INFO-[BUN]: STEP TWO:
+2025-03-19 17:59:36,455-INFO-[BUN]: ..File 1: Filename "tempfiles/85c1b705/Malvina_Reynolds_-_Magic_Penny.pdf"
+2025-03-19 17:59:36,455-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,455-INFO-[BUN]: .... had 2 page(s).
+2025-03-19 17:59:36,455-INFO-[BUN]: ..File 2: Filename "tempfiles/85c1b705/Jeff_Buckley_-_Hallelujah.pdf"
+2025-03-19 17:59:36,455-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,456-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,456-INFO-[BUN]: ..File 3: Filename "tempfiles/85c1b705/99_Red_Balloons.pdf"
+2025-03-19 17:59:36,456-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,456-INFO-[BUN]: .... had 2 page(s).
+2025-03-19 17:59:36,456-INFO-[BUN]: ..File 4: Filename "tempfiles/85c1b705/99_red_balloons_larger.pdf"
+2025-03-19 17:59:36,456-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,456-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,456-INFO-[BUN]: ..File 5: Filename "tempfiles/85c1b705/The_Longest_Johns_-_Wellerman.pdf"
+2025-03-19 17:59:36,456-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,457-INFO-[BUN]: .... had 4 page(s).
+2025-03-19 17:59:36,457-INFO-[BUN]: ..File 6: Filename "tempfiles/85c1b705/Nathan_Evans_-_Wellerman.pdf"
+2025-03-19 17:59:36,457-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,457-INFO-[BUN]: .... had 5 page(s).
+2025-03-19 17:59:36,457-INFO-[BUN]: ..File 7: Filename "tempfiles/85c1b705/AlicebanD_-_True_Blood.pdf"
+2025-03-19 17:59:36,457-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,458-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,458-INFO-[BUN]: ..File 8: Filename "tempfiles/85c1b705/Gary_Jules_-_Mad_World.pdf"
+2025-03-19 17:59:36,458-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,458-INFO-[BUN]: .... had 2 page(s).
+2025-03-19 17:59:36,458-INFO-[BUN]: ..File 9: Filename "tempfiles/85c1b705/Misc_Traditional_-_Wellerman.pdf"
+2025-03-19 17:59:36,458-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,458-INFO-[BUN]: .... had 4 page(s).
+2025-03-19 17:59:36,458-INFO-[BUN]: ..File 10: Filename "tempfiles/85c1b705/Parker_Millsap_-_Old_Time_Religion.pdf"
+2025-03-19 17:59:36,458-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,459-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,459-INFO-[BUN]: ..File 11: Filename "tempfiles/85c1b705/Buddy_Holly_-_Everyday.pdf"
+2025-03-19 17:59:36,459-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,459-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,459-INFO-[BUN]: ..File 12: Filename "tempfiles/85c1b705/Smash_Mouth_-_All_Star.pdf"
+2025-03-19 17:59:36,459-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,459-INFO-[BUN]: .... had 2 page(s).
+2025-03-19 17:59:36,460-INFO-[BUN]: ..File 13: Filename "tempfiles/85c1b705/Creedence_Clearwater_Revival_-_Bad_Moon_Rising.pdf"
+2025-03-19 17:59:36,460-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,460-INFO-[BUN]: .... had 2 page(s).
+2025-03-19 17:59:36,460-INFO-[BUN]: ..File 14: Filename "tempfiles/85c1b705/Kenny_Rogers_-_The_Gambler.pdf"
+2025-03-19 17:59:36,460-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,460-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,460-INFO-[BUN]: ..File 15: Filename "tempfiles/85c1b705/Annie_Lennox_-_Into_The_West.pdf"
+2025-03-19 17:59:36,460-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,461-INFO-[BUN]: .... had 2 page(s).
+2025-03-19 17:59:36,461-INFO-[BUN]: ..File 16: Filename "tempfiles/85c1b705/Johnny_Cash_-_Folsom_Prison_Blues.pdf"
+2025-03-19 17:59:36,461-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,461-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,461-INFO-[BUN]: ..File 17: Filename "tempfiles/85c1b705/Misc_Cartoons_-_Lava_-_Lava.pdf"
+2025-03-19 17:59:36,461-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,461-INFO-[BUN]: .... had 3 page(s).
+2025-03-19 17:59:36,461-INFO-[BUN]: ..File 18: Filename "tempfiles/85c1b705/craig_wright_is_not_satoshi.pdf"
+2025-03-19 17:59:36,461-INFO-[BUN]: .... had index data: False
+2025-03-19 17:59:36,462-INFO-[BUN]: .... had 1 page(s).
+2025-03-19 17:59:36,462-INFO-[BUN]: STEP THREE:
+2025-03-19 17:59:36,462-INFO-[BUN]: ..Index Options:
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Index font: sans
+2025-03-19 17:59:36,462-INFO-[BUN]: ....No coversheet provided.
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Date column: uk_abbreviated_date
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Confidentiality: False
+2025-03-19 17:59:36,462-INFO-[BUN]: ..Page Numbering Options:
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Footer font: sans
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Preface numbering: False
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Page number alignment: right
+2025-03-19 17:59:36,462-INFO-[BUN]: ....Page numbering style: page_x
+2025-03-19 17:59:36,462-INFO-[BUN]: ....No footer prefix
+2025-03-19 17:59:36,462-INFO-[BUN]: END RECORD OF USER SETTINGS
+2025-03-19 17:59:36,462-INFO-[BUN]: =================================================================================
+2025-03-19 17:59:36,467-DEBUG-[BUN]: [CB]Creating dummy TOC PDF to find length of frontmatter
+2025-03-19 17:59:36,487-ERROR-[BUN]: [CB]Error during first pass TOC creation: Can't open file "Charter_Regular.ttf"
+2025-03-19 17:59:36,487-ERROR-[BUN]: [CB]Error during create_bundle: Can't open file "Charter_Regular.ttf"
+2025-03-19 17:59:36,487-DEBUG-[BUN]: [CB]Calling create_zip_file:
+2025-03-19 17:59:36,487-ERROR-[BUN]: [CB]..Error during create_zip_file: cannot access local variable 'docx_output_path' where it is not associated with a value
+2025-03-19 17:59:36,487-ERROR-[APP]: Fatal Error creating bundle: cannot access local variable 'docx_output_path' where it is not associated with a value

@@ -205,14 +205,27 @@
                                     </td>
                                     <td style="width: 67%;">
                                         <select class="form-control" id="date_setting" name="date_setting">
-                                            <option value="YYYY-MM-DD" selected>2025-12-31 (YYYY-MM-DD)</option>
-                                            <option value="DD-MM-YYYY" selected>31/12/2025 (DD/MM/YYYY)</option>
-                                            <option value="MM-DD-YYYY" selected>12/31/2025 (MM/DD/YYYY)</option>
-                                            <option value="uk_longdate" selected>31 December 2025 (UK Longform)</option>
-                                            <option value="us_longdate" selected>December 31 2025 (US Longform)</option>
-                                            <option value="uk_abbreviated_date" selected>31 Dec 2025 (UK Abbreviated)</option>
-                                            <option value="us_abbreviated_date" selected>Dec 31 2025 (US Abbreviated)</option>
+                                            <option value="YYYY-MM-DD" >2025-12-31 (YYYY-MM-DD)</option>
+                                            <option value="DD-MM-YYYY" >31/12/2025 (DD/MM/YYYY)</option>
+                                            <option value="MM-DD-YYYY" >12/31/2025 (MM/DD/YYYY)</option>
+                                            <option value="uk_longdate" >31 December 2025 (UK Longform)</option>
+                                            <option value="us_longdate" >December 31, 2025 (US Longform)</option>
+                                            <option value="uk_abbreviated_date" selected>31 Dec 2025 (UK Abbreviated)(default)</option>
+                                            <option value="us_abbreviated_date" >Dec 31 2025 (US Abbreviated)</option>
                                             <option value="hide_date">None (Don't include date in index)</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 33%;">
+                                        <label for="bookmark_setting">Bookmark style for PDF:</label>
+                                    </td>
+                                    <td style="width: 67%;">
+                                        <select class="form-control" id="bookmark_setting" name="bookmark_setting">
+                                            <option value="tab-title" selected>001. Document title (default)</option>
+                                            <option value="tab-title-date" >001. Document Title (date)</option>
+                                            <option value="tab-title-page" >001. Document Title [pg.1]</option>
+                                            <option value="tab-title-date-page" >001. Document Title (date)[pg.1]</option>
                                         </select>
                                     </td>
                                 </tr>

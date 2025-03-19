@@ -9,19 +9,19 @@ from datetime import datetime
 import uuid
 from waitress import serve
 import csv
-import boto3
+#import boto3
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # file size limit in MB
 app.logger.setLevel(logging.DEBUG)
 
-s3 = boto3.client('s3')
-bucket_name = os.environ.get('s3_bucket', 'your-default-bucket')
+# s3 = boto3.client('s3')
+# bucket_name = os.environ.get('s3_bucket', 'your-default-bucket')
 
 
-def upload_to_s3(file_path, s3_key):
-    s3.upload_file(file_path, bucket_name, s3_key)
-    return f"s3://{bucket_name}/{s3_key}"
+# def upload_to_s3(file_path, s3_key):
+#     s3.upload_file(file_path, bucket_name, s3_key)
+#     return f"s3://{bucket_name}/{s3_key}"
 
 
 def is_running_in_lambda():
@@ -208,7 +208,7 @@ def create_bundle():
         roman_for_preface = bool(strtobool(request.form.get('roman_for_preface')))
         case_details = [bundle_title, claim_no, case_name]
         zip_bool = True  # option not implemented for GUI control.
-        date_format = request.form.get('date_format')
+        bookmark_setting = request.form.get('bookmark_setting')
 
         output_file = get_output_filename(bundle_title, case_name, timestamp, footer_prefix)
         app.logger.debug(f"generated output filename: {output_file}")
@@ -299,7 +299,7 @@ def create_bundle():
             app.logger.info(f"........roman_for_preface: {roman_for_preface}")
             app.logger.info(f"........temp_dir: {temp_dir}")
             app.logger.info(f"........logs_dir: {logs_dir}")
-
+            app.logger.info(f"........bookmark_setting: {bookmark_setting}")
             # Create BundleConfig instance
             bundle_config = buntool.BundleConfig(
                 timestamp=timestamp,
@@ -317,7 +317,8 @@ def create_bundle():
                 date_setting=date_setting,
                 roman_for_preface=roman_for_preface,
                 temp_dir=temp_dir,
-                logs_dir=logs_dir
+                logs_dir=logs_dir,
+                bookmark_setting=bookmark_setting
             )
 
             received_output_file, zip_file_path = buntool.create_bundle(
@@ -369,22 +370,22 @@ def create_bundle():
         if session_file_handler and session_file_handler in app.logger.handlers:
             app.logger.removeHandler(session_file_handler)
 
-        try:
-            # Upload logs to s3:
-            # As mentioned in the frontend, logs are always uploaded to s3, and the
-            # only private info they contain are is user agent and index
-            # data (basically, filenames and titles):
-            logsurl = upload_to_s3(logs_path, f'logs/{os.path.basename(logs_path)}')
-            # By contrast, the zip file has all the input files and the output bundle
-            # itself. It almost certainly contains private data.
-            # In the /dev/ instance it's uploaded to s3 for testing purposes
-            # and regularly cleaned out.It is disabled in stable version by commenting
-            # out the following lin, but is left uncommented here for tranparency:
-            #upload_to_s3(final_zip_path, f'bundles/{os.path.basename(final_zip_path)}')
-            app.logger.debug(f"Upload to s3 successful: {logsurl}")
-        except Exception as e:
-            app.logger.error(f"Error uploading logs or zip to s3: {str(e)}")
-            pass
+        # try:
+        #     # Upload logs to s3:
+        #     # As mentioned in the frontend, logs are always uploaded to s3, and the
+        #     # only private info they contain are is user agent and index
+        #     # data (basically, filenames and titles):
+        #     logsurl = upload_to_s3(logs_path, f'logs/{os.path.basename(logs_path)}')
+        #     # By contrast, the zip file has all the input files and the output bundle
+        #     # itself. It almost certainly contains private data.
+        #     # In the /dev/ instance it's uploaded to s3 for testing purposes
+        #     # and regularly cleaned out.It is disabled in stable version by commenting
+        #     # out the following lin, but is left uncommented here for tranparency:
+        #     #upload_to_s3(final_zip_path, f'bundles/{os.path.basename(final_zip_path)}')
+        #     app.logger.debug(f"Upload to s3 successful: {logsurl}")
+        # except Exception as e:
+        #     app.logger.error(f"Error uploading logs or zip to s3: {str(e)}")
+        #     pass
 
 
 @app.route('/download/bundle', methods=['GET'])
