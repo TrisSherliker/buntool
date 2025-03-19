@@ -201,13 +201,18 @@
                                 </tr>
                                 <tr>
                                     <td style="width: 33%;">
-                                        <label for="date_setting">Date column:</label>
+                                        <label for="date_setting">Date style for PDF:</label>
                                     </td>
                                     <td style="width: 67%;">
                                         <select class="form-control" id="date_setting" name="date_setting">
-                                            <option value="show_date" selected>Include date column in index (default)
-                                            </option>
-                                            <option value="hide_date">No date column in index</option>
+                                            <option value="YYYY-MM-DD" selected>2025-12-31 (YYYY-MM-DD)</option>
+                                            <option value="DD-MM-YYYY" selected>31/12/2025 (DD/MM/YYYY)</option>
+                                            <option value="MM-DD-YYYY" selected>12/31/2025 (MM/DD/YYYY)</option>
+                                            <option value="uk_longdate" selected>31 December 2025 (UK Longform)</option>
+                                            <option value="us_longdate" selected>December 31 2025 (US Longform)</option>
+                                            <option value="uk_abbreviated_date" selected>31 Dec 2025 (UK Abbreviated)</option>
+                                            <option value="us_abbreviated_date" selected>Dec 31 2025 (US Abbreviated)</option>
+                                            <option value="hide_date">None (Don't include date in index)</option>
                                         </select>
                                     </td>
                                 </tr>

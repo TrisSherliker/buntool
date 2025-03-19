@@ -18,6 +18,7 @@
 #   - [ ] Validation of all strings passed through frontend
 #   - [ ] validation of csv data passed from frontend, check headers and columns.
 # Features
+#   - [ ] Add ability to offset page numbers (start at N)
 #   - [ ] Convenience for sections: Add section header, spawn upload area for that section, helps to organise files
 #   - [ ] Add a write-metadata function: https://pypdf.readthedocs.io/en/stable/user/metadata.html
 #   - [ ] ability to reload state (via zip import).
@@ -200,6 +201,41 @@ def load_bundle_config(bundle_config_data):
     global bundle_config
     bundle_config = bundle_config_data
 
+def parse_the_date(date):
+    '''
+    This function takes a date input in YYYY-MM-DD format and
+    formats it according to user preferences from the following
+    styles depending on state of date_setting: 
+    - YYYY-MM-DD
+    - DD-MM-YYYY
+    - MM-DD-YYYY
+    - uk_longdate
+    - us_longdate
+    - uk_abbreviated_date
+    - us_abbreviated_date
+    or if setting is hide_date, don't do anything
+    '''
+    if bundle_config.date_setting == "hide_date":
+        return date
+
+    try:
+        parsed_date = datetime.strptime(date, '%Y-%m-%d')
+
+        formats = {
+            "YYYY-MM-DD": "%Y-%m-%d",
+            "DD-MM-YYYY": "%d/%m/%Y",
+            "MM-DD-YYYY": "%m/%d/%Y",
+            "uk_longdate": "%d %B %Y",
+            "us_longdate": "%B %d, %Y",
+            "uk_abbreviated_date": "%d %b %Y",
+            "us_abbreviated_date": "%b %d, %Y"
+        }
+
+        return parsed_date.strftime(formats[bundle_config.date_setting])
+    except KeyError:
+        bundle_logger.error(f"[PTD] Error: Unknown date setting: {bundle_config.date_setting}")
+        return date
+
 
 def load_index_data(csv_index):
     '''
@@ -215,6 +251,9 @@ def load_index_data(csv_index):
                 [filename, title, date, 0]
         for section breaks:
                 [SECTION, section_name,,1]
+    There are some fallbacks in place in case the data is missing, but
+     this should not happen. They are there mainly for testing purposes
+     when using the code via CLI.
     '''
     index_data = {}
     bundle_logger.debug(f"[LID]Loading index data from {csv_index}")
@@ -224,11 +263,13 @@ def load_index_data(csv_index):
         nil = "0"
         for row in reader:
             if len(row) >= 4:
-                filename, userdefined_title, date, section = row
+                formatted_date = parse_the_date(row[2])
+                filename, userdefined_title, formatted_date, section = row
                 # Store filename as provided by frontend
                 index_data[filename] = (userdefined_title, date, section)
             elif len(row) == 3:
-                filename, userdefined_title, date = row
+                formatted_date = parse_the_date(row[2])
+                filename, userdefined_title, formatted_date = row
                 index_data[filename] = (userdefined_title, date, '')
             else:
                 filename, userdefined_title = row
@@ -344,7 +385,10 @@ def add_bookmarks_to_pdf(pdf_file, output_file, toc_entries, length_of_frontmatt
     It does not bookmark the index itself (that's the job of bookmark_the_index).
     It does not add on-page hyperlinks (that's add_hyperlinks)
     '''
-    # take the toc_entries and make an outline item for each one, appending it to the bookmarks. Note that the frontmatter will have been added in the meantime, so the pages will need to be adjusted by the length of the frontmatter.
+    # take the toc_entries and make an outline item for each one, 
+    # appending it to the bookmarks. Note that the frontmatter will 
+    # have been added in the meantime, so the pages will need to be 
+    # adjusted by the length of the frontmatter.
     with Pdf.open(pdf_file) as pdf:
         with pdf.open_outline() as outline:
             for entry in toc_entries:
@@ -404,7 +448,7 @@ def create_toc_pdf_reportlab(
         casedetails,
         output_file,
         confidential=False,
-        date_setting=True,
+        date_setting="YYYY-MM-DD",
         index_font_setting=None,
         dummy=False,
         frontmatter_offset=0,
@@ -419,8 +463,8 @@ def create_toc_pdf_reportlab(
     '''
     The first version of buntool generated the index file and
     page numbering with LaTeX, but LaTeX is a complicated dependency
-    for generating this sort of thing, so this is the refactored
-    version that uses reportlab.
+    for generating this sort of thing. So this is a refactored
+    version that uses ReportLab.
 
     This function is a drop-in replacement for the earlier version,
     create_toc_pdf_tex. The LaTeX chain is preserved for personal
@@ -441,7 +485,6 @@ def create_toc_pdf_reportlab(
     '''
 
     # First, parse out the arguments.
-    # date_setting = "hide_date"
     # index font setting.
     if index_font_setting == 'serif':
         main_font = 'Times-Roman'
@@ -469,10 +512,15 @@ def create_toc_pdf_reportlab(
         date_col_width = 0
         title_col_width = 11.5  # These ints will later be used with the cm unit
         page_col_width = 2.5
-    elif date_setting == "show_date":
+    elif date_setting == "YYYY-MM-DD" or date_setting == "DD-MM-YYYY" or date_setting == "MM-DD-YYYY":
         date_col_hdr = "Date"
         date_col_width = 3.5
         title_col_width = 9.5
+        page_col_width = 1.7
+    elif date_setting == "uk_longdate" or date_setting == "us_longdate" or date_setting == "uk_abbreviated_date" or date_setting == "us_abbreviated_date":
+        date_col_hdr = "Date"
+        date_col_width = 4.5
+        title_col_width = 8.5
         page_col_width = 1.7
     else:
         date_col_hdr = "Date"
@@ -1582,14 +1630,13 @@ class BundleConfig:
         self.footer_font = footer_font if footer_font else "Default"
         self.page_num_style = page_num_style if page_num_style else "page_x_of_y"
         self.footer_prefix = footer_prefix if footer_prefix else ""
-        self.date_setting = date_setting if date_setting else "show_date"
+        self.date_setting = date_setting if date_setting else "DD_MM_YYYY"
         self.roman_for_preface = roman_for_preface if roman_for_preface else False
         self.expected_length_of_frontmatter = expected_length_of_frontmatter if expected_length_of_frontmatter else 0
         self.main_page_count = main_page_count if main_page_count else 0
         self.total_number_of_pages = self.main_page_count + self.expected_length_of_frontmatter
         self.temp_dir = temp_dir if temp_dir else os.path.join('/tmp', 'tempfiles', self.session_id)
         self.logs_dir = logs_dir if logs_dir else os.path.join('/tmp', 'logs', self.session_id)
-
 
 def create_bundle(input_files, output_file, coversheet, index_file, bundle_config_data):
     '''

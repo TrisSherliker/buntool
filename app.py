@@ -208,6 +208,7 @@ def create_bundle():
         roman_for_preface = bool(strtobool(request.form.get('roman_for_preface')))
         case_details = [bundle_title, claim_no, case_name]
         zip_bool = True  # option not implemented for GUI control.
+        date_format = request.form.get('date_format')
 
         output_file = get_output_filename(bundle_title, case_name, timestamp, footer_prefix)
         app.logger.debug(f"generated output filename: {output_file}")
