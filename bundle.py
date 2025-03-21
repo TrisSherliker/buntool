@@ -409,9 +409,9 @@ def add_bookmarks_to_pdf(pdf_file, output_file, toc_entries, length_of_frontmatt
                     elif bundle_config.bookmark_setting == "tab-title-date":
                         item = OutlineItem(f"{tab_number} {title} ({date})", page + length_of_frontmatter)
                     elif bundle_config.bookmark_setting == "tab-title-page":
-                        item = OutlineItem(f"{tab_number} {title} [pg.{page + length_of_frontmatter}]", page + length_of_frontmatter)
+                        item = OutlineItem(f"{tab_number} {title} [pg.{1+ page + length_of_frontmatter}]", page + length_of_frontmatter)
                     elif bundle_config.bookmark_setting == "tab-title-date-page":
-                        item = OutlineItem(f"{tab_number} {title} ({date}) [pg.{page + length_of_frontmatter}]", page + length_of_frontmatter)
+                        item = OutlineItem(f"{tab_number} {title} ({date}) [pg.{1 + page + length_of_frontmatter}]", page + length_of_frontmatter)
                     else:
                         bundle_logger.error(f"[ABTP]Error: Unknown bookmark_setting: {bundle_config.bookmark_setting}")
                         item = OutlineItem(f"{tab_number} {title}", page + length_of_frontmatter)
