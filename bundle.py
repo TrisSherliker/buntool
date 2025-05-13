@@ -851,7 +851,6 @@ def reportlab_footer_config(canvas, doc):
         )
 
     if footer_prefix:
-        bundle_logger.debug(f"[rplb]..Footer prefix provided: {footer_prefix}")
         footer_data = footer_prefix.strip() + " "
     else:
         footer_data = ""
@@ -1298,9 +1297,9 @@ def add_footer_to_bundle(input_file, page_numbers_pdf_path, output_file):
         for input_page, overlay_page in zip(input_pdf.pages, page_numbers_pdf.pages):
             # get page of input page
             input_page_size = input_page.mediabox
-            scaling_factor = input_page_size[2] / a4_width
-            input_page.merge_scaled_page(overlay_page, scaling_factor)
-            writer.add_page(input_page)
+            scaling_factor = overlay_page_size[2] / input_page_size[2]
+            overlay_page.merge_scaled_page(input_page, scaling_factor)
+            writer.add_page(overlay_page)
 
         # Write the resulting PDF to the output file
         with open(output_file, "wb") as f:

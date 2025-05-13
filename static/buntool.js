@@ -136,7 +136,6 @@ async function processPDFFile(file, sanitizedFileName, originalBasename) {
     }
 }
 
-
 function addFileToList(fileData) {
     console.log("Adding file to list:", fileData);
     const row = document.createElement('tr');
