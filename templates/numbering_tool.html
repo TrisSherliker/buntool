@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='buntool.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="{{ url_for('static', filename='numbering_tool.js') }}" defer></script>
+    <title>PDF Numbering Tool</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="app-subtitle"
+            style="display: flex; align-items: center; justify-content: center; color: #d57782; padding-top: 0;">PDF
+            numbering with</span>
+        </div>
+        <div class="container">
+            <div class="app-header" style="display: flex; align-items: center; justify-content: center;">
+                <h1 class="app-title" style="font-size: 7.5rem; display: flex; align-items: center;">
+                    <span style="color: #ef8c51;">Bun</span>
+                    <img src="{{ url_for('static', filename='buntool.webp') }}" alt="Bun tool Logo"
+                        style="width: 120px; height: auto; margin: 0 0.5rem;">
+                    <span style="color: #68b3cd;">Tool</span>
+                </h1>
+            </div>
+            <br>
+        </div>
+
+        <div class="intro-section" style="background-color: #f8fcff; padding: 1rem; text-align: left;">
+            <h2>PDF Numbering Tool</h2>
+            <p>
+                Add custom page numbers to any PDF file. Choose from multiple numbering styles, fonts, alignments, and
+                advanced options like page range mapping.
+            </p>
+            <p style="margin-bottom: 0;">
+                <a href="{{ url_for('index') }}" style="text-decoration: underline; color: #0066cc;">← Back to BunTool
+                    (Bundle Creator)</a>
+            </p>
+        </div>
+
+        <form id="numberingForm" action="/number_pdf" method="POST" enctype="multipart/form-data">
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="mdi mdi-file-pdf-box"></i>
+                    </div>
+                    <h2 class="card-title">Step 1 - Upload PDF File</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="pdf_file">Select PDF file to number:</label>
+                        <div class="file-input-wrapper">
+                            <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" required
+                                style="width: 100%; padding: 10px; border: 2px solid #ccc; border-radius: 5px;">
+                        </div>
+                        <small class="form-text text-muted">Maximum file size: 100 MB</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="mdi mdi-palette"></i>
+                    </div>
+                    <h2 class="card-title">Step 2 - Numbering Options</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group" style="border: 2px dashed; border-radius: 0.5rem; border-color:#68b3cd;">
+                        <h4>Page Numbering Options:</h4>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td style="vertical-align: text-top;">
+                                        <label for="footer_font" style="vertical-align: text-top;">Font for page
+                                            numbers:</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="footerFontSans"
+                                                name="footer_font" value="sans" checked
+                                                style="vertical-align: middle; margin-right: 5px;">
+                                            <label class="form-check-label" for="footerFontSans"
+                                                style="font-family: Arial; display: inline;">Sans Serif Helvetica
+                                                (Default)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="footerFontSerif"
+                                                name="footer_font" value="serif"
+                                                style="vertical-align: middle; margin-right: 5px;">
+                                            <label class="form-check-label" for="footerFontSerif"
+                                                style="font-family: 'Times New Roman', Times, serif; display: inline;">Roman
+                                                Serif (Times)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="footerFontMono"
+                                                name="footer_font" value="mono"
+                                                style="vertical-align: middle; margin-right: 5px;">
+                                            <label class="form-check-label" for="footerFontMono"
+                                                style="font-family: Courier; display: inline;">Typewriter style
+                                                (Courier)</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" id="footerFontTraditional"
+                                                name="footer_font" value="traditional"
+                                                style="vertical-align: middle; margin-right: 5px;">
+                                            <label class="form-check-label" for="footerFontTraditional"
+                                                style="font-family: Charter Regular; display: inline;">Charter (similar
+                                                to MS Georgia)</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 33%;">
+                                        <label for="page_num_align">Alignment:</label>
+                                    </td>
+                                    <td style="width: 67%;">
+                                        <select class="form-control" id="page_num_align" name="page_num_align">
+                                            <option value="left">Left</option>
+                                            <option value="centre">Centre</option>
+                                            <option value="right" selected>Right (Default)</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="page_num_style">Numbering style:</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" id="page_num_style" name="page_num_style">
+                                            <option value="x">Number only: [X] e.g. '1'</option>
+                                            <option value="x_of_y">Numbers only: [X] of [Y] e.g. '1 of 100'</option>
+                                            <option value="x_slash_y">Numbers with slash: [X]/[Y] e.g. '1/100'</option>
+                                            <option value="page_x" selected>Page [X] e.g. 'Page 1' (default)</option>
+                                            <option value="page_x_of_y">Page [X] of [Y] e.g. 'Page 1 of 100'</option>
+                                            <option value="custom_alpha">Custom Alphanumeric e.g. 'A1', 'A2', 'B1'</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr id="customAlphaConfigRow" style="display: none;">
+                                    <td style="vertical-align: text-top;">
+                                        <label for="custom_alpha_prefix">Custom numbering prefix:</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check" style="display: inline;">
+                                            <p>Letter prefix for custom numbering (e.g., 'A', 'AB', 'Doc'):</p>
+                                            <input type="text" class="form-control" id="custom_alpha_prefix"
+                                                name="custom_alpha_prefix" maxlength="10" placeholder="e.g. enter 'A' for 'A1', 'A2'..." style="width: 100%; box-sizing: border-box;">
+                                            <small class="form-text text-muted">Leave empty for numbering: 1, 2, 3...</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="customAlphaResetRow" style="display: none;">
+                                    <td>
+                                        <label for="custom_alpha_reset">Reset numbering:</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" id="custom_alpha_reset" name="custom_alpha_reset">
+                                            <option value="none" selected>Sequential (1, 2, 3, ...)</option>
+                                            <option value="letter_change">Change letter per 26 pages (A1-A26, B1-B26)</option>
+                                            <option value="custom">Reset every N pages (specify below)</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr id="customAlphaResetIntervalRow" style="display: none;">
+                                    <td>
+                                        <label for="custom_alpha_reset_interval">Reset every N pages:</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control" id="custom_alpha_reset_interval"
+                                            name="custom_alpha_reset_interval" min="1" value="20" style="width: 100%; box-sizing: border-box;">
+                                        <small class="form-text text-muted">Only used when "Reset every N pages" is selected</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: text-top;">
+                                        <label for="use_page_range_mapping">Page range mapping:</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check" style="display: inline;">
+                                            <input class="form-check-input" type="checkbox" id="use_page_range_mapping"
+                                                name="use_page_range_mapping" style="vertical-align: middle; margin-right: 5px;">
+                                            <label class="form-check-label" for="use_page_range_mapping"
+                                                style="display: inline;">Enable custom mapping for specific page ranges</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="pageRangeMappingRow" style="display: none;">
+                                    <td style="vertical-align: text-top;">
+                                        <label for="page_range_mapping_input">Define page ranges:</label>
+                                    </td>
+                                    <td>
+                                        <textarea class="form-control" id="page_range_mapping_input"
+                                            name="page_range_mapping_input" rows="5" placeholder="Format: start-end:prefix&#10;Example:&#10;1-20:A&#10;21-40:B&#10;41-60:C"
+                                            style="width: 100%; box-sizing: border-box; font-family: monospace;"></textarea>
+                                        <small class="form-text text-muted">
+                                            <strong style="color: #667eea;">⚠️ Page range mapping OVERRIDES all other numbering styles</strong><br>
+                                            Format: <code>start-end:prefix</code> (numbering restarts for each range)<br>
+                                            - Each line is one range<br>
+                                            - Example: <code>1-20:A</code> → pages numbered A1-A20<br>
+                                            - Example: <code>21-40:B</code> → pages numbered B1-B20 (restarts at B1)<br>
+                                            - Pages outside defined ranges will NOT be numbered<br>
+                                            - Can use different prefixes: <code>1-15:Doc</code>, <code>16-30:Ev</code>
+                                        </small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: text-top;">
+                                        <label for="footer_prefix">Footer prefix:</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check" style="display: inline;">
+                                            <p>Optional prefix before each page number:</p>
+                                            <input type="text" class="form-control" id="footer_prefix"
+                                                name="footer_prefix" maxlength="30" placeholder="e.g. enter 'AB pg' for 'AB pg 1' style footer" style="width: 100%; box-sizing: border-box;">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="mdi mdi-cogs"></i>
+                    </div>
+                    <h2 class="card-title">Step 3 - Create and Download</h2>
+                </div>
+                <div class="card-body">
+                    <div id="processErrorContainer"></div>
+                    <div id="downloadButtonContainer" style="display: none; text-align: center; padding-top: 2rem;">
+                        <button type="button" class="dothething" id="downloadButton">
+                            <i class="mdi mdi-download"></i> Download PDF
+                        </button>
+                    </div>
+                    <div class="button-group" style="padding-top: 2rem; display: flex; justify-content: center; align-items: center;">
+                        <button type="submit" class="create-button">
+                            <i class="mdi mdi-plus-circle"></i> ADD PAGE NUMBERS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="card">
+            <h2>About this tool</h2>
+            <p>
+                This tool adds custom page numbers to any PDF file. It uses the same powerful page numbering system
+                as BunTool, including support for custom alphanumeric numbering and page range mapping.
+            </p>
+            <p>
+                <strong>Features:</strong>
+            </p>
+            <ul>
+                <li>Multiple numbering styles (Page 1, 1/100, A1, B2, etc.)</li>
+                <li>Four font options (Sans, Serif, Mono, Charter)</li>
+                <li>Alignment control (Left, Centre, Right)</li>
+                <li>Custom alphanumeric prefixes (A, B, Doc, etc.)</li>
+                <li>Page range mapping (pages 1-20 as A1-A20, pages 21-40 as B1-B20, etc.)</li>
+                <li>Optional footer prefix</li>
+            </ul>
+            <p style="margin-bottom: 0;">
+                Free, open-source, and private. All files are automatically deleted after processing.
+            </p>
+        </div>
+    </div>
+
+    <!-- Error modal -->
+    <div id="errorModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000;">
+        <div style="background-color: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 500px;">
+            <h3 style="color: #d57782; margin-top: 0;">Error</h3>
+            <p id="errorMessage"></p>
+            <button onclick="document.getElementById('errorModal').style.display='none'; location.reload();" style="background-color: #d57782; color: white; padding: 0.5rem 1rem; border: none; border-radius: 4px; cursor: pointer;">Close and Retry</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

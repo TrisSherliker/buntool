@@ -44,6 +44,18 @@
             <p>
                 Just enter the details, upload your files, choose any options, and click "Create Bundle" below. The PDFs will be combined,  
             </p>
+            <p style="margin-bottom: 0;">
+                <strong>💡 Tip:</strong> Need to add page numbers to a single PDF without bundling? 
+                <a href="{{ url_for('numbering_tool') }}" style="text-decoration: underline; color: #0066cc;">Use the PDF Numbering Tool →</a>
+            </p>
+            <p style="margin-bottom: 0;">
+                <strong>📚 Tip:</strong> Need to add bookmarks to a single PDF? 
+                <a href="{{ url_for('bookmark_tool') }}" style="text-decoration: underline; color: #0066cc;">Use the PDF Bookmark Tool →</a>
+            </p>
+            <p style="margin-bottom: 0;">
+                <strong>📑 Tip:</strong> Just want to merge and arrange PDF files? 
+                <a href="{{ url_for('pdf_merger') }}" style="text-decoration: underline; color: #0066cc;">Use the PDF Merger Tool →</a>
+            </p>
         </div>
 
 
@@ -320,7 +332,72 @@
                                             <option value="x_slash_y">Numbers with slash: [X]/[Y] e.g. '1/100'</option>
                                             <option value="page_x" selected>Page [X] e.g. 'Page 1' (default)</option>
                                             <option value="page_x_of_y">Page [X] of [Y] e.g. 'Page 1 of 100'</option>
+                                            <option value="custom_alpha">Custom Alphanumeric e.g. 'A1', 'A2', 'B1'</option>
                                         </select>
+                                    </td>
+                                </tr>
+                                <tr id="customAlphaConfigRow" style="display: none;">
+                                    <td style="vertical-align: text-top;">
+                                        <label for="custom_alpha_prefix">Custom numbering prefix:</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check" style="display: inline;">
+                                            <p>Letter prefix for custom numbering (e.g., 'A', 'AB', 'Doc'):</p>
+                                            <input type="text" class="form-control" id="custom_alpha_prefix"
+                                                name="custom_alpha_prefix" maxlength="10" placeholder="e.g. enter 'A' for 'A1', 'A2'..." style="width: 100%; box-sizing: border-box;">
+                                            <small class="form-text text-muted">Leave empty for numbering: 1, 2, 3...</small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="customAlphaResetRow" style="display: none;">
+                                    <td>
+                                        <label for="custom_alpha_reset">Reset numbering:</label>
+                                    </td>
+                                    <td>
+                                        <select class="form-control" id="custom_alpha_reset" name="custom_alpha_reset">
+                                            <option value="none" selected>Sequential (1, 2, 3, ...)</option>
+                                            <option value="letter_change">Change letter per 26 pages (A1-A26, B1-B26)</option>
+                                            <option value="custom">Reset every N pages (specify below)</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr id="customAlphaResetIntervalRow" style="display: none;">
+                                    <td>
+                                        <label for="custom_alpha_reset_interval">Reset every N pages:</label>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control" id="custom_alpha_reset_interval"
+                                            name="custom_alpha_reset_interval" min="1" value="20" style="width: 100%; box-sizing: border-box;">
+                                        <small class="form-text text-muted">Only used when "Reset every N pages" is selected</small>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="vertical-align: text-top;">
+                                        <label for="use_page_range_mapping">Page range mapping:</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-check" style="display: inline;">
+                                            <input class="form-check-input" type="checkbox" id="use_page_range_mapping"
+                                                name="use_page_range_mapping" style="vertical-align: middle; margin-right: 5px;">
+                                            <label class="form-check-label" for="use_page_range_mapping"
+                                                style="display: inline;">Enable custom mapping for specific page ranges</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr id="pageRangeMappingRow" style="display: none;">
+                                    <td style="vertical-align: text-top;">
+                                        <label for="page_range_mapping_input">Define page ranges:</label>
+                                    </td>
+                                    <td>
+                                        <textarea class="form-control" id="page_range_mapping_input"
+                                            name="page_range_mapping_input" rows="5" placeholder="Format: start-end:prefix&#10;Example:&#10;1-20:A&#10;21-40:B&#10;41-60:C"
+                                            style="width: 100%; box-sizing: border-box; font-family: monospace;"></textarea>
+                                        <small class="form-text text-muted">
+                                            Define custom numbering for page ranges. Format: <code>start-end:prefix</code><br>
+                                            - Each line is one range<br>
+                                            - Example: <code>1-20:A</code> (pages 1-20 numbered A1-A20)<br>
+                                            - Can use different prefixes: <code>1-15:Doc</code>, <code>16-30:Ev</code>
+                                        </small>
                                     </td>
                                 </tr>
                                 <tr>

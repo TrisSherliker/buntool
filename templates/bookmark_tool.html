@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Bookmark Tool - BunTool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='buntool.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        .form-section h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="file"],
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        input[type="file"]:focus,
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        .help-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 6px;
+            font-style: italic;
+        }
+        .bookmark-entry {
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .bookmark-entry label {
+            margin-bottom: 10px;
+        }
+        .remove-bookmark {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+        .remove-bookmark:hover {
+            background: #cc0000;
+        }
+        .add-bookmark-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .add-bookmark-btn:hover {
+            background: #5568d3;
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.05em;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .loader {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        .error-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .error-modal.show {
+            display: flex;
+        }
+        .error-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .error-content h2 {
+            color: #ff4444;
+            margin-top: 0;
+        }
+        .error-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .close-error-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .close-error-btn:hover {
+            background: #5568d3;
+        }
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        .note strong {
+            color: #667eea;
+        }
+        .indent-info {
+            background: #f0f4ff;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #555;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="{{ url_for('index') }}" class="back-link" style="color: white; position: absolute; top: 20px; left: 30px;">← Back to BunTool</a>
+            <h1>📚 PDF Bookmark Tool</h1>
+            <p>Add custom bookmarks to your PDF files for easy navigation</p>
+        </div>
+
+        <div class="content">
+            <form id="bookmarkForm" enctype="multipart/form-data">
+                <!-- File Upload Section -->
+                <div class="form-section">
+                    <h3>📄 Select PDF File</h3>
+                    <div class="form-group">
+                        <label for="pdf_file">Upload PDF:</label>
+                        <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" required>
+                        <div class="help-text">Select a PDF file to add bookmarks to (max 100 MB)</div>
+                    </div>
+                </div>
+
+                <!-- Bookmarks Section -->
+                <div class="form-section">
+                    <h3>🔖 Bookmarks</h3>
+                    <div class="note">
+                        <strong>💡 Tip:</strong> Add bookmarks below. Each bookmark will link to a specific page in your PDF. You can create hierarchical bookmarks (nested levels) by setting the indent level.
+                    </div>
+                    
+                    <div id="bookmarksContainer"></div>
+                    
+                    <button type="button" class="add-bookmark-btn" onclick="addBookmark()">+ Add Bookmark</button>
+                </div>
+
+                <!-- Bookmark Settings Section -->
+                <div class="form-section">
+                    <h3>⚙️ Settings</h3>
+                    <div class="form-group">
+                        <label for="bookmark_color">Bookmark Color:</label>
+                        <select id="bookmark_color" name="bookmark_color">
+                            <option value="black">Black</option>
+                            <option value="red">Red</option>
+                            <option value="green">Green</option>
+                            <option value="blue">Blue</option>
+                            <option value="purple">Purple</option>
+                            <option value="orange">Orange</option>
+                        </select>
+                        <div class="help-text">Color for the bookmark entries in the PDF viewer</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="bookmark_bold" name="bookmark_bold" value="on">
+                            Make bookmarks bold
+                        </label>
+                        <div class="help-text">Display bookmark text in bold font</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="bookmark_italic" name="bookmark_italic" value="on">
+                            Make bookmarks italic
+                        </label>
+                        <div class="help-text">Display bookmark text in italic font</div>
+                    </div>
+                </div>
+
+                <!-- Submit Section -->
+                <button type="submit" class="submit-btn">Generate PDF with Bookmarks</button>
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Processing your PDF... This may take a moment.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="error-modal">
+        <div class="error-content">
+            <h2>⚠️ Error</h2>
+            <p id="errorMessage"></p>
+            <button class="close-error-btn" onclick="closeErrorModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='bookmark_tool.js') }}"></script>
+</body>
+</html>

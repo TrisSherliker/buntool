@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Merger Tool - BunTool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='buntool.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .section-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .file-upload-zone {
+            border: 2px dashed #667eea;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            background: #f8f9ff;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .file-upload-zone:hover {
+            background: #eef0ff;
+            border-color: #764ba2;
+        }
+        .file-upload-zone.dragover {
+            background: #e3e8ff;
+            border-color: #764ba2;
+            box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+        .file-upload-zone input {
+            display: none;
+        }
+        .upload-icon {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .file-list {
+            background: #f8f9ff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            min-height: 150px;
+        }
+        .file-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            cursor: move;
+            transition: all 0.2s ease;
+        }
+        .file-item:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            background: #fafbff;
+        }
+        .file-item.dragging {
+            opacity: 0.5;
+            background: #e3e8ff;
+        }
+        .file-item-number {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 0.85em;
+        }
+        .file-item-content {
+            flex: 1;
+        }
+        .file-item-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .file-item-info {
+            font-size: 0.85em;
+            color: #666;
+        }
+        .file-item-controls {
+            display: flex;
+            gap: 10px;
+            margin-left: 15px;
+        }
+        .bookmark-toggle {
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: all 0.2s ease;
+        }
+        .bookmark-toggle:hover {
+            background: #e0e0e0;
+        }
+        .bookmark-toggle.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        .remove-file {
+            background: #ff4444;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            transition: background 0.2s ease;
+        }
+        .remove-file:hover {
+            background: #cc0000;
+        }
+        .bookmark-labels {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 6px;
+        }
+        .bookmark-labels.show {
+            display: block;
+        }
+        .bookmark-input {
+            margin-bottom: 10px;
+        }
+        .bookmark-input label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        .bookmark-input input {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .form-section {
+            margin-bottom: 30px;
+        }
+        .settings-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.05em;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .loader {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .empty-state {
+            text-align: center;
+            color: #999;
+            padding: 30px;
+        }
+        .empty-state-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .error-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .error-modal.show {
+            display: flex;
+        }
+        .error-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .error-content h2 {
+            color: #ff4444;
+            margin-top: 0;
+        }
+        .close-error-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .close-error-btn:hover {
+            background: #5568d3;
+        }
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+        .info-box strong {
+            color: #667eea;
+        }
+        .drag-hint {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="{{ url_for('index') }}" class="back-link">← Back to BunTool</a>
+            <h1>📑 PDF Merger Tool</h1>
+            <p>Combine multiple PDFs in your preferred order with optional bookmarks</p>
+        </div>
+
+        <div class="content">
+            <form id="mergerForm" enctype="multipart/form-data">
+                <!-- Info Box -->
+                <div class="info-box">
+                    <strong>💡 How it works:</strong> Upload multiple PDF files, arrange them in the order you want, add optional bookmark labels, and download the merged PDF.
+                </div>
+
+                <!-- File Upload Section -->
+                <div class="form-section">
+                    <div class="section-title">📤 Upload PDF Files</div>
+                    <div class="file-upload-zone" id="uploadZone">
+                        <div class="upload-icon">📁</div>
+                        <p style="margin: 0; font-weight: 600;">Click to select or drag and drop PDF files</p>
+                        <p style="margin: 5px 0 0 0; color: #999; font-size: 0.9em;">You can select multiple files at once</p>
+                        <input type="file" id="fileInput" name="files" multiple accept=".pdf">
+                    </div>
+                </div>
+
+                <!-- Files List Section -->
+                <div class="form-section">
+                    <div class="section-title">📋 Files to Merge</div>
+                    <div class="info-box">
+                        <strong>📌 Tip:</strong> Drag files to reorder them. The top file will be first in the merged PDF. Click the bookmark icon to add a bookmark label for each file.
+                    </div>
+                    <div class="file-list" id="fileList">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📂</div>
+                            <p>No files selected yet. Upload files to begin.</p>
+                        </div>
+                    </div>
+                    <div class="drag-hint">You can reorder files by dragging them</div>
+                </div>
+
+                <!-- Output Settings -->
+                <div class="form-section">
+                    <div class="section-title">⚙️ Output Settings</div>
+                    <div class="form-group">
+                        <label for="outputFilename">Output filename (optional):</label>
+                        <input type="text" id="outputFilename" name="outputFilename" 
+                               placeholder="merged_document.pdf" value="">
+                        <div style="font-size: 0.85em; color: #999; margin-top: 5px;">
+                            Leave blank for default name
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Merge PDFs</button>
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Merging your PDFs... Please wait.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="error-modal">
+        <div class="error-content">
+            <h2>⚠️ Error</h2>
+            <p id="errorMessage"></p>
+            <button class="close-error-btn" onclick="closeErrorModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='pdf_merger_tool.js') }}"></script>
+</body>
+</html>

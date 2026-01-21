@@ -413,6 +413,235 @@ def add_bookmarks_to_pdf(pdf_file, output_file, toc_entries, length_of_frontmatt
         pdf.save(output_file)
 
 
+def add_custom_bookmarks_to_pdf(input_pdf, output_pdf, bookmarks_list, bookmark_settings=None, logger=None):
+    '''
+    Add custom bookmarks to a PDF file.
+    
+    Args:
+        input_pdf (str): Path to the input PDF file
+        output_pdf (str): Path to save the output PDF with bookmarks
+        bookmarks_list (list): List of bookmark dictionaries with keys:
+            - title (str): Bookmark title
+            - page (int): Page number (1-based, will be converted to 0-based)
+            - indent (int): Indentation level (0, 1, 2, 3, etc.)
+            - style (str): Style ('none', 'bold', 'italic', 'bold_italic')
+        bookmark_settings (dict): Optional settings:
+            - color (str): Bookmark color ('black', 'red', 'green', 'blue', 'purple', 'orange')
+            - bold (bool): Make all bookmarks bold
+            - italic (bool): Make all bookmarks italic
+        logger: Optional logger object for output
+    
+    Returns:
+        str: Path to the output PDF file
+    '''
+    def log_msg(msg, level='info'):
+        """Log a message to logger if available, otherwise print"""
+        if logger:
+            if level == 'debug':
+                logger.debug(msg)
+            elif level == 'info':
+                logger.info(msg)
+            elif level == 'warning':
+                logger.warning(msg)
+            elif level == 'error':
+                logger.error(msg)
+        else:
+            print(msg)
+    
+    try:
+        log_msg(f"[ACB]Starting bookmark addition using PIKEPDF (raw dict manipulation). Input: {input_pdf}")
+        
+        if bookmark_settings is None:
+            bookmark_settings = {}
+        
+        import shutil
+        
+        # Copy input to output first
+        log_msg(f"[ACB]Copying input PDF to output")
+        shutil.copy2(input_pdf, output_pdf)
+        log_msg(f"[ACB]✅ Copy complete")
+        
+        log_msg(f"[ACB]Opening PDF for bookmark editing (allow_overwriting_input=True)")
+        
+        with Pdf.open(output_pdf, allow_overwriting_input=True) as pdf:
+            log_msg(f"[ACB]PDF opened. Pages: {len(pdf.pages)}")
+            
+            bookmarks_added = 0
+            valid_bookmarks = []
+            
+            log_msg(f"[ACB]Validating {len(bookmarks_list)} bookmarks...")
+            for idx, bookmark in enumerate(bookmarks_list):
+                title = bookmark.get('title', 'Untitled')
+                page_num = bookmark.get('page', 1)
+                
+                if page_num < 1 or page_num > len(pdf.pages):
+                    log_msg(f"[ACB]  ⚠️  Bookmark '{title}' (page {page_num}) out of range", 'warning')
+                    continue
+                
+                valid_bookmarks.append((title, page_num - 1))  # Convert to 0-based
+                log_msg(f"[ACB]  ✅ Bookmark '{title}' on page {page_num}")
+            
+            if len(valid_bookmarks) == 0:
+                log_msg(f"[ACB]No valid bookmarks to add")
+                return output_pdf
+            
+            log_msg(f"[ACB]Rebuilding outline with {len(valid_bookmarks)} bookmarks...")
+            
+            # Remove existing outlines if any
+            try:
+                if '/Outlines' in pdf.root:
+                    log_msg(f"[ACB]Removing existing /Outlines from root")
+                    del pdf.root['/Outlines']
+            except:
+                pass
+            
+            # Create new outline items
+            outline_items = []
+            for title, page_index in valid_bookmarks:
+                try:
+                    item = OutlineItem(title, page_index)
+                    outline_items.append(item)
+                    log_msg(f"[ACB]  Created item: {title}")
+                except Exception as e:
+                    log_msg(f"[ACB]  ❌ Error creating item: {e}", 'error')
+                    continue
+            
+            if outline_items:
+                log_msg(f"[ACB]Adding {len(outline_items)} items to outline...")
+                try:
+                    # Get the outline and clear it completely
+                    outline = pdf.open_outline()
+                    
+                    # Clear existing items
+                    while len(outline.root) > 0:
+                        outline.root.pop()
+                    
+                    # Add new items
+                    for item in outline_items:
+                        outline.root.append(item)
+                    
+                    log_msg(f"[ACB]Outline.root now has {len(list(outline.root))} items")
+                    
+                except Exception as e:
+                    log_msg(f"[ACB]❌ Error manipulating outline: {e}", 'error')
+                    raise
+            
+            log_msg(f"[ACB]Saving PDF...")
+            pdf.save()
+            log_msg(f"[ACB]✅ PDF saved")
+        
+        # Verify persistence
+        log_msg(f"[ACB]Verifying bookmarks...")
+        try:
+            with Pdf.open(output_pdf) as verify_pdf:
+                verify_outline = verify_pdf.open_outline()
+                if verify_outline.root:
+                    verify_count = len(list(verify_outline.root))
+                    log_msg(f"[ACB]VERIFICATION: {verify_count} bookmarks in saved file")
+                    
+                    for i, item in enumerate(list(verify_outline.root)):
+                        try:
+                            title = item.title if hasattr(item, 'title') else "??"
+                            log_msg(f"[ACB]  [{i}] {title}")
+                        except:
+                            pass
+                    
+                    if verify_count > 0:
+                        log_msg(f"[ACB]✅ SUCCESS: Bookmarks persisted!")
+                    else:
+                        log_msg(f"[ACB]⚠️  WARNING: Still 0 bookmarks after save", 'warning')
+                else:
+                    log_msg(f"[ACB]⚠️  Outline.root is empty or None")
+        except Exception as verify_error:
+            log_msg(f"[ACB]Verification error: {verify_error}", 'warning')
+        
+        log_msg(f"[ACB]✅ Function completed")
+        return output_pdf
+    
+    except Exception as e:
+        log_msg(f"[ACB]❌ Error in add_custom_bookmarks_to_pdf: {str(e)}", 'error')
+        import traceback
+        log_msg(f"[ACB]Traceback: {traceback.format_exc()}", 'error')
+        raise
+
+
+def merge_pdfs_simple(input_pdfs, output_pdf, bookmarks_dict=None):
+    '''
+    Merge multiple PDF files into a single PDF with optional bookmarks.
+    
+    Args:
+        input_pdfs (list): List of input PDF file paths in desired order
+        output_pdf (str): Path to save the merged output PDF
+        bookmarks_dict (dict): Optional dict mapping file index to bookmark label
+                             e.g., {0: "Chapter 1", 1: "Chapter 2"}
+    
+    Returns:
+        str: Path to the merged output PDF
+    '''
+    try:
+        if bookmarks_dict is None:
+            bookmarks_dict = {}
+        
+        # Create new PDF
+        merged_pdf = Pdf.new()
+        page_offset = 0
+        bookmarks_to_add = []
+        
+        # Merge all PDFs
+        for index, pdf_path in enumerate(input_pdfs):
+            try:
+                if not os.path.exists(pdf_path):
+                    bundle_logger.warning(f"[MPS]PDF file not found: {pdf_path}")
+                    continue
+                
+                with Pdf.open(pdf_path) as src_pdf:
+                    page_count = len(src_pdf.pages)
+                    
+                    # Add pages to merged PDF
+                    merged_pdf.pages.extend(src_pdf.pages)
+                    
+                    # Store bookmark info if provided
+                    if index in bookmarks_dict and bookmarks_dict[index]:
+                        bookmarks_to_add.append({
+                            'title': bookmarks_dict[index],
+                            'page': page_offset,
+                            'indent': 0
+                        })
+                    
+                    page_offset += page_count
+                    bundle_logger.debug(f"[MPS]Added {page_count} pages from {os.path.basename(pdf_path)}")
+                    
+            except Exception as e:
+                bundle_logger.error(f"[MPS]Error merging {os.path.basename(pdf_path)}: {str(e)}")
+                continue
+        
+        # Add bookmarks if any
+        if bookmarks_to_add:
+            try:
+                with merged_pdf.open_outline() as outline:
+                    for bookmark_info in bookmarks_to_add:
+                        try:
+                            page_index = min(bookmark_info['page'], len(merged_pdf.pages) - 1)
+                            item = OutlineItem(bookmark_info['title'], page_index)
+                            outline.root.append(item)
+                            bundle_logger.debug(f"[MPS]Added bookmark: {bookmark_info['title']} at page {page_index}")
+                        except Exception as e:
+                            bundle_logger.warning(f"[MPS]Could not add bookmark: {str(e)}")
+                            continue
+            except Exception as e:
+                bundle_logger.warning(f"[MPS]Error adding bookmarks to merged PDF: {str(e)}")
+        
+        # Save merged PDF
+        merged_pdf.save(output_pdf)
+        bundle_logger.info(f"[MPS]Successfully merged {len(input_pdfs)} PDFs into {output_pdf}")
+        
+        return output_pdf
+    
+    except Exception as e:
+        bundle_logger.error(f"[MPS]Error merging PDFs: {str(e)}")
+        raise
+
+
 def merge_frontmatter(input_files, output_file):
     '''
     Function to merge uploaded coversheet + generated index, in cases
@@ -779,6 +1008,146 @@ def generate_footer_pages_reportlab(filename, num_pages):
     doc.build(story, onFirstPage=reportlab_footer_config, onLaterPages=reportlab_footer_config)
 
 
+def parse_page_range_mapping(mapping_string):
+    '''
+    Parse page range mapping from user input string.
+    
+    Expected format - can be comma-separated or one per line:
+    start-end:prefix, start-end:prefix, ... OR
+    start-end:prefix
+    start-end:prefix
+    start-end:prefix
+    
+    Examples:
+    1-20:A, 21-40:B, 41-60:C
+    OR
+    1-20:A
+    21-40:B
+    41-60:C
+    
+    Args:
+        mapping_string (str): Raw mapping input from user
+        
+    Returns:
+        list: List of tuples [(start, end, prefix), ...]
+              Sorted by start page
+        
+    Raises:
+        ValueError: If format is invalid
+    '''
+    if not mapping_string or not mapping_string.strip():
+        return []
+    
+    ranges = []
+    
+    # Detect format: comma-separated or newline-separated
+    # If it contains commas, assume comma-separated; otherwise newline-separated
+    if ',' in mapping_string:
+        # Comma-separated format
+        items = mapping_string.split(',')
+    else:
+        # Newline-separated format
+        items = mapping_string.split('\n')
+    
+    for item in items:
+        item = item.strip()
+        if not item:  # Skip empty lines/items
+            continue
+        
+        if ':' not in item or '-' not in item.split(':')[0]:
+            bundle_logger.warning(f"[PRM]Invalid range format (skipping): {item}")
+            continue
+        
+        try:
+            page_part, prefix = item.split(':', 1)  # Use maxsplit=1 in case prefix contains ':'
+            start_str, end_str = page_part.split('-', 1)  # Use maxsplit=1 in case we have ranges like "1-10-20"
+            start = int(start_str.strip())
+            end = int(end_str.strip())
+            prefix = prefix.strip()
+            
+            if start > end:
+                bundle_logger.warning(f"[PRM]Invalid range (start > end, skipping): {start}-{end}")
+                continue
+            
+            ranges.append((start, end, prefix))
+            bundle_logger.debug(f"[PRM]Parsed range: pages {start}-{end} → prefix '{prefix}'")
+        except (ValueError, IndexError) as e:
+            bundle_logger.warning(f"[PRM]Error parsing range '{item}': {e}")
+            continue
+    
+    # Sort by start page
+    ranges.sort(key=lambda x: x[0])
+    bundle_logger.debug(f"[PRM]Total ranges parsed: {len(ranges)}")
+    return ranges
+
+
+def get_custom_number_for_page_in_range(page_number, ranges):
+    '''
+    Get custom page number for a given page, checking against defined ranges.
+    
+    Args:
+        page_number (int): Absolute page number in document
+        ranges (list): List of tuples [(start, end, prefix), ...]
+        
+    Returns:
+        tuple: (prefix, page_within_range) or (None, None) if not in any range
+    '''
+    for start, end, prefix in ranges:
+        if start <= page_number <= end:
+            page_within_range = page_number - start + 1
+            return (prefix, page_within_range)
+    
+    return (None, None)
+
+
+def generate_custom_alpha_page_number(page_number, prefix="", reset_mode="none", reset_interval=20):
+    '''
+    Generate custom alphanumeric page numbers like A1, A2, B1, B2, etc.
+    
+    Args:
+        page_number (int): Current page number (1-indexed)
+        prefix (str): Letter prefix (e.g., 'A', 'AB', 'Doc')
+        reset_mode (str): One of:
+            - "none": Sequential numbering (1, 2, 3, ...)
+            - "letter_change": Change letter every 26 pages (A1-A26, B1-B26, ...)
+            - "custom": Reset every N pages based on reset_interval
+        reset_interval (int): Number of pages before resetting counter (for custom mode)
+    
+    Returns:
+        str: Formatted page number like 'A1', 'A2', 'B1', etc.
+    '''
+    if reset_mode == "letter_change":
+        # Calculate which letter and which number within that letter
+        letter_index = (page_number - 1) // 26
+        page_within_letter = ((page_number - 1) % 26) + 1
+        # Convert letter index to letter(s): 0->A, 1->B, ..., 25->Z, 26->AA, etc.
+        letter = ""
+        temp_index = letter_index
+        while True:
+            letter = chr(65 + (temp_index % 26)) + letter
+            temp_index = temp_index // 26 - 1
+            if temp_index < 0:
+                break
+        return f"{prefix}{letter}{page_within_letter}" if prefix else f"{letter}{page_within_letter}"
+    
+    elif reset_mode == "custom":
+        # Reset counter every N pages
+        letter_index = (page_number - 1) // reset_interval
+        page_within_interval = ((page_number - 1) % reset_interval) + 1
+        # Convert letter index to letter(s)
+        letter = ""
+        temp_index = letter_index
+        while True:
+            letter = chr(65 + (temp_index % 26)) + letter
+            temp_index = temp_index // 26 - 1
+            if temp_index < 0:
+                break
+        return f"{prefix}{letter}{page_within_interval}" if prefix else f"{letter}{page_within_interval}"
+    
+    else:  # "none" - sequential numbering
+        return f"{prefix}{page_number}" if prefix else str(page_number)
+
+
 def reportlab_footer_config(canvas, doc):
     '''
     This is a page configuration function, and is called by
@@ -849,6 +1218,14 @@ def reportlab_footer_config(canvas, doc):
     else:
         footer_data = ""
 
+    # Debug: Log the page range mapping status
+    has_page_range_mapping = hasattr(bundle_config, 'page_range_mapping') and bundle_config.page_range_mapping
+    bundle_logger.debug(f"[GPF]Page numbering footer generation:")
+    bundle_logger.debug(f"[GPF]  - has_page_range_mapping: {has_page_range_mapping}")
+    if has_page_range_mapping:
+        bundle_logger.debug(f"[GPF]  - page_range_mapping content: {bundle_config.page_range_mapping}")
+    bundle_logger.debug(f"[GPF]  - page_numbering_style: {page_numbering_style}")
+
     # parse page numbering style and APPEND to the existing text above.
     # NOTE: This feels a bit janky, but the same function is being used to
     # make the footer for the TOC as is used for the main bundle.
@@ -859,7 +1236,33 @@ def reportlab_footer_config(canvas, doc):
     # offset parameter length_of_frontmatter_offset is a global parameter, initially
     # set to 0 (at the time this is first called) and later set to the frontmatter length.
 
-    if page_numbering_style == "x":
+    # Check if page range mapping is enabled - if so, OVERRIDE all other numbering styles
+    if hasattr(bundle_config, 'page_range_mapping') and bundle_config.page_range_mapping:
+        current_page = canvas.getPageNumber() + length_of_frontmatter_offset
+        range_prefix, page_in_range = get_custom_number_for_page_in_range(current_page, bundle_config.page_range_mapping)
+        
+        if range_prefix is not None and page_in_range is not None:
+            # Page is within a defined range - use the mapped prefix and numbering
+            footer_data += f"{range_prefix}{page_in_range}"
+        else:
+            # Page is outside all defined ranges - no numbering for this page
+            # (as page range mapping should only apply to specified ranges)
+            pass  # Don't add any numbering
+    elif page_numbering_style == "custom_alpha":
+        # Use custom alphanumeric numbering (only if page range mapping is not enabled)
+        custom_prefix = bundle_config.custom_alpha_prefix if hasattr(bundle_config, 'custom_alpha_prefix') else ""
+        custom_reset = bundle_config.custom_alpha_reset if hasattr(bundle_config, 'custom_alpha_reset') else "none"
+        custom_interval = bundle_config.custom_alpha_reset_interval if hasattr(bundle_config, 'custom_alpha_reset_interval') else 20
+        current_page = canvas.getPageNumber() + length_of_frontmatter_offset
+        
+        # Use global custom alpha numbering
+        footer_data += generate_custom_alpha_page_number(
+            current_page,
+            prefix=custom_prefix,
+            reset_mode=custom_reset,
+            reset_interval=custom_interval
+        )
+    elif page_numbering_style == "x":
         footer_data += f"{canvas.getPageNumber() + length_of_frontmatter_offset}"
     #    bundle_logger.debug("[rplb]..Page numbering style: x")
     elif page_numbering_style == "x_of_y":
@@ -1268,12 +1671,15 @@ def add_footer_to_bundle(input_file, page_numbers_pdf_path, output_file):
     this combines the two by overlaying footers on top of the input file.
     It scales the footer according to horizontal scaling factor (an imperfect
     solution to a difficult problem)
+    
+    IMPORTANT: Preserves all bookmarks from the input PDF.
     '''
     # CONVERSION NOTE: PDF points are 1/72 inch by standard.
     # the scaling factor between point and mm is 2.8346...
     # a4 paper (which I've chosen for the reference page numbering) is 210mm x 297mm = 595 x 842 points
     # height isn't such an issue, but width is or we'll overflow.
     a4_width = 595
+    
     try:
         # Load the input PDF and the page numbers PDF
         input_pdf = PdfReader(input_file)
@@ -1286,7 +1692,7 @@ def add_footer_to_bundle(input_file, page_numbers_pdf_path, output_file):
 
         # Create a writer for the output PDF
         writer = PdfWriter()
-
+        
         # Overlay page numbers PDF pages onto input PDF pages
         for input_page, overlay_page in zip(input_pdf.pages, page_numbers_pdf.pages):
             # The content is `input_page`, the footer is `overlay_page`.
@@ -1295,9 +1701,64 @@ def add_footer_to_bundle(input_file, page_numbers_pdf_path, output_file):
             input_page.merge_scaled_page(overlay_page, scaling_factor)
             writer.add_page(input_page)
 
-        # Write the resulting PDF to the output file
+        # Write the resulting PDF to output file first (without bookmarks)
         with open(output_file, "wb") as f:
             writer.write(f)
+        
+        bundle_logger.debug(f"[OPN]PDF with page numbers created, now attempting bookmark preservation")
+        
+        # Now use pikepdf to preserve bookmarks from input to output
+        try:
+            bundle_logger.debug(f"[OPN]Opening input PDF with pikepdf to extract bookmarks")
+            with Pdf.open(input_file) as input_pdf_pikepdf:
+                try:
+                    input_outline = input_pdf_pikepdf.open_outline()
+                    bundle_logger.debug(f"[OPN]Input outline opened. Checking for bookmarks...")
+                    
+                    if input_outline.root:
+                        bookmark_count = len(list(input_outline.root))
+                        bundle_logger.debug(f"[OPN]Found {bookmark_count} bookmarks in input PDF")
+                        
+                        if bookmark_count > 0:
+                            # Bookmarks exist - copy them to output PDF with proper pikepdf approach
+                            bundle_logger.debug(f"[OPN]Opening output PDF with pikepdf (allow_overwriting_input=True)")
+                            with Pdf.open(output_file, allow_overwriting_input=True) as output_pdf_pikepdf:
+                                try:
+                                    output_outline = output_pdf_pikepdf.open_outline()
+                                    bundle_logger.debug(f"[OPN]Output outline created. Copying {bookmark_count} bookmarks...")
+                                    
+                                    # Copy bookmarks by creating OutlineItems for each one
+                                    for input_item in input_outline.root:
+                                        try:
+                                            # Create new OutlineItem with same page reference
+                                            new_item = OutlineItem(input_item.title, input_item.page_index)
+                                            output_outline.root.append(new_item)
+                                            bundle_logger.debug(f"[OPN]  Added bookmark: {input_item.title}")
+                                        except Exception as item_error:
+                                            bundle_logger.warning(f"[OPN]  Error copying bookmark: {item_error}")
+                                    
+                                    output_pdf_pikepdf.save()
+                                    
+                                    # Verify bookmarks persisted
+                                    with Pdf.open(output_file) as verify_pdf:
+                                        verify_outline = verify_pdf.open_outline()
+                                        verify_count = len(list(verify_outline.root)) if verify_outline.root else 0
+                                        bundle_logger.info(f"[OPN]✅ Bookmark preservation VERIFICATION: {verify_count} bookmarks in output")
+                                    
+                                except Exception as copy_error:
+                                    bundle_logger.warning(f"[OPN]Error copying bookmarks: {copy_error}")
+                        else:
+                            bundle_logger.debug(f"[OPN]No bookmarks found in input PDF (outline.root is empty)")
+                    else:
+                        bundle_logger.debug(f"[OPN]No bookmarks in input PDF (outline.root is None/False)")
+                        
+                except Exception as outline_error:
+                    bundle_logger.debug(f"[OPN]Could not read outline from input PDF: {outline_error}")
+                    
+        except Exception as pikepdf_error:
+            bundle_logger.warning(f"[OPN]Pikepdf failed or unavailable: {pikepdf_error}")
+            bundle_logger.info(f"[OPN]PDF created with page numbers (bookmarks could not be preserved)")
+        
     except Exception as e:
         bundle_logger.error(f"[OPN]Error overlaying page numbers: {e}")
         raise e
@@ -1626,7 +2087,9 @@ def add_hyperlinks(
 class BundleConfig:
     def __init__(self, timestamp, case_details, csv_string, confidential_bool, zip_bool, session_id, user_agent,
                  page_num_align, index_font, footer_font, page_num_style, footer_prefix, date_setting,
-                 roman_for_preface, expected_length_of_frontmatter=0, main_page_count=0, temp_dir=None, logs_dir=None, bookmark_setting="uk_abbreviated"):
+                 roman_for_preface, expected_length_of_frontmatter=0, main_page_count=0, temp_dir=None, logs_dir=None, bookmark_setting="uk_abbreviated",
+                 custom_alpha_prefix=None, custom_alpha_reset="none", custom_alpha_reset_interval=20,
+                 page_range_mapping_string=None):
         self.timestamp = timestamp if timestamp else datetime.now().strftime("%Y-%m-%d-%H%M%S")
         self.case_details = case_details
         self.csv_string = csv_string if csv_string else None
@@ -1648,6 +2111,122 @@ class BundleConfig:
         self.temp_dir = temp_dir if temp_dir else os.path.join(base_temp, 'buntool', 'tempfiles', self.session_id)
         self.logs_dir = logs_dir if logs_dir else os.path.join(base_temp, 'buntool', 'logs', self.session_id)
         self.bookmark_setting = bookmark_setting if bookmark_setting else "uk_abbreviated"
+        # Custom alphanumeric numbering
+        self.custom_alpha_prefix = custom_alpha_prefix if custom_alpha_prefix else ""
+        self.custom_alpha_reset = custom_alpha_reset if custom_alpha_reset else "none"
+        self.custom_alpha_reset_interval = int(custom_alpha_reset_interval) if custom_alpha_reset_interval else 20
+        # Page range mapping (will be parsed from string)
+        self.page_range_mapping_string = page_range_mapping_string if page_range_mapping_string else ""
+        self.page_range_mapping = parse_page_range_mapping(self.page_range_mapping_string)
+
+def number_single_pdf(input_pdf, output_pdf, numbering_options):
+    '''
+    Add custom page numbers to a single PDF file without bundling.
+    This is used by the standalone PDF numbering tool.
+    
+    Args:
+        input_pdf (str): Path to input PDF file
+        output_pdf (str): Path to output PDF file with page numbers
+        numbering_options (dict): Dictionary containing:
+            - page_num_align: 'left', 'centre', or 'right'
+            - footer_font: 'sans', 'serif', 'mono', or 'traditional'
+            - page_num_style: 'x', 'x_of_y', 'x_slash_y', 'page_x', 'page_x_of_y', 'custom_alpha'
+            - footer_prefix: Optional prefix text
+            - custom_alpha_prefix: Prefix for custom alpha (e.g. 'A', 'Doc')
+            - custom_alpha_reset: 'none', 'letter_change', or 'custom'
+            - custom_alpha_reset_interval: Number of pages before reset
+            - page_range_mapping_string: Optional range mapping (e.g. "1-20:A\n21-40:B")
+            - temp_dir: Temporary directory for processing
+            - logs_dir: Logs directory for logging
+            - session_id: Session ID for logging
+    
+    Returns:
+        str: Path to output PDF file
+    '''
+    global bundle_config
+    
+    # Create a minimal BundleConfig for this single PDF operation
+    bundle_config_obj = BundleConfig(
+        timestamp=datetime.now().strftime("%Y-%m-%d-%H%M%S"),
+        case_details=['', '', ''],
+        csv_string=None,
+        confidential_bool=False,
+        zip_bool=False,
+        session_id=numbering_options.get('session_id', 'numbering_tool'),
+        user_agent='PDF Numbering Tool',
+        page_num_align=numbering_options.get('page_num_align', 'right'),
+        index_font='Default',
+        footer_font=numbering_options.get('footer_font', 'sans'),
+        page_num_style=numbering_options.get('page_num_style', 'page_x'),
+        footer_prefix=numbering_options.get('footer_prefix', ''),
+        date_setting='hide_date',
+        roman_for_preface=False,
+        expected_length_of_frontmatter=0,
+        main_page_count=0,
+        temp_dir=numbering_options.get('temp_dir'),
+        logs_dir=numbering_options.get('logs_dir'),
+        custom_alpha_prefix=numbering_options.get('custom_alpha_prefix', ''),
+        custom_alpha_reset=numbering_options.get('custom_alpha_reset', 'none'),
+        custom_alpha_reset_interval=numbering_options.get('custom_alpha_reset_interval', 20),
+        page_range_mapping_string=numbering_options.get('page_range_mapping_string', '')
+    )
+    
+    load_bundle_config(bundle_config_obj)
+    
+    # Set up logging
+    try:
+        bundle_logger = configure_logger(bundle_config.session_id)
+        bundle_logger.info(f"[NSP]Starting PDF numbering for {os.path.basename(input_pdf)}")
+        bundle_logger.debug(f"[NSP]Numbering options: {numbering_options}")
+    except Exception as e:
+        print(f"Error configuring logger: {e}")
+        return None
+    
+    try:
+        # Get page count from input PDF
+        with Pdf.open(input_pdf) as pdf:
+            page_count = len(pdf.pages)
+        
+        bundle_config.main_page_count = page_count
+        bundle_config.total_number_of_pages = page_count
+        bundle_config.expected_length_of_frontmatter = 0
+        
+        bundle_logger.info(f"[NSP]Input PDF has {page_count} pages")
+        
+        # Create page numbers PDF
+        page_numbers_pdf_path = os.path.join(bundle_config.temp_dir, "pageNumbers_single.pdf")
+        bundle_logger.debug(f"[NSP]Generating page numbers PDF at {page_numbers_pdf_path}")
+        
+        generate_footer_pages_reportlab(page_numbers_pdf_path, page_count)
+        
+        if not os.path.exists(page_numbers_pdf_path):
+            bundle_logger.error(f"[NSP]Failed to generate page numbers PDF")
+            return None
+        
+        # Overlay page numbers onto input PDF
+        bundle_logger.debug(f"[NSP]Overlaying page numbers onto input PDF")
+        add_footer_to_bundle(input_pdf, page_numbers_pdf_path, output_pdf)
+        
+        if not os.path.exists(output_pdf):
+            bundle_logger.error(f"[NSP]Failed to create output PDF")
+            return None
+        
+        bundle_logger.info(f"[NSP]Successfully created numbered PDF at {output_pdf}")
+        
+        # Clean up temporary files
+        try:
+            if os.path.exists(page_numbers_pdf_path):
+                os.remove(page_numbers_pdf_path)
+                bundle_logger.debug(f"[NSP]Cleaned up temporary file: {page_numbers_pdf_path}")
+        except Exception as e:
+            bundle_logger.warning(f"[NSP]Could not delete temporary file: {e}")
+        
+        return output_pdf
+        
+    except Exception as e:
+        bundle_logger.error(f"[NSP]Error during PDF numbering: {e}")
+        raise e
+
 
 def create_bundle(input_files, output_file, coversheet, index_file, bundle_config_data):
     '''
@@ -1751,6 +2330,16 @@ def create_bundle(input_files, output_file, coversheet, index_file, bundle_confi
         bundle_logger.info(f"....Preface numbering: {bundle_config.roman_for_preface}")
         bundle_logger.info(f"....Page number alignment: {bundle_config.page_num_align}")
         bundle_logger.info(f"....Page numbering style: {bundle_config.page_num_style}")
+        if bundle_config.page_num_style == "custom_alpha":
+            if bundle_config.page_range_mapping:
+                bundle_logger.info(f"....Page range mapping: ENABLED")
+                for start, end, prefix in bundle_config.page_range_mapping:
+                    bundle_logger.info(f"......Pages {start}-{end} → prefix '{prefix}'")
+            else:
+                bundle_logger.info(f"....Custom alpha prefix: {bundle_config.custom_alpha_prefix}")
+                bundle_logger.info(f"....Custom alpha reset mode: {bundle_config.custom_alpha_reset}")
+                if bundle_config.custom_alpha_reset == "custom":
+                    bundle_logger.info(f"....Custom alpha reset interval: {bundle_config.custom_alpha_reset_interval} pages")
         if bundle_config.footer_prefix:
             bundle_logger.info(f"....Footer prefix: {bundle_config.footer_prefix}")
         else:

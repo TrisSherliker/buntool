@@ -47,6 +47,53 @@ fileInput.addEventListener('change', (e) => {
     handleFiles(e.target.files);
 });
 
+// Event listener for custom alpha numbering style selector
+const pageNumStyleSelect = document.getElementById('page_num_style');
+const customAlphaConfigRow = document.getElementById('customAlphaConfigRow');
+const customAlphaResetRow = document.getElementById('customAlphaResetRow');
+const customAlphaResetIntervalRow = document.getElementById('customAlphaResetIntervalRow');
+const customAlphaResetSelect = document.getElementById('custom_alpha_reset');
+
+if (pageNumStyleSelect) {
+    pageNumStyleSelect.addEventListener('change', function() {
+        if (this.value === 'custom_alpha') {
+            customAlphaConfigRow.style.display = '';
+            customAlphaResetRow.style.display = '';
+            if (customAlphaResetSelect && customAlphaResetSelect.value === 'custom') {
+                customAlphaResetIntervalRow.style.display = '';
+            }
+        } else {
+            customAlphaConfigRow.style.display = 'none';
+            customAlphaResetRow.style.display = 'none';
+            customAlphaResetIntervalRow.style.display = 'none';
+        }
+    });
+}
+
+if (customAlphaResetSelect) {
+    customAlphaResetSelect.addEventListener('change', function() {
+        if (this.value === 'custom') {
+            customAlphaResetIntervalRow.style.display = '';
+        } else {
+            customAlphaResetIntervalRow.style.display = 'none';
+        }
+    });
+}
+
+// Event listener for page range mapping checkbox
+const usePageRangeMapping = document.getElementById('use_page_range_mapping');
+const pageRangeMappingRow = document.getElementById('pageRangeMappingRow');
+
+if (usePageRangeMapping) {
+    usePageRangeMapping.addEventListener('change', function() {
+        if (this.checked) {
+            pageRangeMappingRow.style.display = '';
+        } else {
+            pageRangeMappingRow.style.display = 'none';
+        }
+    });
+}
+
 
 function sanitizeFilename(filename) {
     let nameWithoutExt = filename;
