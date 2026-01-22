@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  buntool:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: buntool-app
+    ports:
+      - "7001:7001"
+    volumes:
+      # Mount for persistent temporary files (optional)
+      - buntool_tempfiles:/app/tempfiles
+      - buntool_logs:/app/logs
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7001/bookmark_tool"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  buntool_tempfiles:
+  buntool_logs:
