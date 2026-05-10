@@ -1,3 +1,5 @@
+ARCHIVED Python implementation of BunTool. For its more private, better-featured and actively maintained successor, go to https://github.com/TrisSherliker/buntool-website-git
+
 # BunTool
 <p align="center">
   <img src="static/buntool.webp" width="300" style="center">
