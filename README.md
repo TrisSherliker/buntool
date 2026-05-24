@@ -2,14 +2,14 @@ ARCHIVED Python implementation of BunTool. For its more private, better-featured
 
 # BunTool
 <p align="center">
-  <img src="static/buntool.webp" width="300" style="center">
+  <img src="buntool/static/buntool.webp" width="300" style="center">
 </p>
 
 Automatically make court bundles in seconds.  Check out the main instance: [buntool.co.uk](https://buntool.co.uk)
 
 Takes input PDF files; generates index data; outputs a merged PDF with index, hyperlinks, bookmarks and page numbers according to your chosen settings.
 
-Output Bundles comply with the requirements of the English Courts, and are also useful for a range of other applications. 
+Output Bundles comply with the requirements of the English Courts, and are also useful for a range of other applications.
 
 # Usage and installation
 
@@ -24,25 +24,60 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 # 3. Install the required packages
-pip install -r requirements.txt
-```
-## Copy fonts to fonts directory
-
-Buntool uses the font Charter, a popular style of font for legal documents. The four `.ttf` files need to be added to ReportLab's fonts folder:
-
-```bash
-# This command copies the fonts into your virtual environment.
-# The python* wildcard makes it work for any version of Python 3 
-cp static/Charter*.ttf ./venv/lib/python*/site-packages/reportlab/fonts/
+pip install -e .
 ```
 
 ## Ready to bake
 
 Now you can start the server:
 ```bash
-python app.py
+buntool
 ```
 Then visit `http://127.0.0.1:7001` in your browser.
+
+# Packaging as Nuitka compiled wheel for 15% speed up
+In our local tests we noticed a 15% speed up when compiling the wheel with Nuitka so we decided to include instructions on how to integrate Nuitka in your workflow.
+
+## Building the compiled wheel
+In the project folder:
+
+```bash
+# 1. Create the virtual environment (a hidden folder named .venv)
+python3 -m venv .venv
+
+# 2. Activate the virtual environment
+source .venv/bin/activate
+
+# 3. Install the required packages
+pip install .[build]
+
+# 4. Build wheel
+python -m build
+```
+
+This will create a .whl file within the dist folder.
+
+## Install wheel in a new venv and run
+To make sure you run on an isolated from build environment, deactivate the previous venv and create a new sibling folder with a new venv:
+
+```bash
+deactivate
+cd ..
+mkdir new-folder && cd new-folder
+
+# 1. Create the virtual environment (a hidden folder named .venv)
+python3 -m venv .venv
+
+# 2. Activate the virtual environment
+source .venv/bin/activate
+
+# 3. Install wheel where * is the name of the created wheel
+pip install ../buntool/dist/*.whl
+
+# 4. Run application
+buntool
+```
+
 
 # Copyright and License
 

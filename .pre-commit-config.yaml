@@ -1,0 +1,41 @@
+repos:
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.20.0
+    hooks:
+      - id: pyupgrade
+
+  - repo: https://github.com/MarcoGorelli/absolufy-imports
+    rev: v0.3.1
+    hooks:
+      - id: absolufy-imports
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^src/pattern_identifier\.egg-info/
+      - id: end-of-file-fixer
+        exclude: ^src/pattern_identifier\.egg-info/
+      - id: check-yaml
+
+  - repo: https://github.com/PyCQA/bandit
+    rev: "1.9.2"
+    hooks:
+      - id: bandit
+        args: ["--exclude", ".tox,.eggs,tests"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: "v0.14.8" # Use the latest version
+    hooks:
+      - id: ruff
+        args: ["--fix", "--exit-non-zero-on-fix"]
+      - id: ruff-format
+        # args: ["--check"] # Use --check in CI if you only want to verify
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: pytest
+        language: system
+        pass_filenames: false
+        always_run: true

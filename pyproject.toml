@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "nuitka", "toml"]
+build-backend = "nuitka.distutils.Build"
+
+[project]
+name = "buntool"
+version = "2025.01.24"
+description = "A simple tool for creating PDF bundles."
+authors = [
+  { name = "Tristan Sherliker", email = "tris@sherliker.net" },
+]
+requires-python = ">=3.11"
+dependencies = [
+    "flask==3.1.2",
+    "waitress==3.0.2",
+    "pikepdf==10.0.2",
+    "pdfplumber==0.11.8",
+    "reportlab==4.4.6",
+    "python-docx==1.2.0",
+    "colorlog==6.10.1",
+    "werkzeug==3.1.4",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest==9.0.2"
+]
+
+build = [
+    "build==1.3.0",
+    "bump-my-version==1.2.4",
+    "twine==6.2.0",
+]
+
+dev = [
+    "buntool[build]", # Includes all dependencies from the 'build' group,
+    "buntool[test]", # Includes all dependencies from the 'test' group,
+    "pre-commit==4.5.0", # For managing pre-commit hooks
+    "ruff==0.14.8",
+    "vulture==2.14",
+    # "memory-profiler==0.61", # uncomment for memory profiling...
+    "flask-livereload"
+]
+
+[tool.ruff]
+line-length = 149
+target-version = "py311"
+
+[tool.ruff.lint]
+# Enable Pyflakes (F), pycodestyle (E, W), isort (I)
+# Enable many common Pylint (PL), flake8-bugbear (B), flake8-comprehensions (C4), etc. rules
+select = [
+    "F", "E", "W", "I", "N", "D", # Core flake8, isort, pep8-naming, pydocstyle
+    "UP", # pyupgrade
+    "B",  # flake8-bugbear
+    "A",  # flake8-builtins
+    "ARG", # flake8-unused-arguments
+    "C4", # flake8-comprehensions
+    "T20", # flake8-print (T201 for print, T203 for pprint)
+    "SIM", # flake8-simplify
+    "PTH", # flake8-use-pathlib
+    "PL", # Pylint
+    "TRY", # tryceratops
+]
+ignore = [
+    # Ignore common missing docstring errors for now
+    "D100",  # Missing docstring in public module
+    "D101",  # Missing docstring in public class
+    "D102",  # Missing docstring in public method
+    "D103",  # Missing docstring in public function
+    "D104",  # Missing docstring in public package
+    "D107",  # Missing docstring in `__init__`
+    "D203",  # 1 blank line required before class docstring
+    "D213",  # Multi-line docstring closing quotes should be on a separate line
+    "D401",  # First line of docstring should be in imperative mood
+    "N803",  # Function name should be lowercase
+    "N806",  # Variable in function should be lowercase
+]
+# mccabe (cyclomatic complexity)
+# mccabe.max-complexity = 10 # Default is 10, adjust as needed
+
+[tool.ruff.format]
+quote-style = "double" # Black default
+indent-style = "space"
+skip-magic-trailing-comma = false # Black default
+line-ending = "auto"
+
+[project.scripts]
+buntool = "buntool.app:main"
+
+[tool.setuptools]
+packages = ["buntool"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"buntool" = ["static/**", "templates/**"]

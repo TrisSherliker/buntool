@@ -6,43 +6,48 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='buntool.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chrono-node@1.4.9/dist/chrono.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script src="{{ url_for('static', filename='buntool.js') }}" defer></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "chrono-node": "https://esm.sh/chrono-node@2.7.5",
+                "sortablejs": "https://esm.sh/sortablejs@1.15.2",
+                "pdfjs-dist": "https://esm.sh/pdfjs-dist@4.0.379"
+            }
+        }
+    </script>
+    <script type="module" src="{{ url_for('static', filename='buntool.js') }}"></script>
     <title>BunTool</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="app-subtitle"
-            style="display: flex; align-items: center; justify-content: center; color: #d57782; padding-top: 0;">simple
-            bundling with</span>
+        <div class="app-subtitle">
+            simple bundling with
         </div>
         <div class="container">
-            <div class="app-header" style="display: flex; align-items: center; justify-content: center;">
-                <h1 class="app-title" style="font-size: 7.5rem; display: flex; align-items: center;">
-                    <span style="color: #ef8c51;">Bun</span>
+            <div class="app-header">
+                <h1 class="app-title">
+                    <span class="text-orange">Bun</span>
                     <img src="{{ url_for('static', filename='buntool.webp') }}" alt="Bun tool Logo"
-                        style="width: 120px; height: auto; margin: 0 0.5rem;">
-                    <span style="color: #68b3cd;">Tool</span>
+                        class="logo-img">
+                    <span class="text-blue">Tool</span>
                 </h1>
             </div>
             <br>
         </div>
 
-        <div class="intro-section" style="background-color: #f8fcff; padding: 1rem; text-align: left;">
+        <div class="intro-section">
             <h2> Welcome to BunTool! </h2>
-            <p> 
-                BunTool is a simple tool for creating PDF bundles from several PDF files. 
+            <p>
+                BunTool is a simple tool for creating PDF bundles from several PDF files.
             </p>
             <p>
-                Written by a lawyer for use in court, it's perfect for 
-                making court bundles in the English court system. The tool will automatically tab, index, paginate, hyperlink and bookmark the output file in a few seconds. 
-                The default settings comply with the guidance for most courts, but there are lots of options to customise the output. 
+                Written by a lawyer for use in court, it's perfect for
+                making court bundles in the English court system. The tool will automatically tab, index, paginate, hyperlink and bookmark the output file in a few seconds.
+                The default settings comply with the guidance for most courts, but there are lots of options to customise the output.
             </p>
             <p>
-                Just enter the details, upload your files, choose any options, and click "Create Bundle" below. The PDFs will be combined,  
+                Just enter the details, upload your files, choose any options, and click "Create Bundle" below. The PDFs will be combined,
             </p>
         </div>
 
@@ -87,27 +92,27 @@
                 <p>Click the button to add section markers.</p>
                 <p>Check and edit the titles and dates for the index: BunTool will suggest some automatically. </p>
 
-                <div id="dropZone" class="upload-zone" style="display: block;">
-                    <i class="mdi mdi-upload upload-icon" style="color: #d57782;"></i>
-                    <p><span style="color: #d57782; font-size: 1.2rem;"><b>Upload your PDFs here:</b> Click to select,
+                <label for="fileInput" id="dropZone" class="upload-zone">
+                    <i class="mdi mdi-upload upload-icon"></i>
+                    <p><span class="drop-text"><b>Upload your PDFs here:</b> Click to select,
                             or
                             drag and drop</p></span>
-                    <input type="file" id="fileInput" name="files" multiple accept=".pdf" style="display: block;">
-                </div>
+                </label>
+                <input type="file" id="fileInput" name="files" multiple accept=".pdf" class="hidden">
                 <div class="progress-container">
                     <div class="progress-bar"></div>
                 </div>
                         <div class="loading-indicator" id="loadingIndicator">
                             <i class="mdi mdi-loading mdi-spin mdi-24px"></i> Creating your bundle, please wait...
                         </div>
-                <div id="file-table" class="file-table" style="display: none;">
+                <div id="file-table" class="file-table hidden">
                 <div id="errorContainer"></div>
 
-                <div class="button-group" style="padding-top: 2rem;">
-                    <button type="button" class="secondary" onclick="addSection()">
+                <div class="button-group pt-2">
+                    <button type="button" class="secondary" id="btnAddSection">
                         <i class="mdi mdi-plus"></i> Add Section Break
                     </button>
-                    <button type="button" class="secondary" onclick="clearAllFiles()">
+                    <button type="button" class="secondary" id="btnClearAll">
                         <i class="mdi mdi-delete"></i> Clear All Rows
                     </button>
                     </div>
@@ -115,18 +120,17 @@
                 <table>
                     <thead>
                         <tr>
-                            <th style="width: 40px"><span
-                                    style="background-color: #68b3cd; color: white; padding: 0.2rem 0.5rem; border-radius: 0.3rem;">☰</span>
+                            <th class="w-40"><span class="hamburger-icon">☰</span>
                             </th>
                             <th>File</th>
-                            <th style="width: 500px" onclick="sortTable(2)" class="sortable">
+                            <th id="thSortTitle" class="sortable w-500">
                                 Title (for bundle index) <i class="mdi mdi-sort"></i>
                             </th>
-                            <th onclick="sortTable(3)" class="sortable">
+                            <th id="thSortDate" class="sortable">
                                 Date (YYYY-MM-DD for now) <i class="mdi mdi-sort"></i>
                             </th>
                             <th>Pages</th>
-                            <th style="width: 40px">❌</th>
+                            <th class="w-40">❌</th>
                         </tr>
                     </thead>
                     <tbody id="fileList"></tbody>
@@ -146,64 +150,60 @@
                 </div>
                 <p>Choose additional options for the index and page numbers, or just use the defaults.</p>
                 <div class="form-grid">
-                    <div class="form-group" style="border: 2px dashed; border-radius: 0.5rem; border-color:#ef8c51;">
+                    <div class="form-group dashed-border-orange">
                         <h4>Index options:</h4>
 
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
-                                    <td style="vertical-align: text-top;">
+                                    <td class="align-top">
                                         <label for="index_font">Font for index:</label>
                                     </td>
                                     <td>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="indexFontSans" name="index_font"
-                                            checked value="sans" style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="indexFontSans"
-                                                style="font-family: Arial; display: inline;">Sans Serif Helvetica
+                                            checked value="sans" class="radio-align">
+                                            <label class="form-check-label font-label font-arial" for="indexFontSans">Sans Serif Helvetica
                                                 (similar to MS Arial)(Default)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="indexFontSerif"
                                                 name="index_font" value="serif"
-                                                style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="indexFontSerif"
-                                                style="font-family: 'Times New Roman', Times, serif; display: inline;">Roman Serif
+                                                class="radio-align">
+                                            <label class="form-check-label font-label font-times" for="indexFontSerif">Roman Serif
                                                 (Times)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="indexFontMono" name="index_font"
-                                                value="mono" style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="indexFontMono"
-                                                style="font-family: Courier; display: inline;">Typewriter-style
+                                                value="mono" class="radio-align">
+                                            <label class="form-check-label font-label font-courier" for="indexFontMono">Typewriter-style
                                                 (Courier)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="indexFontTraditional"
-                                                name="index_font" value="traditional" 
-                                                style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="indexFontTraditional"
-                                                style="font-family: Charter Regular; display: inline;">Charter (similar to MS Georgia)</label>
+                                                name="index_font" value="traditional"
+                                                class="radio-align">
+                                            <label class="form-check-label font-label font-charter" for="indexFontTraditional">Charter (similar to MS Georgia)</label>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="vertical-align: text-top;">
+                                    <td class="align-top">
                                         <label for="coversheetInput">Coversheet:</label>
                                     </td>
                                     <td>
                                         <p>Add optional additional PDF before index (e.g. a 1-page coversheet)</p>
                                         <input type="file" id="coversheetInput" name="coversheet" accept=".pdf"
-                                            style="margin-right: 0.5rem;">
-                                        <button type="button" class="secondary" onclick="clearCoversheet()">❌</button>
+                                            class="mr-05">
+                                        <button type="button" class="secondary" id="btnClearCoversheet">❌</button>
 
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 33%;">
+                                    <td class="w-33">
                                         <label for="date_setting">Date style for PDF:</label>
                                     </td>
-                                    <td style="width: 67%;">
+                                    <td class="w-67">
                                         <select class="form-control" id="date_setting" name="date_setting">
                                             <option value="YYYY-MM-DD" >2025-12-31 (YYYY-MM-DD)</option>
                                             <option value="DD-MM-YYYY" >31/12/2025 (DD/MM/YYYY)</option>
@@ -217,10 +217,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 33%;">
+                                    <td class="w-33">
                                         <label for="bookmark_setting">Bookmark style for PDF:</label>
                                     </td>
-                                    <td style="width: 67%;">
+                                    <td class="w-67">
                                         <select class="form-control" id="bookmark_setting" name="bookmark_setting">
                                             <option value="tab-title" selected>001. Document title (default)</option>
                                             <option value="tab-title-date" >001. Document Title (date)</option>
@@ -236,60 +236,55 @@
                                     <td>
                                         <input type="checkbox" class="form-check-input" id="confidential_bool"
                                             name="confidential_bool">
-                                        <label class="form-check-label" for="confidential_bool"
-                                            style="display: inline;">Tick to add <span style="color: red;">CONFDENTIAL</span> label to index.</label>
+                                        <label class="form-check-label inline-block" for="confidential_bool">Tick to add <span class="text-red">CONFIDENTIAL</span> label to index.</label>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="form-group" style="border: 2px dashed; border-radius: 0.5rem; border-color:#68b3cd;">
+                    <div class="form-group dashed-border-blue">
                         <h4>Page Numbering Options:</h4>
                         <table class="table table-borderless">
                             <tbody>
                                 <tr>
-                                    <td style="vertical-align: text-top;">
-                                        <label for="footer_font" style="vertical-align: text-top;">Font for footer:</label>
+                                    <td class="align-top">
+                                        <label for="footer_font" class="align-top">Font for footer:</label>
                                     </td>
                                     <td>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="footerFontSans"
                                                 name="footer_font" value="sans" checked
-                                                style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="footerFontSans"
-                                            style="font-family: Arial; display: inline;">Sans Serif Helvetica
+                                                class="radio-align">
+                                            <label class="form-check-label font-label font-arial" for="footerFontSans">Sans Serif Helvetica
                                             (similar to MS Arial)(Default)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="footerFontSerif"
                                                 name="footer_font" value="serif"
-                                                style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="footerFontSerif"
-                                                style="font-family: 'Times New Roman', Times, serif; display: inline;">Roman Serif
+                                                class="radio-align">
+                                            <label class="form-check-label font-label font-times" for="footerFontSerif">Roman Serif
                                             (Times)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="footerFontMono"
                                                 name="footer_font" value="mono"
-                                                style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="footerFontMono"
-                                                style="font-family: Courier; display: inline;">Typewriter style
+                                                class="radio-align">
+                                            <label class="form-check-label font-label font-courier" for="footerFontMono">Typewriter style
                                                 (Courier)</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" id="footerFontTraditional"
-                                                name="footer_font" value="traditional" 
-                                                style="vertical-align: middle; margin-right: 5px;">
-                                            <label class="form-check-label" for="footerFontTraditional"
-                                                style="font-family: Charter Regular; display: inline;">Charter (similar to MS Georgia)</label>
+                                                name="footer_font" value="traditional"
+                                                class="radio-align">
+                                            <label class="form-check-label font-label font-charter" for="footerFontTraditional">Charter (similar to MS Georgia)</label>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="width: 33%;">
+                                    <td class="w-33">
                                         <label for="page_num_align">Alignment:</label>
                                     </td>
-                                    <td style="width: 67%;">
+                                    <td class="w-67">
                                         <select class="form-control" id="page_num_align" name="page_num_align">
                                             <option value="left">Left</option>
                                             <option value="centre">Centre</option>
@@ -324,14 +319,14 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td style="vertical-align: text-top;">
+                                    <td class="align-top">
                                         <label for="footer_prefix">Footer prefix:</label>
                                     </td>
                                     <td>
-                                        <div class="form-check" style="display: inline;">
+                                        <div class="form-check inline-block">
                                             <p>Optional prefix before each page number:</p>
                                             <input type="text" class="form-control" id="footer_prefix"
-                                                name="footer_prefix" maxlength="30" placeholder="e.g. enter 'AB pg' for 'AB pg 1' style footer" style="width: 100%; box-sizing: border-box;">
+                                                name="footer_prefix" maxlength="30" placeholder="e.g. enter 'AB pg' for 'AB pg 1' style footer" class="w-100-box">
                                         </div>
                                     </td>
                                 </tr>
@@ -341,7 +336,7 @@
                 </div>
 
                 </div>
-            
+
             <div class="card">
                 <div class="card-header">
                     <div class="card-icon">
@@ -352,7 +347,7 @@
                 <div class="card-body"></div>
                 <div id="processErrorContainer"></div>
                 <div id="zipExplainerContainer"></div>
-                    <div id="downloadButtonContainer" style="display: none; text-align: center; padding-top: 2rem;">
+                    <div id="downloadButtonContainer" class="hidden text-center pt-2">
                         <button type="button" class="dothething" id="downloadButton">
                             <i class="mdi mdi-download"></i> Download PDF Bundle
                         </button>
@@ -360,7 +355,7 @@
                             <i class="mdi mdi-download"></i> Download ZIP Archive
                         </button>
                     </div>
-                    <div class="button-group" style="padding-top: 2rem; display: flex; justify-content: center; align-items: center;">
+                    <div class="button-group flex-center pt-2">
                         <button type="submit" class="create-button">
                             <i class="mdi mdi-content-save"></i> CREATE BUNDLE
                         </button>
@@ -375,24 +370,22 @@
                 Some logs are stored, including: the number of files uploaded, the number of pages in each file, the number of bundles created, and any text input for the index. This is all just to make sure the app is functioning correctly, and diagnose any errors. Logs are deleted regularly, though less often than the main data itself.
                 BunTool also logs the type of browser you're using. You can review the code on <a href="https://github.com/TrisSherliker/buntool">GitHub</a>. As with most open-source tools, it is free to use but comes with no warranty.</p>
                 <p>
-                    If you find this useful, have any suggestions, or need help with any errors, I'd like to hear from you. You can contact me <a href="mailto:tris@sherliker.net">by email here</a>. 
+                    If you find this useful, have any suggestions, or need help with any errors, I'd like to hear from you. You can contact me <a href="mailto:tris@sherliker.net">by email here</a>.
                 </p>
             </div>
     </div>
     <!-- Add the duplicate file popup modal -->
-    <div id="duplicateModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-    background-color: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
-        <div
-            style="background-color: #fff; padding: 1.5rem; border-radius: 0.5rem; max-width: 400px; text-align: center;">
+    <div id="duplicateModal" class="modal-overlay">
+        <div class="modal-content">
             <p id="duplicateMessage"></p>
-            <button onclick="closeDuplicateModal()">OK</button>
+            <button id="btnCloseModal">OK</button>
         </div>
     </div>
 
 
-    <footer style="background-color: #f8fafc; padding: 1rem; text-align: center;">
-        <p style="color: #6b7280; font-size: 0.875rem;">&copy; 2025 Tristan Sherliker</p>
-        <p style="color: #6b7280; font-size: 0.875rem;">BunTool is an early development tool and is constantly being improved. If you want to get in touch, need help or have ideas for how to improve it, please contact <a href="mailto:tris@sherliker.net">tris@sherliker.net</a></p>
+    <footer>
+        <p>&copy; 2025 Tristan Sherliker</p>
+        <p>BunTool is an early development tool and is constantly being improved. If you want to get in touch, need help or have ideas for how to improve it, please contact <a href="mailto:tris@sherliker.net">tris@sherliker.net</a></p>
         </div>
 </body>
 </html>
